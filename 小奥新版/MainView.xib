@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="lge-jx-NZR" customClass="MainView">
+            <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbG-eH-0Ni">
+                    <rect key="frame" x="0.0" y="0.0" width="736" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGj-pK-eLJ">
+                            <rect key="frame" x="30" y="11" width="28" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="28" id="TEg-JN-9kI"/>
+                                <constraint firstAttribute="height" constant="28" id="wZt-pf-Q0U"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="Arrow-orange-icon"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIn-sj-4vh">
+                            <rect key="frame" x="678" y="11" width="28" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="apg-0K-8gP"/>
+                                <constraint firstAttribute="width" constant="28" id="yK5-ae-5C5"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="Gear-orange-icon"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVR-MZ-9M3">
+                            <rect key="frame" x="620" y="11" width="28" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="Uuk-j5-9fP"/>
+                                <constraint firstAttribute="width" constant="28" id="YV2-UP-rtT"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="HELP-orange-icon"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96691578629999997" green="0.45497143270000001" blue="0.19362476470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="IGj-pK-eLJ" firstAttribute="centerY" secondItem="fbG-eH-0Ni" secondAttribute="centerY" id="1cZ-bs-M49"/>
+                        <constraint firstAttribute="trailing" secondItem="YIn-sj-4vh" secondAttribute="trailing" constant="30" id="SvY-Kl-7h0"/>
+                        <constraint firstItem="IGj-pK-eLJ" firstAttribute="leading" secondItem="fbG-eH-0Ni" secondAttribute="leading" constant="30" id="TS4-b7-M3Q"/>
+                        <constraint firstItem="YIn-sj-4vh" firstAttribute="centerY" secondItem="IGj-pK-eLJ" secondAttribute="centerY" id="WSs-IM-Ryj"/>
+                        <constraint firstItem="VVR-MZ-9M3" firstAttribute="centerY" secondItem="IGj-pK-eLJ" secondAttribute="centerY" id="fgU-KQ-jCT"/>
+                        <constraint firstAttribute="height" constant="50" id="iUX-Xo-PgT"/>
+                        <constraint firstItem="YIn-sj-4vh" firstAttribute="leading" secondItem="VVR-MZ-9M3" secondAttribute="trailing" constant="30" id="ouX-BG-72f"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ciP-iW-Nd2" customClass="iCarousel">
+                    <rect key="frame" x="0.0" y="100" width="736" height="274"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="lge-jx-NZR" id="I4s-C1-ECI"/>
+                        <outlet property="delegate" destination="lge-jx-NZR" id="fht-Z7-jHD"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.99108022451400757" green="0.9573168158531189" blue="0.84843021631240845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="fbG-eH-0Ni" secondAttribute="trailing" id="5EK-sp-gQY"/>
+                <constraint firstAttribute="trailing" secondItem="ciP-iW-Nd2" secondAttribute="trailing" id="DV1-YG-W1A"/>
+                <constraint firstItem="ciP-iW-Nd2" firstAttribute="leading" secondItem="lge-jx-NZR" secondAttribute="leading" id="DoN-nl-6Ce"/>
+                <constraint firstItem="ciP-iW-Nd2" firstAttribute="centerX" secondItem="fbG-eH-0Ni" secondAttribute="centerX" id="M2q-qC-uaX"/>
+                <constraint firstItem="fbG-eH-0Ni" firstAttribute="leading" secondItem="lge-jx-NZR" secondAttribute="leading" id="Q7S-zB-Yf7"/>
+                <constraint firstAttribute="bottom" secondItem="ciP-iW-Nd2" secondAttribute="bottom" constant="40" id="dxY-HC-FDw"/>
+                <constraint firstItem="ciP-iW-Nd2" firstAttribute="top" secondItem="fbG-eH-0Ni" secondAttribute="bottom" constant="50" id="ptl-V0-ty3"/>
+                <constraint firstItem="fbG-eH-0Ni" firstAttribute="top" secondItem="lge-jx-NZR" secondAttribute="top" id="trk-y3-xfh"/>
+            </constraints>
+            <connections>
+                <outlet property="icarV" destination="ciP-iW-Nd2" id="M8w-Ua-1Rf"/>
+            </connections>
+            <point key="canvasLocation" x="-10" y="-515"/>
+        </view>
+        <view contentMode="scaleToFill" id="jgD-bm-XBI">
+            <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="-10" y="139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Arrow-orange-icon" width="28" height="28"/>
+        <image name="Gear-orange-icon" width="28" height="28"/>
+        <image name="HELP-orange-icon" width="28" height="28"/>
+    </resources>
+</document>

@@ -7,14 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C14CE5F31EA88584007AE1AE /* ConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C14CE5F11EA88584007AE1AE /* ConnectViewController.m */; };
+		C14CE5F41EA88584007AE1AE /* ConnectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C14CE5F21EA88584007AE1AE /* ConnectView.xib */; };
+		C14CE5F71EA887CA007AE1AE /* ConnectView.m in Sources */ = {isa = PBXBuildFile; fileRef = C14CE5F61EA887CA007AE1AE /* ConnectView.m */; };
 		C19228121EA5B62300B0166D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C19228111EA5B62300B0166D /* main.m */; };
 		C19228151EA5B62300B0166D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C19228141EA5B62300B0166D /* AppDelegate.m */; };
-		C19228181EA5B62300B0166D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C19228171EA5B62300B0166D /* ViewController.m */; };
+		C19228181EA5B62300B0166D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C19228171EA5B62300B0166D /* MainViewController.m */; };
 		C192281B1EA5B62300B0166D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C19228191EA5B62300B0166D /* Main.storyboard */; };
 		C192281D1EA5B62300B0166D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C192281C1EA5B62300B0166D /* Assets.xcassets */; };
 		C19228201EA5B62300B0166D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C192281E1EA5B62300B0166D /* LaunchScreen.storyboard */; };
 		C192282B1EA5B62400B0166D /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C192282A1EA5B62400B0166D /* ____Tests.m */; };
 		C19228361EA5B62400B0166D /* ____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C19228351EA5B62400B0166D /* ____UITests.m */; };
+		C19228491EA5C3E500B0166D /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19228481EA5C3E500B0166D /* MainView.xib */; };
+		C192284B1EA5C4D000B0166D /* HeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C192284A1EA5C4CF00B0166D /* HeadView.xib */; };
+		C19228511EA5C54200B0166D /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = C19228501EA5C54200B0166D /* MainView.m */; };
+		C19228541EA5EA9400B0166D /* HeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = C19228531EA5EA9400B0166D /* HeadView.m */; };
+		C19228571EA5FD6900B0166D /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = C19228561EA5FD6900B0166D /* iCarousel.m */; };
+		C192285A1EA617DF00B0166D /* NSMutableArray+Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = C19228591EA617DF00B0166D /* NSMutableArray+Queue.m */; };
+		C192285D1EA6188C00B0166D /* MainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C192285C1EA6188C00B0166D /* MainViewModel.m */; };
+		C19849031EAF1B43006F3625 /* MessageRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = C19849021EAF1B43006F3625 /* MessageRoute.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,12 +46,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C14CE5F01EA88584007AE1AE /* ConnectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectViewController.h; sourceTree = "<group>"; };
+		C14CE5F11EA88584007AE1AE /* ConnectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectViewController.m; sourceTree = "<group>"; };
+		C14CE5F21EA88584007AE1AE /* ConnectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectView.xib; sourceTree = "<group>"; };
+		C14CE5F51EA887CA007AE1AE /* ConnectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectView.h; sourceTree = "<group>"; };
+		C14CE5F61EA887CA007AE1AE /* ConnectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectView.m; sourceTree = "<group>"; };
 		C192280D1EA5B62300B0166D /* 小奥新版.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "小奥新版.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C19228111EA5B62300B0166D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C19228131EA5B62300B0166D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C19228141EA5B62300B0166D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C19228161EA5B62300B0166D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C19228171EA5B62300B0166D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C19228161EA5B62300B0166D /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		C19228171EA5B62300B0166D /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		C192281A1EA5B62300B0166D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C192281C1EA5B62300B0166D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C192281F1EA5B62300B0166D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +67,20 @@
 		C19228311EA5B62400B0166D /* 小奥新版UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "小奥新版UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C19228351EA5B62400B0166D /* ____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____UITests.m"; sourceTree = "<group>"; };
 		C19228371EA5B62400B0166D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C19228481EA5C3E500B0166D /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		C192284A1EA5C4CF00B0166D /* HeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeadView.xib; sourceTree = "<group>"; };
+		C192284F1EA5C54200B0166D /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
+		C19228501EA5C54200B0166D /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
+		C19228521EA5EA9400B0166D /* HeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadView.h; sourceTree = "<group>"; };
+		C19228531EA5EA9400B0166D /* HeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadView.m; sourceTree = "<group>"; };
+		C19228551EA5FD6900B0166D /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		C19228561EA5FD6900B0166D /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		C19228581EA617DF00B0166D /* NSMutableArray+Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Queue.h"; sourceTree = "<group>"; };
+		C19228591EA617DF00B0166D /* NSMutableArray+Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Queue.m"; sourceTree = "<group>"; };
+		C192285B1EA6188C00B0166D /* MainViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewModel.h; sourceTree = "<group>"; };
+		C192285C1EA6188C00B0166D /* MainViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewModel.m; sourceTree = "<group>"; };
+		C19849011EAF1B42006F3625 /* MessageRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageRoute.h; sourceTree = "<group>"; };
+		C19849021EAF1B43006F3625 /* MessageRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageRoute.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +108,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C14CE5EF1EA884ED007AE1AE /* 提示连接 */ = {
+			isa = PBXGroup;
+			children = (
+				C14CE5F21EA88584007AE1AE /* ConnectView.xib */,
+				C14CE5F51EA887CA007AE1AE /* ConnectView.h */,
+				C14CE5F61EA887CA007AE1AE /* ConnectView.m */,
+			);
+			name = "提示连接";
+			sourceTree = "<group>";
+		};
+		C186E9C71EAAF5EC00951E7B /* 跳舞 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "跳舞";
+			sourceTree = "<group>";
+		};
 		C19228041EA5B62200B0166D = {
 			isa = PBXGroup;
 			children = (
@@ -101,14 +148,11 @@
 		C192280F1EA5B62300B0166D /* 小奥新版 */ = {
 			isa = PBXGroup;
 			children = (
-				C19228131EA5B62300B0166D /* AppDelegate.h */,
-				C19228141EA5B62300B0166D /* AppDelegate.m */,
-				C19228161EA5B62300B0166D /* ViewController.h */,
-				C19228171EA5B62300B0166D /* ViewController.m */,
-				C19228191EA5B62300B0166D /* Main.storyboard */,
-				C192281C1EA5B62300B0166D /* Assets.xcassets */,
-				C192281E1EA5B62300B0166D /* LaunchScreen.storyboard */,
-				C19228211EA5B62300B0166D /* Info.plist */,
+				C19228431EA5C2BF00B0166D /* views */,
+				C19228461EA5C36D00B0166D /* others */,
+				C19228471EA5C39600B0166D /* models */,
+				C192B4251EA6F74800DE32FD /* MyLib */,
+				C19228451EA5C35800B0166D /* controllers */,
 				C19228101EA5B62300B0166D /* Supporting Files */,
 			);
 			path = "小奥新版";
@@ -117,6 +161,7 @@
 		C19228101EA5B62300B0166D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C192281C1EA5B62300B0166D /* Assets.xcassets */,
 				C19228111EA5B62300B0166D /* main.m */,
 			);
 			name = "Supporting Files";
@@ -138,6 +183,74 @@
 				C19228371EA5B62400B0166D /* Info.plist */,
 			);
 			path = "小奥新版UITests";
+			sourceTree = "<group>";
+		};
+		C19228431EA5C2BF00B0166D /* views */ = {
+			isa = PBXGroup;
+			children = (
+				C186E9C71EAAF5EC00951E7B /* 跳舞 */,
+				C14CE5EF1EA884ED007AE1AE /* 提示连接 */,
+				C19228441EA5C2E600B0166D /* 首页 */,
+				C19228191EA5B62300B0166D /* Main.storyboard */,
+				C19849011EAF1B42006F3625 /* MessageRoute.h */,
+				C19849021EAF1B43006F3625 /* MessageRoute.m */,
+				C192281E1EA5B62300B0166D /* LaunchScreen.storyboard */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		C19228441EA5C2E600B0166D /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				C19228551EA5FD6900B0166D /* iCarousel.h */,
+				C19228561EA5FD6900B0166D /* iCarousel.m */,
+				C19228481EA5C3E500B0166D /* MainView.xib */,
+				C192284A1EA5C4CF00B0166D /* HeadView.xib */,
+				C19228521EA5EA9400B0166D /* HeadView.h */,
+				C19228531EA5EA9400B0166D /* HeadView.m */,
+				C192284F1EA5C54200B0166D /* MainView.h */,
+				C19228501EA5C54200B0166D /* MainView.m */,
+			);
+			name = "首页";
+			sourceTree = "<group>";
+		};
+		C19228451EA5C35800B0166D /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C14CE5F01EA88584007AE1AE /* ConnectViewController.h */,
+				C14CE5F11EA88584007AE1AE /* ConnectViewController.m */,
+				C19228161EA5B62300B0166D /* MainViewController.h */,
+				C19228171EA5B62300B0166D /* MainViewController.m */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		C19228461EA5C36D00B0166D /* others */ = {
+			isa = PBXGroup;
+			children = (
+				C19228131EA5B62300B0166D /* AppDelegate.h */,
+				C19228141EA5B62300B0166D /* AppDelegate.m */,
+				C19228211EA5B62300B0166D /* Info.plist */,
+			);
+			name = others;
+			sourceTree = "<group>";
+		};
+		C19228471EA5C39600B0166D /* models */ = {
+			isa = PBXGroup;
+			children = (
+				C192285B1EA6188C00B0166D /* MainViewModel.h */,
+				C192285C1EA6188C00B0166D /* MainViewModel.m */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		C192B4251EA6F74800DE32FD /* MyLib */ = {
+			isa = PBXGroup;
+			children = (
+				C19228581EA617DF00B0166D /* NSMutableArray+Queue.h */,
+				C19228591EA617DF00B0166D /* NSMutableArray+Queue.m */,
+			);
+			name = MyLib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +363,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C19228201EA5B62300B0166D /* LaunchScreen.storyboard in Resources */,
+				C19228491EA5C3E500B0166D /* MainView.xib in Resources */,
+				C192284B1EA5C4D000B0166D /* HeadView.xib in Resources */,
+				C14CE5F41EA88584007AE1AE /* ConnectView.xib in Resources */,
 				C192281D1EA5B62300B0166D /* Assets.xcassets in Resources */,
 				C192281B1EA5B62300B0166D /* Main.storyboard in Resources */,
 			);
@@ -276,7 +392,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C19228181EA5B62300B0166D /* ViewController.m in Sources */,
+				C19228181EA5B62300B0166D /* MainViewController.m in Sources */,
+				C192285A1EA617DF00B0166D /* NSMutableArray+Queue.m in Sources */,
+				C19228541EA5EA9400B0166D /* HeadView.m in Sources */,
+				C14CE5F71EA887CA007AE1AE /* ConnectView.m in Sources */,
+				C192285D1EA6188C00B0166D /* MainViewModel.m in Sources */,
+				C14CE5F31EA88584007AE1AE /* ConnectViewController.m in Sources */,
+				C19228511EA5C54200B0166D /* MainView.m in Sources */,
+				C19849031EAF1B43006F3625 /* MessageRoute.m in Sources */,
+				C19228571EA5FD6900B0166D /* iCarousel.m in Sources */,
 				C19228151EA5B62300B0166D /* AppDelegate.m in Sources */,
 				C19228121EA5B62300B0166D /* main.m in Sources */,
 			);
@@ -426,6 +550,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7QBZV3YGDE;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = "小奥新版/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alsrobort.www.----";
@@ -438,6 +563,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7QBZV3YGDE;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = "小奥新版/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alsrobort.www.----";
@@ -514,6 +640,7 @@
 				C192283C1EA5B62400B0166D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C192283D1EA5B62400B0166D /* Build configuration list for PBXNativeTarget "小奥新版Tests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +649,7 @@
 				C192283F1EA5B62400B0166D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C19228401EA5B62400B0166D /* Build configuration list for PBXNativeTarget "小奥新版UITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +658,7 @@
 				C19228421EA5B62400B0166D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

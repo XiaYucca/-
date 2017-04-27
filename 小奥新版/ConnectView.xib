@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConnectView">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="L5S-99-2h6"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8wl-0f-hn9">
+                    <rect key="frame" x="0.0" y="0.0" width="736" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWs-n4-hHb">
+                            <rect key="frame" x="30" y="11" width="28" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="k9A-my-Yxq"/>
+                                <constraint firstAttribute="width" constant="28" id="tJs-bu-SzF"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="Arrow-icon-blue"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojM-bP-rZ4">
+                            <rect key="frame" x="678" y="11" width="28" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="28" id="AT2-e6-NVx"/>
+                                <constraint firstAttribute="height" constant="28" id="sT1-pC-DmE"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="Gear-icon-blue"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYy-lV-ZM1">
+                            <rect key="frame" x="620" y="11" width="28" height="28"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="LQo-nF-5KH"/>
+                                <constraint firstAttribute="width" constant="28" id="xtN-35-4ph"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="HELPicon-blue"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.21592089533805847" green="0.72578257322311401" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="ojM-bP-rZ4" secondAttribute="trailing" constant="30" id="E08-5g-Y36"/>
+                        <constraint firstItem="pYy-lV-ZM1" firstAttribute="centerY" secondItem="PWs-n4-hHb" secondAttribute="centerY" id="K6V-3H-R6l"/>
+                        <constraint firstItem="PWs-n4-hHb" firstAttribute="leading" secondItem="8wl-0f-hn9" secondAttribute="leading" constant="30" id="NvZ-sk-fyX"/>
+                        <constraint firstItem="ojM-bP-rZ4" firstAttribute="leading" secondItem="pYy-lV-ZM1" secondAttribute="trailing" constant="30" id="Zax-yu-qTN"/>
+                        <constraint firstItem="PWs-n4-hHb" firstAttribute="centerY" secondItem="8wl-0f-hn9" secondAttribute="centerY" id="czX-Nr-E7p"/>
+                        <constraint firstItem="ojM-bP-rZ4" firstAttribute="centerY" secondItem="PWs-n4-hHb" secondAttribute="centerY" id="lBg-yE-WVL"/>
+                        <constraint firstAttribute="height" constant="50" id="tdl-HB-heZ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HH4-Pj-uNB" customClass="BlueAnimattionView">
+                    <rect key="frame" x="133.66666666666663" y="88.666666666666657" width="470" height="237.33333333333334"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="手机蓝牙" translatesAutoresizingMaskIntoConstraints="NO" id="Ocb-dJ-i07">
+                    <rect key="frame" x="321" y="112" width="94" height="190"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="94" id="XtL-mF-SAA"/>
+                        <constraint firstAttribute="height" constant="190" id="ffO-OE-LjI"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="HH4-Pj-uNB" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="3ta-uz-lCo"/>
+                <constraint firstItem="8wl-0f-hn9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="6Q1-Wq-xuf"/>
+                <constraint firstItem="8wl-0f-hn9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9P2-SE-MjL"/>
+                <constraint firstItem="Ocb-dJ-i07" firstAttribute="width" secondItem="HH4-Pj-uNB" secondAttribute="width" multiplier="0.2" id="LtJ-tC-uQo"/>
+                <constraint firstItem="HH4-Pj-uNB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="S8N-NG-aKS"/>
+                <constraint firstItem="Ocb-dJ-i07" firstAttribute="centerY" secondItem="HH4-Pj-uNB" secondAttribute="centerY" id="ZsV-ue-SWN"/>
+                <constraint firstItem="Ocb-dJ-i07" firstAttribute="centerX" secondItem="HH4-Pj-uNB" secondAttribute="centerX" id="aBJ-Yb-HDZ"/>
+                <constraint firstItem="Ocb-dJ-i07" firstAttribute="height" secondItem="HH4-Pj-uNB" secondAttribute="height" multiplier="0.8" id="kDo-a1-eU0"/>
+                <constraint firstAttribute="trailing" secondItem="8wl-0f-hn9" secondAttribute="trailing" id="v1r-SV-jDf"/>
+            </constraints>
+            <point key="canvasLocation" x="115" y="-116"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Arrow-icon-blue" width="28" height="28"/>
+        <image name="Gear-icon-blue" width="28" height="28"/>
+        <image name="HELPicon-blue" width="28" height="28"/>
+        <image name="手机蓝牙" width="94" height="190"/>
+    </resources>
+</document>
