@@ -24,10 +24,15 @@
 //
 //    [r test];
 //    NSLog(@"    [r test];");
-    [r evalObject_C:@"[[MessageRoute SharedRoute]test]" CallBack:^(id response) {
+    [r evalObject_C:@"[[MessageRoute SharedRoute]testParm1:1 parm2:parm2 parm3:parm3]" CallBack:^(id response) {
         NSLog(@"i=====d%@",[response class]);
         NSLog(@"%@",response);
     }];
+    
+//    [r evalObject_C:@"[[NSBundle mainBundle]loadNibNamed:\"MainView\" owner:self options:nil]" CallBack:^(id response) {
+//        NSLog(@"i=====d%@",[response class]);
+//        NSLog(@"%@",response);
+//    }];
     
 }
 

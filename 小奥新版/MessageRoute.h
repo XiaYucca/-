@@ -7,16 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+@class XYObject;
 
 @interface MessageRoute : NSObject
 
-@property(nonatomic ,strong)NSString *property;
-
-@property (nonatomic ,strong)NSMutableArray *objArr;
-
 +(instancetype)SharedRoute;
 -(void)test;
-
 
 -(void)evalObject_C:(NSString *)str CallBack:(void (^)(id response))callBack;
 

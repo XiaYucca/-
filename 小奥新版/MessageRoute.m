@@ -15,10 +15,10 @@
 #define WeakObj(o) __weak typeof(o) weak##o = o
 
 @interface XYObject : NSObject
-
 @property (nonatomic ,copy)NSString *className;
 @property (nonatomic ,copy)NSString *classMethod;
 @property (nonatomic ,copy)NSArray *classMethodParm;
+
 @end
 
 @implementation XYObject
@@ -27,13 +27,31 @@
 
 @interface MessageRoute()
 
+@property(nonatomic ,strong)NSString *property;
+@property (nonatomic ,strong)NSMutableArray<XYObject *> *objArr;
 @property (nonatomic ,copy) void(^evalCallBack)(id response);
 
 @end
 
+typedef struct returnStruct{
+    int RETURN_TYPE_OBJ:1;
+    int RETURN_TYPE_VOID:1;
+    int RETURN_TYPE_BYTE:1;
+    int RETURN_TYPE_CHAR:1;
+    int RETURN_TYPE_INT:1;
+    int RETURN_TYPE_LONG:1;
+    int RETURN_TYPE_FLOAT:1;
+    int RETURN_TYPE_DOUBLE:1;
+    int RETURN_TYPE_STRUCT:1;
+    int RETURN_TYPE_POINT:1;
+
+}RETURNSTRUCT ;
+
+
 @implementation MessageRoute
 
 static typeof(MessageRoute) *_static_route;
+
 
 +(instancetype)SharedRoute{
     static dispatch_once_t onceToken;
@@ -221,12 +239,13 @@ static typeof(MessageRoute) *_static_route;
     return arr;
 }
 
+
+
 -(void)enumCode{
     NSMutableArray *itemList = [@[]mutableCopy];
     [self.objArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         XYObject *xyObj = obj;
         if(xyObj.className){
-            
             id c;
             if (idx == 0) {
               c = objc_getClass([xyObj.className UTF8String]);
@@ -236,24 +255,113 @@ static typeof(MessageRoute) *_static_route;
 
             NSArray *parm = xyObj.classMethodParm;
             int count = xyObj.classMethodParm.count;
+            
+            
+            Method mc = class_getClassMethod([c class], sel_registerName([xyObj.classMethod UTF8String]));
+            SEL s =  sel_registerName([xyObj.classMethod UTF8String]);
+            Method mi = class_getInstanceMethod([c class],s);
+            char dc[10] = {};
+            char di[10] = {};
+            
+               method_getReturnType(mc, dc, 10);
+               method_getReturnType(mi, di, 10);
+            
+               printf("\n\n %s----%s\n\n",dc,di);
+               bool hasReturn = NO;
+            
+            RETURNSTRUCT returnType ;
+            
+            if (strcmp(dc,"@")==0|| strcmp(di,"@")==0) {
+                printf("return type is object\n");
+                returnType.RETURN_TYPE_OBJ = 1;
+                hasReturn = YES;
+            }
+            if (strcmp(dc, "v")==0||strcmp(di, "v")==0) {
+                printf("return type is void\n");
+                 returnType.RETURN_TYPE_VOID = 1;
+                 hasReturn = NO;
+            }
+            if (strcmp(dc,"C")==0 || strcmp(di,"C")==0) {
+                printf("return type is byte\n");
+                 returnType.RETURN_TYPE_BYTE = 1;
+            }
+            if (strcmp(dc,"c")==0 || strcmp(di,"c")==0) {
+                printf("return type is char\n");
+                 returnType.RETURN_TYPE_CHAR = 1;
+            }
+            
+            if (strcmp(dc, "i")==0||strcmp(di, "i")==0) {
+                printf("return type is interge\n");
+                 returnType.RETURN_TYPE_INT = 1;
+            }
+            if (strcmp(dc, "f")==0||strcmp(di, "f")==0) {
+                printf("return type is float\n");
+                 returnType.RETURN_TYPE_FLOAT = 1;
+            }
+            if (strcmp(dc, "*")==0||strcmp(di, "*")==0) {
+                printf("return type is c-point\n");
+                returnType.RETURN_TYPE_POINT = 1;
+            }
+            if (strcmp(dc,"{")>=0 || strcmp(di,"{")>=0) {
+                printf("return type is c-struct\n");
+                returnType.RETURN_TYPE_STRUCT = 1;
+            }
+
             id x = nil;
+            NSInteger i = 0;
+            float f = 0.0;
+            void *p = NULL;
+
+
             if (count == 0) {
-                x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]));
+                if (hasReturn) {
+                     x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]));
+                }else{
+                    objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]));
+                }
+               
             }
             if (count == 1) {
-                x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0]);
+                if (hasReturn) {
+                     x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0]);
+                }else{
+                    objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0]);
+
+                }
+               
             }
             if (count == 2) {
-                x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0],parm[1]);
+                if (hasReturn) {
+                    x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0],parm[1]);
+
+                }else{
+                    objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0],parm[1]);
+
+                }
             }
             if (count == 3) {
-                x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0],parm[1],parm[2]);
+                if (hasReturn) {
+                     x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0],parm[1],parm[2]);
+                }else{
+                    objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0],parm[1],parm[2]);
+                }
             }
             if (count == 4) {
-                x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0],parm[1],parm[2],parm[3]);
+                if (hasReturn) {
+                    x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0],parm[1],parm[2],parm[3]);
+                }
+                else{
+                    objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0],parm[1],parm[2],parm[3]);
+                }
             }
             if (count == 5) {
-                x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0],parm[1],parm[2],parm[3],parm[4]);
+                if (hasReturn) {
+                    x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0],parm[1],parm[2],parm[3],parm[4]);
+
+                }else{
+                   objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0],parm[1],parm[2],parm[3],parm[4]);
+
+                }
             }
             if (x) {
                 [itemList addObject:x];
@@ -265,13 +373,166 @@ static typeof(MessageRoute) *_static_route;
 //        if ([xyObj.className isEqualToString:indexStr]) {
 //            
 //        }
-        
     }];
     
     if (self.evalCallBack) {
         self.evalCallBack(itemList.lastObject);
     }
+    [self.objArr removeAllObjects];
     
+}
+
+/*
+void processReturnType(RETURNSTRUCT *r,id c,XYObject *xyObj,void (^callBack)()){
+    if(callBack) callBack();
+    
+    NSArray *parm = xyObj.classMethodParm;
+    int count = xyObj.classMethodParm.count;
+    
+    id x = nil;
+    NSInteger i = 0;
+    float f = 0.0;
+    void *p = NULL;
+    
+    bool hasReturn = NO;
+   
+     void(^block)(RETURNSTRUCT *r, id c, XYObject *xyObj, NSArray *parm) = ^(RETURNSTRUCT *r, id c, XYObject *xyObj, NSArray *parm){
+       
+        int count = xyObj.classMethodParm.count;
+        
+        if (count == 0) {
+
+            if ((*r).RETURN_TYPE_OBJ) {
+                id x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]));
+                
+            }
+            if ((*r).RETURN_TYPE_VOID) {
+                 objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]));
+            }
+            if ((*r).RETURN_TYPE_BYTE) {
+                Byte x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]));
+            }
+            if ((*r).RETURN_TYPE_CHAR) {
+                char  x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]));
+            }
+            if ((*r).RETURN_TYPE_INT) {
+                int x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]));
+            }
+            if ((*r).RETURN_TYPE_FLOAT) {
+                float x = objc_msgSend_fpret(c, sel_registerName([xyObj.classMethod UTF8String]));
+            }
+            if ((*r).RETURN_TYPE_LONG) {
+                long  x = objc_msgSend_fpret(c, sel_registerName([xyObj.classMethod UTF8String]));
+            }
+            if ((*r).RETURN_TYPE_DOUBLE) {
+                double  x = objc_msgSend_fpret(c, sel_registerName([xyObj.classMethod UTF8String]));
+            }
+            if ((*r).RETURN_TYPE_STRUCT) {
+                 RETURNSTRUCT *x = objc_msgSend_stret(c, sel_registerName([xyObj.classMethod UTF8String]));
+            }
+            if ((*r).RETURN_TYPE_POINT) {
+                //  x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]));
+            }
+            x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]));
+            // block(r,c,xyObj,parm);
+            
+            
+        }
+        if (count == 1) {
+            x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0]);
+        }
+        if (count == 2) {
+            x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0],parm[1]);
+        }
+        if (count == 3) {
+            if (hasReturn) {
+                x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0],parm[1],parm[2]);
+            }else{
+                objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0],parm[1],parm[2]);
+            }
+        }
+        if (count == 4) {
+            x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0],parm[1],parm[2],parm[3]);
+        }
+        if (count == 5) {
+            x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0],parm[1],parm[2],parm[3],parm[4]);
+        }
+        
+        {
+            
+            if ((*r).RETURN_TYPE_OBJ) {
+                //  x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]));
+                
+            }
+            if ((*r).RETURN_TYPE_VOID) {
+                //  x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]));
+            }
+            if ((*r).RETURN_TYPE_BYTE) {
+                //  x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]));
+            }
+            if ((*r).RETURN_TYPE_CHAR) {
+                //  x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]));
+            }
+            if ((*r).RETURN_TYPE_INT) {
+                //  x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]));
+            }
+            if ((*r).RETURN_TYPE_FLOAT) {
+                //  x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]));
+            }
+            if ((*r).RETURN_TYPE_LONG) {
+                //  x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]));
+            }
+            if ((*r).RETURN_TYPE_DOUBLE) {
+                //  x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]));
+            }
+            if ((*r).RETURN_TYPE_STRUCT) {
+                //  x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]));
+            }
+            if ((*r).RETURN_TYPE_POINT) {
+                //  x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]));
+            }
+            
+        }
+    };
+    
+    if (count == 0) {
+        x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]));
+       // block(r,c,xyObj,parm);
+        
+        
+    }
+    if (count == 1) {
+        x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0]);
+    }
+    if (count == 2) {
+        x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0],parm[1]);
+    }
+    if (count == 3) {   
+        if (hasReturn) {
+            x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0],parm[1],parm[2]);
+        }else{
+            objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0],parm[1],parm[2]);
+        }
+    }
+    if (count == 4) {
+        x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0],parm[1],parm[2],parm[3]);
+    }
+    if (count == 5) {
+        x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0],parm[1],parm[2],parm[3],parm[4]);
+    }
+    if (x) {
+      //  [itemList addObject:x];
+    }else{
+        NSLog(@"创建对象失败或者没有执行方法");
+    }
+} */
+
+-(char)testParm1:(NSString *)str parm2:(NSString *)parm2 parm3:(NSString *)parm3 //:void(^block)()
+{
+    NSLog(@"%s parm1:%@ parm2:%@ parm3%@",__func__,str,parm2,parm3);
+    RETURNSTRUCT t = {1};
+    struct returnStruct x = {2};
+    return 1;
 }
 
 //测试runtime
@@ -359,13 +620,13 @@ static typeof(MessageRoute) *_static_route;
     //        SEL oriSEL = @selector(test2);
     //        Method cusMethod = class_getInstanceMethod(xiaomingClass, oriSEL);
     //
-    //        BOOL addSucc = class_addMethod(xiaomingClass, oriSEL, method_getImplementation(cusMethod), method_getTypeEncoding(cusMethod));
+    //        BOOL addSucc = class_addMethod(xiaomingClass, oriSEL, method_getImplementation(cusMethod),            method_getTypeEncoding(cusMethod));
     //     }
     // objc_msgSend(self, sel_registerName("methTest"));
     // [self methTest:[@"[[UIView alloc:zone parm1:parm :parm2 parm3:parm3]initWith:frame :test] " mutableCopy]];
-//    [self methTest:[@"[[UIView alloc] init] " mutableCopy]];
-//    [self enumCode];
-    //[_ClassInstace_0  initWithFram:frame item:ite]
+//     [self methTest:[@"[[UIView alloc] init] " mutableCopy]];
+//     [self enumCode];
+    // [_ClassInstace_0  initWithFram:frame item:ite]
 }
 
 @end
