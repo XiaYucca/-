@@ -11,7 +11,7 @@
 #import "FaceView.h"
 
 @interface EditFaceView ()
-@property (nonatomic, weak)IBOutlet UIView *content;
+@property (nonatomic, weak)IBOutlet UIView *view;
 @property (nonatomic, weak)IBOutlet FaceView *leftFaceView;
 @property (nonatomic, weak)IBOutlet FaceView *rightFaceView;
 
@@ -35,9 +35,24 @@
     }
 }
 
+-(FaceView *)leftFaceView{
+    if (!_leftFaceView) {
+        _leftFaceView = [self viewWithTag:1000];
+
+    }
+    return _leftFaceView;
+}
+-(FaceView *)rightFaceView{
+    if (!_rightFaceView) {
+       _rightFaceView = [self viewWithTag:2000];
+    }
+    return _rightFaceView;
+}
+
 -(instancetype)initWithCoder:(NSCoder *)aDecoder{
     if (self = [super initWithCoder:aDecoder]) {
-        
+        [self EditFaceViewInitFromXib];
+
     }
     return self;
 }
@@ -48,10 +63,22 @@
     }
     return self;
 }
+-(instancetype)init{
+    if (self = [super init]) {
+        
+    }
+    
+    return self;
+}
+
+
 
 -(void)EditFaceViewInitFromXib{
     [[NSBundle mainBundle]loadNibNamed:@"EditFaceView" owner:self options:nil];
-    [self addSubview:_content];
+    [self addSubview:_view];
+    
+
+    
     [self.leftFaceView addObserver:self forKeyPath:@"fontHexValue" options:NSKeyValueObservingOptionNew context:nil];
     [self.rightFaceView  addObserver:self forKeyPath:@"fontHexValue" options:NSKeyValueObservingOptionNew context:nil];
 }
@@ -81,6 +108,7 @@
 
 - (void)drawRect:(CGRect)rect {
     
+ //   [self EditFaceViewInitFromXib];
 }
 
 -(IBAction)clearBtnClick:(id)sender{

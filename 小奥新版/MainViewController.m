@@ -10,6 +10,8 @@
 #import "MainView.h"
 #import "HeadView.h"
 #import "MainViewModel.h"
+#import "EditFaceViewController.h"
+#import "SetingViewController.h"
 
 @interface MainViewController ()
 
@@ -28,6 +30,14 @@
     MainView *mainView = [MainView MainView:self.view.frame];
     mainView.model = mainViewModel;
     [self.view addSubview:mainView];
+    
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        EditFaceViewController *edit = [[EditFaceViewController alloc]init];
+        [self presentViewController:edit animated:YES completion:nil];
+    });
+
+    
 //    HeadView *headV = [HeadView headView:CGRectMake(0, 0, 200, 200)];
 //    [self.view addSubview:headV];
 

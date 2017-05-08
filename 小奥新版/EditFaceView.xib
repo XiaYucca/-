@@ -11,9 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditFaceView">
             <connections>
-                <outlet property="content" destination="iN0-l3-epB" id="Ud9-bw-jYe"/>
-                <outlet property="leftFaceView" destination="UfB-QF-hdM" id="cCh-7y-EBb"/>
-                <outlet property="rightFaceView" destination="8fg-6h-6ag" id="Ckd-qN-HuI"/>
+                <outlet property="leftFaceView" destination="UfB-QF-hdM" id="qBU-YH-5N6"/>
+                <outlet property="rightFaceView" destination="8fg-6h-6ag" id="ob3-3H-lG7"/>
+                <outlet property="view" destination="iN0-l3-epB" id="qPn-Ag-hWc"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -33,7 +33,7 @@
                                         <constraint firstAttribute="height" constant="26" id="nGy-zu-J3J"/>
                                     </constraints>
                                 </imageView>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UfB-QF-hdM" customClass="FaceView">
+                                <view tag="1000" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UfB-QF-hdM" customClass="FaceView">
                                     <rect key="frame" x="0.0" y="35" width="220" height="213"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -50,6 +50,7 @@
                                     </state>
                                     <connections>
                                         <action selector="clearBtnClick:" destination="-1" eventType="touchUpInside" id="cYE-tH-rp1"/>
+                                        <action selector="clearBtnClick:" destination="-2" eventType="touchDragInside" id="vLJ-OB-doV"/>
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="左" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPd-Nl-eLI">
@@ -90,7 +91,7 @@
                                                 <constraint firstAttribute="height" constant="26" id="jIA-IK-9fw"/>
                                             </constraints>
                                         </imageView>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8fg-6h-6ag" customClass="FaceView">
+                                        <view tag="2000" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8fg-6h-6ag" customClass="FaceView">
                                             <rect key="frame" x="0.0" y="35" width="220" height="213"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>

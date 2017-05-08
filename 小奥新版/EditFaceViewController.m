@@ -18,8 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    EditFaceView *editV = [EditFaceView EditFaceViewWithFrame:self.view.frame];
-    [self.view addSubview:editV];
+//    EditFaceView *editV = [EditFaceView EditFaceViewWithFrame:self.view.frame];
+//    self.view = editV;
+//    self.view = [ed]
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,6 +28,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)loadView{
+    EditFaceView *view = [EditFaceView EditFaceViewWithFrame:[[UIScreen mainScreen] applicationFrame]];
+    self.view = view;
+}
 
 
 @end
