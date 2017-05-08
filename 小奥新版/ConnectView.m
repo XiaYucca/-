@@ -48,7 +48,7 @@ typedef enum : NSUInteger {
     
     shaperLayer.backgroundColor = [UIColor clearColor].CGColor;
     
-    UIGraphicsPopContext();
+    //UIGraphicsPopContext();
     
     float startAngle = -M_2_PI;
     float endAngle = M_2_PI;

@@ -113,7 +113,11 @@
 -(void)drawRect:(CGRect)rect
 {
     //所有的路劲都渲染一次
-    UIGraphicsPopContext();
+    CGContextRef context =  UIGraphicsGetCurrentContext();
+  
+    UIGraphicsPushContext(context);
+    
+
     for (int i = 0; i < self.path.count; i++) {
         HMBezierPath * path = self.path[i];
         
@@ -128,7 +132,7 @@
         
         [path stroke];
     }
-
+    UIGraphicsPopContext();
 }
 
 
@@ -139,7 +143,7 @@
     }
     [self clear];
     // 获取触摸对象
-    UIGraphicsPopContext();
+//    UIGraphicsPopContext();
     UITouch* t = touches.anyObject;
     
     // 获取当前手指的位置
