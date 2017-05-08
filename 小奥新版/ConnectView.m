@@ -48,6 +48,8 @@ typedef enum : NSUInteger {
     
     shaperLayer.backgroundColor = [UIColor clearColor].CGColor;
     
+    UIGraphicsPopContext();
+    
     float startAngle = -M_2_PI;
     float endAngle = M_2_PI;
     
@@ -130,8 +132,6 @@ typedef enum : NSUInteger {
 -(void)initFromNib{
     [[NSBundle mainBundle]loadNibNamed:@"ConnectView" owner:self options:nil];
     [self addSubview:self.view];
-    
-    
 }
 
 // Only override drawRect: if you perform custom drawing.

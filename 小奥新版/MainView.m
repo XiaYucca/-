@@ -89,11 +89,8 @@
 
 -(instancetype)initWithFrame:(CGRect)frame{
     NSLog(@"%s",__func__);
-
     self = [super initWithFrame:frame];
-    
     [self initFromNib];
-    
     return self;
 }
 
@@ -142,9 +139,6 @@
     NSLog(@"点击了 %ld",index);
 
 }
-
-
-
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {

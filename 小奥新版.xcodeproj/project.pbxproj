@@ -10,6 +10,8 @@
 		C14CE5F31EA88584007AE1AE /* ConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C14CE5F11EA88584007AE1AE /* ConnectViewController.m */; };
 		C14CE5F41EA88584007AE1AE /* ConnectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C14CE5F21EA88584007AE1AE /* ConnectView.xib */; };
 		C14CE5F71EA887CA007AE1AE /* ConnectView.m in Sources */ = {isa = PBXBuildFile; fileRef = C14CE5F61EA887CA007AE1AE /* ConnectView.m */; };
+		C18F59BC1EBC3E0E00D16CA7 /* SetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18F59BB1EBC3E0E00D16CA7 /* SetingViewController.m */; };
+		C18F59BF1EBC692900D16CA7 /* SetingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C18F59BE1EBC692900D16CA7 /* SetingViewModel.m */; };
 		C19228121EA5B62300B0166D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C19228111EA5B62300B0166D /* main.m */; };
 		C19228151EA5B62300B0166D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C19228141EA5B62300B0166D /* AppDelegate.m */; };
 		C19228181EA5B62300B0166D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C19228171EA5B62300B0166D /* MainViewController.m */; };
@@ -25,7 +27,28 @@
 		C19228571EA5FD6900B0166D /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = C19228561EA5FD6900B0166D /* iCarousel.m */; };
 		C192285A1EA617DF00B0166D /* NSMutableArray+Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = C19228591EA617DF00B0166D /* NSMutableArray+Queue.m */; };
 		C192285D1EA6188C00B0166D /* MainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C192285C1EA6188C00B0166D /* MainViewModel.m */; };
+		C19421ED1EBD604900220B8B /* FaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = C19421E81EBD604900220B8B /* FaceView.m */; };
+		C19421EE1EBD604900220B8B /* LittleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C19421EA1EBD604900220B8B /* LittleItem.m */; };
+		C19421F21EBD617F00220B8B /* EditFaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = C19421F11EBD617F00220B8B /* EditFaceView.m */; };
+		C19421F41EBD61B200220B8B /* EditFaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19421F31EBD61B200220B8B /* EditFaceView.xib */; };
+		C19421F71EBD699100220B8B /* EditFaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C19421F61EBD699100220B8B /* EditFaceViewController.m */; };
+		C19421FA1EBD7B4B00220B8B /* EditFaceViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C19421F91EBD7B4B00220B8B /* EditFaceViewModel.m */; };
+		C19421FD1EBDA69600220B8B /* DrawingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19421FC1EBDA69600220B8B /* DrawingView.xib */; };
+		C19422001EBDA73800220B8B /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C19421FF1EBDA73800220B8B /* DrawingView.m */; };
+		C19422091EBDBF8300220B8B /* XYDirectionCalculate.c in Sources */ = {isa = PBXBuildFile; fileRef = C19422011EBDBF8300220B8B /* XYDirectionCalculate.c */; };
+		C194220A1EBDBF8300220B8B /* CanvasLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C19422041EBDBF8300220B8B /* CanvasLayer.m */; };
+		C194220B1EBDBF8300220B8B /* HMView.m in Sources */ = {isa = PBXBuildFile; fileRef = C19422061EBDBF8300220B8B /* HMView.m */; };
+		C194220C1EBDBF8300220B8B /* HMBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = C19422081EBDBF8300220B8B /* HMBezierPath.m */; };
+		C19422101EBDC14F00220B8B /* DrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C194220F1EBDC14F00220B8B /* DrawingViewController.m */; };
 		C19849031EAF1B43006F3625 /* MessageRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = C19849021EAF1B43006F3625 /* MessageRoute.m */; };
+		C19B14AE1EBB285B00CB9B86 /* SetingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19B14AD1EBB285B00CB9B86 /* SetingView.xib */; };
+		C1A409811EB9821300874B8F /* MModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A4097E1EB9821300874B8F /* MModel.m */; };
+		C1A409821EB9821300874B8F /* MModel+test.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A409801EB9821300874B8F /* MModel+test.m */; };
+		C1A409861EB9828C00874B8F /* HYXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A409841EB9828C00874B8F /* HYXMLParser.m */; };
+		C1A409891EB987F500874B8F /* NSNull+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A409881EB987F500874B8F /* NSNull+Safe.m */; };
+		C1A4098C1EB9A6C000874B8F /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A4098B1EB9A6C000874B8F /* Route.m */; };
+		C1A409901EB9C03000874B8F /* NSArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A4098F1EB9C03000874B8F /* NSArray+Safe.m */; };
+		C1A409941EB9C41500874B8F /* SetingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A409931EB9C41500874B8F /* SetingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +74,11 @@
 		C14CE5F21EA88584007AE1AE /* ConnectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectView.xib; sourceTree = "<group>"; };
 		C14CE5F51EA887CA007AE1AE /* ConnectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectView.h; sourceTree = "<group>"; };
 		C14CE5F61EA887CA007AE1AE /* ConnectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectView.m; sourceTree = "<group>"; };
+		C18F59BA1EBC3E0E00D16CA7 /* SetingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetingViewController.h; sourceTree = "<group>"; };
+		C18F59BB1EBC3E0E00D16CA7 /* SetingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetingViewController.m; sourceTree = "<group>"; };
+		C18F59BD1EBC692900D16CA7 /* SetingViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetingViewModel.h; sourceTree = "<group>"; };
+		C18F59BE1EBC692900D16CA7 /* SetingViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetingViewModel.m; sourceTree = "<group>"; };
+		C18F59C01EBC7C2D00D16CA7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C192280D1EA5B62300B0166D /* 小奥新版.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "小奥新版.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C19228111EA5B62300B0166D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C19228131EA5B62300B0166D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -79,8 +107,48 @@
 		C19228591EA617DF00B0166D /* NSMutableArray+Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Queue.m"; sourceTree = "<group>"; };
 		C192285B1EA6188C00B0166D /* MainViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewModel.h; sourceTree = "<group>"; };
 		C192285C1EA6188C00B0166D /* MainViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewModel.m; sourceTree = "<group>"; };
+		C19421E71EBD604900220B8B /* FaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceView.h; sourceTree = "<group>"; };
+		C19421E81EBD604900220B8B /* FaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceView.m; sourceTree = "<group>"; };
+		C19421E91EBD604900220B8B /* LittleItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LittleItem.h; sourceTree = "<group>"; };
+		C19421EA1EBD604900220B8B /* LittleItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LittleItem.m; sourceTree = "<group>"; };
+		C19421F01EBD617F00220B8B /* EditFaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditFaceView.h; sourceTree = "<group>"; };
+		C19421F11EBD617F00220B8B /* EditFaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditFaceView.m; sourceTree = "<group>"; };
+		C19421F31EBD61B200220B8B /* EditFaceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditFaceView.xib; sourceTree = "<group>"; };
+		C19421F51EBD699100220B8B /* EditFaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditFaceViewController.h; sourceTree = "<group>"; };
+		C19421F61EBD699100220B8B /* EditFaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditFaceViewController.m; sourceTree = "<group>"; };
+		C19421F81EBD7B4B00220B8B /* EditFaceViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditFaceViewModel.h; sourceTree = "<group>"; };
+		C19421F91EBD7B4B00220B8B /* EditFaceViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditFaceViewModel.m; sourceTree = "<group>"; };
+		C19421FC1EBDA69600220B8B /* DrawingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrawingView.xib; sourceTree = "<group>"; };
+		C19421FE1EBDA73800220B8B /* DrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingView.h; sourceTree = "<group>"; };
+		C19421FF1EBDA73800220B8B /* DrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingView.m; sourceTree = "<group>"; };
+		C19422011EBDBF8300220B8B /* XYDirectionCalculate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = XYDirectionCalculate.c; sourceTree = "<group>"; };
+		C19422021EBDBF8300220B8B /* XYDirectionCalculate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYDirectionCalculate.h; sourceTree = "<group>"; };
+		C19422031EBDBF8300220B8B /* CanvasLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasLayer.h; sourceTree = "<group>"; };
+		C19422041EBDBF8300220B8B /* CanvasLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasLayer.m; sourceTree = "<group>"; };
+		C19422051EBDBF8300220B8B /* HMView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMView.h; sourceTree = "<group>"; };
+		C19422061EBDBF8300220B8B /* HMView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMView.m; sourceTree = "<group>"; };
+		C19422071EBDBF8300220B8B /* HMBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMBezierPath.h; sourceTree = "<group>"; };
+		C19422081EBDBF8300220B8B /* HMBezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMBezierPath.m; sourceTree = "<group>"; };
+		C194220E1EBDC14F00220B8B /* DrawingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingViewController.h; sourceTree = "<group>"; };
+		C194220F1EBDC14F00220B8B /* DrawingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingViewController.m; sourceTree = "<group>"; };
 		C19849011EAF1B42006F3625 /* MessageRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageRoute.h; sourceTree = "<group>"; };
 		C19849021EAF1B43006F3625 /* MessageRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageRoute.m; sourceTree = "<group>"; };
+		C19B14AD1EBB285B00CB9B86 /* SetingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetingView.xib; sourceTree = "<group>"; };
+		C1A4097D1EB9821300874B8F /* MModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MModel.h; sourceTree = "<group>"; };
+		C1A4097E1EB9821300874B8F /* MModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MModel.m; sourceTree = "<group>"; };
+		C1A4097F1EB9821300874B8F /* MModel+test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MModel+test.h"; sourceTree = "<group>"; };
+		C1A409801EB9821300874B8F /* MModel+test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MModel+test.m"; sourceTree = "<group>"; };
+		C1A409831EB9828C00874B8F /* HYXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYXMLParser.h; sourceTree = "<group>"; };
+		C1A409841EB9828C00874B8F /* HYXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYXMLParser.m; sourceTree = "<group>"; };
+		C1A409851EB9828C00874B8F /* HYXMLParserProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYXMLParserProtocol.h; sourceTree = "<group>"; };
+		C1A409871EB987F500874B8F /* NSNull+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull+Safe.h"; sourceTree = "<group>"; };
+		C1A409881EB987F500874B8F /* NSNull+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNull+Safe.m"; sourceTree = "<group>"; };
+		C1A4098A1EB9A6C000874B8F /* Route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Route.h; sourceTree = "<group>"; };
+		C1A4098B1EB9A6C000874B8F /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Route.m; sourceTree = "<group>"; };
+		C1A4098E1EB9C03000874B8F /* NSArray+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Safe.h"; sourceTree = "<group>"; };
+		C1A4098F1EB9C03000874B8F /* NSArray+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Safe.m"; sourceTree = "<group>"; };
+		C1A409921EB9C41500874B8F /* SetingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetingView.h; sourceTree = "<group>"; };
+		C1A409931EB9C41500874B8F /* SetingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,10 +217,11 @@
 			isa = PBXGroup;
 			children = (
 				C19228431EA5C2BF00B0166D /* views */,
-				C19228461EA5C36D00B0166D /* others */,
-				C19228471EA5C39600B0166D /* models */,
-				C192B4251EA6F74800DE32FD /* MyLib */,
 				C19228451EA5C35800B0166D /* controllers */,
+				C19228471EA5C39600B0166D /* models */,
+				C1A4098D1EB9BFF300874B8F /* category */,
+				C19228461EA5C36D00B0166D /* others */,
+				C192B4251EA6F74800DE32FD /* MyLib */,
 				C19228101EA5B62300B0166D /* Supporting Files */,
 			);
 			path = "小奥新版";
@@ -188,10 +257,15 @@
 		C19228431EA5C2BF00B0166D /* views */ = {
 			isa = PBXGroup;
 			children = (
+				C19421FB1EBD982600220B8B /* 手绘 */,
+				C19421E61EBD602300220B8B /* 自定义表情 */,
+				C1A409911EB9C3D500874B8F /* 设置 */,
 				C186E9C71EAAF5EC00951E7B /* 跳舞 */,
 				C14CE5EF1EA884ED007AE1AE /* 提示连接 */,
 				C19228441EA5C2E600B0166D /* 首页 */,
 				C19228191EA5B62300B0166D /* Main.storyboard */,
+				C1A4098A1EB9A6C000874B8F /* Route.h */,
+				C1A4098B1EB9A6C000874B8F /* Route.m */,
 				C19849011EAF1B42006F3625 /* MessageRoute.h */,
 				C19849021EAF1B43006F3625 /* MessageRoute.m */,
 				C192281E1EA5B62300B0166D /* LaunchScreen.storyboard */,
@@ -221,6 +295,12 @@
 				C14CE5F11EA88584007AE1AE /* ConnectViewController.m */,
 				C19228161EA5B62300B0166D /* MainViewController.h */,
 				C19228171EA5B62300B0166D /* MainViewController.m */,
+				C18F59BA1EBC3E0E00D16CA7 /* SetingViewController.h */,
+				C18F59BB1EBC3E0E00D16CA7 /* SetingViewController.m */,
+				C19421F51EBD699100220B8B /* EditFaceViewController.h */,
+				C19421F61EBD699100220B8B /* EditFaceViewController.m */,
+				C194220E1EBDC14F00220B8B /* DrawingViewController.h */,
+				C194220F1EBDC14F00220B8B /* DrawingViewController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -231,6 +311,7 @@
 				C19228131EA5B62300B0166D /* AppDelegate.h */,
 				C19228141EA5B62300B0166D /* AppDelegate.m */,
 				C19228211EA5B62300B0166D /* Info.plist */,
+				C18F59C01EBC7C2D00D16CA7 /* PrefixHeader.pch */,
 			);
 			name = others;
 			sourceTree = "<group>";
@@ -238,6 +319,19 @@
 		C19228471EA5C39600B0166D /* models */ = {
 			isa = PBXGroup;
 			children = (
+				C19421F81EBD7B4B00220B8B /* EditFaceViewModel.h */,
+				C19421F91EBD7B4B00220B8B /* EditFaceViewModel.m */,
+				C18F59BD1EBC692900D16CA7 /* SetingViewModel.h */,
+				C18F59BE1EBC692900D16CA7 /* SetingViewModel.m */,
+				C1A409871EB987F500874B8F /* NSNull+Safe.h */,
+				C1A409881EB987F500874B8F /* NSNull+Safe.m */,
+				C1A409831EB9828C00874B8F /* HYXMLParser.h */,
+				C1A409841EB9828C00874B8F /* HYXMLParser.m */,
+				C1A409851EB9828C00874B8F /* HYXMLParserProtocol.h */,
+				C1A4097D1EB9821300874B8F /* MModel.h */,
+				C1A4097E1EB9821300874B8F /* MModel.m */,
+				C1A4097F1EB9821300874B8F /* MModel+test.h */,
+				C1A409801EB9821300874B8F /* MModel+test.m */,
 				C192285B1EA6188C00B0166D /* MainViewModel.h */,
 				C192285C1EA6188C00B0166D /* MainViewModel.m */,
 			);
@@ -251,6 +345,65 @@
 				C19228591EA617DF00B0166D /* NSMutableArray+Queue.m */,
 			);
 			name = MyLib;
+			sourceTree = "<group>";
+		};
+		C19421E61EBD602300220B8B /* 自定义表情 */ = {
+			isa = PBXGroup;
+			children = (
+				C19421E71EBD604900220B8B /* FaceView.h */,
+				C19421E81EBD604900220B8B /* FaceView.m */,
+				C19421E91EBD604900220B8B /* LittleItem.h */,
+				C19421EA1EBD604900220B8B /* LittleItem.m */,
+				C19421F01EBD617F00220B8B /* EditFaceView.h */,
+				C19421F11EBD617F00220B8B /* EditFaceView.m */,
+				C19421F31EBD61B200220B8B /* EditFaceView.xib */,
+			);
+			name = "自定义表情";
+			sourceTree = "<group>";
+		};
+		C19421FB1EBD982600220B8B /* 手绘 */ = {
+			isa = PBXGroup;
+			children = (
+				C194220D1EBDBF8C00220B8B /* HMView */,
+				C19421FC1EBDA69600220B8B /* DrawingView.xib */,
+				C19421FE1EBDA73800220B8B /* DrawingView.h */,
+				C19421FF1EBDA73800220B8B /* DrawingView.m */,
+			);
+			name = "手绘";
+			sourceTree = "<group>";
+		};
+		C194220D1EBDBF8C00220B8B /* HMView */ = {
+			isa = PBXGroup;
+			children = (
+				C19422011EBDBF8300220B8B /* XYDirectionCalculate.c */,
+				C19422021EBDBF8300220B8B /* XYDirectionCalculate.h */,
+				C19422031EBDBF8300220B8B /* CanvasLayer.h */,
+				C19422041EBDBF8300220B8B /* CanvasLayer.m */,
+				C19422051EBDBF8300220B8B /* HMView.h */,
+				C19422061EBDBF8300220B8B /* HMView.m */,
+				C19422071EBDBF8300220B8B /* HMBezierPath.h */,
+				C19422081EBDBF8300220B8B /* HMBezierPath.m */,
+			);
+			name = HMView;
+			sourceTree = "<group>";
+		};
+		C1A4098D1EB9BFF300874B8F /* category */ = {
+			isa = PBXGroup;
+			children = (
+				C1A4098E1EB9C03000874B8F /* NSArray+Safe.h */,
+				C1A4098F1EB9C03000874B8F /* NSArray+Safe.m */,
+			);
+			name = category;
+			sourceTree = "<group>";
+		};
+		C1A409911EB9C3D500874B8F /* 设置 */ = {
+			isa = PBXGroup;
+			children = (
+				C1A409921EB9C41500874B8F /* SetingView.h */,
+				C1A409931EB9C41500874B8F /* SetingView.m */,
+				C19B14AD1EBB285B00CB9B86 /* SetingView.xib */,
+			);
+			name = "设置";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,9 +516,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C19228201EA5B62300B0166D /* LaunchScreen.storyboard in Resources */,
+				C19421F41EBD61B200220B8B /* EditFaceView.xib in Resources */,
+				C19B14AE1EBB285B00CB9B86 /* SetingView.xib in Resources */,
 				C19228491EA5C3E500B0166D /* MainView.xib in Resources */,
 				C192284B1EA5C4D000B0166D /* HeadView.xib in Resources */,
 				C14CE5F41EA88584007AE1AE /* ConnectView.xib in Resources */,
+				C19421FD1EBDA69600220B8B /* DrawingView.xib in Resources */,
 				C192281D1EA5B62300B0166D /* Assets.xcassets in Resources */,
 				C192281B1EA5B62300B0166D /* Main.storyboard in Resources */,
 			);
@@ -392,17 +548,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1A409821EB9821300874B8F /* MModel+test.m in Sources */,
+				C1A4098C1EB9A6C000874B8F /* Route.m in Sources */,
+				C18F59BF1EBC692900D16CA7 /* SetingViewModel.m in Sources */,
+				C19422001EBDA73800220B8B /* DrawingView.m in Sources */,
 				C19228181EA5B62300B0166D /* MainViewController.m in Sources */,
+				C19421F21EBD617F00220B8B /* EditFaceView.m in Sources */,
+				C1A409811EB9821300874B8F /* MModel.m in Sources */,
 				C192285A1EA617DF00B0166D /* NSMutableArray+Queue.m in Sources */,
+				C19422101EBDC14F00220B8B /* DrawingViewController.m in Sources */,
+				C19422091EBDBF8300220B8B /* XYDirectionCalculate.c in Sources */,
+				C1A409891EB987F500874B8F /* NSNull+Safe.m in Sources */,
 				C19228541EA5EA9400B0166D /* HeadView.m in Sources */,
+				C1A409861EB9828C00874B8F /* HYXMLParser.m in Sources */,
+				C1A409941EB9C41500874B8F /* SetingView.m in Sources */,
+				C18F59BC1EBC3E0E00D16CA7 /* SetingViewController.m in Sources */,
 				C14CE5F71EA887CA007AE1AE /* ConnectView.m in Sources */,
+				C19421EE1EBD604900220B8B /* LittleItem.m in Sources */,
 				C192285D1EA6188C00B0166D /* MainViewModel.m in Sources */,
 				C14CE5F31EA88584007AE1AE /* ConnectViewController.m in Sources */,
 				C19228511EA5C54200B0166D /* MainView.m in Sources */,
+				C19421FA1EBD7B4B00220B8B /* EditFaceViewModel.m in Sources */,
 				C19849031EAF1B43006F3625 /* MessageRoute.m in Sources */,
+				C194220A1EBDBF8300220B8B /* CanvasLayer.m in Sources */,
+				C194220C1EBDBF8300220B8B /* HMBezierPath.m in Sources */,
+				C1A409901EB9C03000874B8F /* NSArray+Safe.m in Sources */,
 				C19228571EA5FD6900B0166D /* iCarousel.m in Sources */,
+				C194220B1EBDBF8300220B8B /* HMView.m in Sources */,
+				C19421ED1EBD604900220B8B /* FaceView.m in Sources */,
 				C19228151EA5B62300B0166D /* AppDelegate.m in Sources */,
 				C19228121EA5B62300B0166D /* main.m in Sources */,
+				C19421F71EBD699100220B8B /* EditFaceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,6 +727,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7QBZV3YGDE;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				GCC_PREFIX_HEADER = "小奥新版/PrefixHeader.pch";
 				INFOPLIST_FILE = "小奥新版/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alsrobort.www.----";
@@ -564,6 +741,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7QBZV3YGDE;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
+				GCC_PREFIX_HEADER = "小奥新版/PrefixHeader.pch";
 				INFOPLIST_FILE = "小奥新版/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alsrobort.www.----";

@@ -12,7 +12,7 @@
 
 
 //#define WS(weakSelf)  __weak __typeof(self)weakSelf = self
-#define WeakObj(o) __weak typeof(o) weak##o = o
+//#define WeakObj(o) __weak typeof(o) weak##o = o
 
 @interface XYObject : NSObject
 @property (nonatomic ,copy)NSString *className;
@@ -77,7 +77,6 @@ static typeof(MessageRoute) *_static_route;
     self.evalCallBack = callBack;
     [self methTest:[str mutableCopy]];
     [self enumCode];
-    
 }
 //int Check_Msg()
 
@@ -89,8 +88,7 @@ static typeof(MessageRoute) *_static_route;
 }
 
 -(void)methTest:( NSMutableString *)str{
-    //  \\[[\\s,a-z,A-Z]*\\]
-    //  [a-z,A-Z,0-9,_]*:
+    //  \\[[\\w,\\s,:]+\\]
     //  \[(\s*\w*)
     // \\w+
     WeakObj(self);
@@ -176,9 +174,7 @@ static typeof(MessageRoute) *_static_route;
     NSLog(@"classMethod :%@",classMethod);
     NSLog(@"classMethodParm%@",classMethodParm);
 
-    
-    
-    /*
+/*
     NSTextCheckingResult *result = [self metchString:searchText reg:@"\\[[\\s,a-z,A-Z]*\\]"];
     if (result) {
         //匹配到的最里面的 [xxxx xxxx]
@@ -197,7 +193,6 @@ static typeof(MessageRoute) *_static_route;
             NSMutableString *classStr = [[contentStr substringWithRange:methodR.range]mutableCopy];
             NSLog(@"method %@",classStr);
         }
-        
         // 去掉 [xxxx xxxx]之后
         NSMutableString *searchMutableStr = [searchText mutableCopy];
         [searchMutableStr replaceCharactersInRange:result.range withString:@""];
@@ -239,8 +234,6 @@ static typeof(MessageRoute) *_static_route;
     return arr;
 }
 
-
-
 -(void)enumCode{
     NSMutableArray *itemList = [@[]mutableCopy];
     [self.objArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -268,7 +261,6 @@ static typeof(MessageRoute) *_static_route;
             
                printf("\n\n %s----%s\n\n",dc,di);
                bool hasReturn = NO;
-            
             RETURNSTRUCT returnType ;
             
             if (strcmp(dc,"@")==0|| strcmp(di,"@")==0) {
@@ -360,7 +352,6 @@ static typeof(MessageRoute) *_static_route;
 
                 }else{
                    objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0],parm[1],parm[2],parm[3],parm[4]);
-
                 }
             }
             if (x) {
@@ -379,9 +370,7 @@ static typeof(MessageRoute) *_static_route;
         self.evalCallBack(itemList.lastObject);
     }
     [self.objArr removeAllObjects];
-    
 }
-
 /*
 void processReturnType(RETURNSTRUCT *r,id c,XYObject *xyObj,void (^callBack)()){
     if(callBack) callBack();
@@ -404,7 +393,6 @@ void processReturnType(RETURNSTRUCT *r,id c,XYObject *xyObj,void (^callBack)()){
 
             if ((*r).RETURN_TYPE_OBJ) {
                 id x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]));
-                
             }
             if ((*r).RETURN_TYPE_VOID) {
                  objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]));
@@ -435,8 +423,6 @@ void processReturnType(RETURNSTRUCT *r,id c,XYObject *xyObj,void (^callBack)()){
             }
             x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]));
             // block(r,c,xyObj,parm);
-            
-            
         }
         if (count == 1) {
             x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0]);
@@ -457,9 +443,7 @@ void processReturnType(RETURNSTRUCT *r,id c,XYObject *xyObj,void (^callBack)()){
         if (count == 5) {
             x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0],parm[1],parm[2],parm[3],parm[4]);
         }
-        
         {
-            
             if ((*r).RETURN_TYPE_OBJ) {
                 //  x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]));
                 
@@ -498,8 +482,6 @@ void processReturnType(RETURNSTRUCT *r,id c,XYObject *xyObj,void (^callBack)()){
     if (count == 0) {
         x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]));
        // block(r,c,xyObj,parm);
-        
-        
     }
     if (count == 1) {
         x = objc_msgSend(c, sel_registerName([xyObj.classMethod UTF8String]),parm[0]);
@@ -602,14 +584,12 @@ void processReturnType(RETURNSTRUCT *r,id c,XYObject *xyObj,void (^callBack)()){
         }
     }
     
-    
     {
         char t[100] = {0};
         Method m = class_getInstanceMethod([self class], sel_registerName("hello:"));
         method_getArgumentType(m, 0, t, 100);
         NSLog(@"argumentType %@", [NSString stringWithUTF8String:t]);
     }
-    
     //    //获取方法
     //    {
     //        Class PersonClass = object_getClass([Person class]);
@@ -624,9 +604,23 @@ void processReturnType(RETURNSTRUCT *r,id c,XYObject *xyObj,void (^callBack)()){
     //     }
     // objc_msgSend(self, sel_registerName("methTest"));
     // [self methTest:[@"[[UIView alloc:zone parm1:parm :parm2 parm3:parm3]initWith:frame :test] " mutableCopy]];
-//     [self methTest:[@"[[UIView alloc] init] " mutableCopy]];
+    // [self methTest:[@"[[UIView alloc] init] " mutableCopy]];
 //     [self enumCode];
     // [_ClassInstace_0  initWithFram:frame item:ite]
+}
+
+
+
+void startEngine(id self, SEL _cmd, NSString *brand) {
+    NSLog(@"my %@ car starts the engine", brand);
+}
+
++ (BOOL)resolveInstanceMethod:(SEL)sel {
+    if (sel == @selector(drive)) {
+        class_addMethod([self class], sel, (IMP)startEngine, "v@:@");
+        return YES;
+    }
+    return [super resolveInstanceMethod:sel];
 }
 
 @end
