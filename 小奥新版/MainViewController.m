@@ -40,7 +40,6 @@
     
 //    HeadView *headV = [HeadView headView:CGRectMake(0, 0, 200, 200)];
 //    [self.view addSubview:headV];
-
 }
 
 

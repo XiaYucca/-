@@ -71,7 +71,7 @@
                         <viewControllerLayoutGuide type="top" id="fUW-cl-lxz"/>
                         <viewControllerLayoutGuide type="bottom" id="UkZ-Jd-AXB"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ez3-wC-KfO">
+                    <view key="view" contentMode="scaleToFill" id="Ez3-wC-KfO" customClass="EditFaceView">
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

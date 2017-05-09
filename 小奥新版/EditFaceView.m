@@ -76,9 +76,6 @@
 -(void)EditFaceViewInitFromXib{
     [[NSBundle mainBundle]loadNibNamed:@"EditFaceView" owner:self options:nil];
     [self addSubview:_view];
-    
-
-    
     [self.leftFaceView addObserver:self forKeyPath:@"fontHexValue" options:NSKeyValueObservingOptionNew context:nil];
     [self.rightFaceView  addObserver:self forKeyPath:@"fontHexValue" options:NSKeyValueObservingOptionNew context:nil];
 }
@@ -101,6 +98,8 @@
     return [[self alloc]initWithFrame:frame];
 }
 
+
+//这个从xib加载后调用的(storyboard 直接关联类加载视图时候调用的)
 -(void)awakeFromNib{
     [self EditFaceViewInitFromXib];
 }
@@ -125,6 +124,7 @@
     [self.leftFaceView removeObserver:self forKeyPath:@"fontHexValue"];
     [self.rightFaceView removeObserver:self forKeyPath:@"fontHexValue"];
     [self removeFromSuperview];
+    
     !self.model.close ?:self.model.close();
 }
 

@@ -29,7 +29,7 @@
 }
 
 -(void)loadView{
-    EditFaceView *view = [EditFaceView EditFaceViewWithFrame:[[UIScreen mainScreen] applicationFrame]];
+    EditFaceView *view = [EditFaceView EditFaceViewWithFrame:[UIScreen mainScreen].bounds];
     self.view = view;
 }
 
