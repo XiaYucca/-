@@ -8,7 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+@class DrawingViewModel;
 
 @interface DrawingView : UIView
+@property(nonatomic ,strong)DrawingViewModel *model;
+
+@property(nonatomic ,copy)void(^dismiss)(void);
+
+-(void)dismissDrawingView:(void(^)(void))callback;
 
 @end

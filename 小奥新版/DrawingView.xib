@@ -31,6 +31,9 @@
                                 <constraint firstAttribute="height" constant="28" id="sFH-Y0-75v"/>
                             </constraints>
                             <state key="normal" backgroundImage="Arrow-icon-blue"/>
+                            <connections>
+                                <action selector="close:" destination="-1" eventType="touchUpInside" id="Zxr-Pg-3gY"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPU-Fo-odC">
                             <rect key="frame" x="678" y="11" width="28" height="28"/>

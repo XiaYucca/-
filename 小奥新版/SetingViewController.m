@@ -24,6 +24,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+//-(void)loadView{
+//    
+//}
 /*
 #pragma mark - Navigation
 

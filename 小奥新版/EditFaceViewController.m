@@ -8,6 +8,7 @@
 
 #import "EditFaceViewController.h"
 #import "EditFaceView.h"
+#import "EditFaceViewModel.h"
 
 @interface EditFaceViewController ()
 
@@ -17,10 +18,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-//    EditFaceView *editV = [EditFaceView EditFaceViewWithFrame:self.view.frame];
-//    self.view = editV;
-//    self.view = [ed]
+    EditFaceViewModel *model = [[EditFaceViewModel alloc]init];
+    [model closeClick:^{
+        [[Route share]GoBackFromController:self];
+    }];
+    
+    ((EditFaceView *)self.view).model = model;
 }
 
 - (void)didReceiveMemoryWarning {

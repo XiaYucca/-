@@ -71,8 +71,6 @@
     return self;
 }
 
-
-
 -(void)EditFaceViewInitFromXib{
     [[NSBundle mainBundle]loadNibNamed:@"EditFaceView" owner:self options:nil];
     [self addSubview:_view];

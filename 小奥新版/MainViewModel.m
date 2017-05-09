@@ -19,5 +19,16 @@
 }
 
 
+-(NSArray *)jumpPageListArr{
+    if (!_pageListArr) {
+        _pageListArr = @[];
+    }
+    return _pageListArr;
+}
+
+-(void)didSeletItem:(void (^)(UIView *view, NSInteger index))callback{
+    _didSeletItemCallback = callback;
+}
+
 
 @end

@@ -32,10 +32,18 @@
 }
 
 -(NSArray *)pageList{
+   // _pageList = [_model.pageListArr mutableCopy];
     if (!_pageList) {
         _pageList = [@[]mutableCopy];
     }
     return _pageList;
+}
+
+-(void (^)(UIView *, NSInteger))didSeletItemCallback{
+    if (!_didSeletItemCallback) {
+        _didSeletItemCallback = [_model.didSeletItemCallback copy];
+    }
+    return _didSeletItemCallback;
 }
 
 
@@ -136,8 +144,9 @@
 
 -(void)carousel:(iCarousel *)carousel didSelectItemAtIndex:(NSInteger)index
 {
+    WeakObj(carousel);
     NSLog(@"点击了 %ld",index);
-
+    !self.didSeletItemCallback ? :_didSeletItemCallback(weakcarousel,index);
 }
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

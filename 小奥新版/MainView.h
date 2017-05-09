@@ -14,5 +14,7 @@
 @property (nonatomic ,strong)MainViewModel *model;
 +(instancetype)MainView:(CGRect)frame;
 
+@property (nonatomic ,copy)void (^didSeletItemCallback)(UIView *view,NSInteger index);
+
 
 @end

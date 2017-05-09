@@ -7,6 +7,8 @@
 //
 
 #import "DrawingViewController.h"
+#import "DrawingView.h"
+#import "DrawingViewModel.h"
 
 @interface DrawingViewController ()
 
@@ -16,13 +18,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    WeakObj(self);
+    DrawingViewModel *drawingModel = [[DrawingViewModel alloc]init];
+    [drawingModel didDissmissDrawingView:^(UIView *view) {
+        NSLog(@"%s",__func__);
+//  下面这样写也会引用循环
+     //  [[Route share]GoBackFromController:self];
+#warning //注意 : self ->view -> model ->block ->self 引用循环;
+       //  [self dismissViewControllerAnimated:YES completion:nil];
+       //正确写法
+        [[Route share]GoBackFromController:weakself]; // or  [weakself dismissViewControllerAnimated:YES completion:nil];
+    }];
+    ((DrawingView *)self.view).model = drawingModel;
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [self dismissViewControllerAnimated:YES completion:nil];
+//    });
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+-(void)loadView{
+    DrawingView *drawV = [[DrawingView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    self.view =drawV;
+}
+
 
 /*
 #pragma mark - Navigation
