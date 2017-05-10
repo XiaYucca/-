@@ -19,6 +19,7 @@ typedef enum : NSUInteger {
 #define maxRadius 200
 
 @interface BlueAnimattionView : UIView
+
 @end
 
 @implementation BlueAnimattionView
@@ -26,17 +27,19 @@ typedef enum : NSUInteger {
 -(void)drawRect:(CGRect)rect{
     NSLog(@"%@",self);
     __weak typeof(self) weakself = self;
-    NSTimer *time = [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
+    [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
         static int count = 0;
         NSLog(@"time +++");
         if (count++ >= 5) {
             [timer invalidate];
             NSLog(@"time over");
+            count =0;
         }else{
             [weakself addWave:LEFT];
             [weakself addWave:RIGHT];
         }
     }];
+    
 }
 
 -(void)addWave:(WAVEDERECT)derect{
@@ -121,6 +124,7 @@ typedef enum : NSUInteger {
 @property(nonatomic ,weak)IBOutlet BlueAnimattionView *blueAnimationView;
 @end
 
+
 @implementation ConnectView
 
 
@@ -133,6 +137,46 @@ typedef enum : NSUInteger {
     [[NSBundle mainBundle]loadNibNamed:@"ConnectView" owner:self options:nil];
     [self addSubview:self.view];
 }
+
+-(instancetype)initWithFrame:(CGRect)frame{
+    if (self = [super initWithFrame:frame]) {
+        [self initFromNib];
+    }
+    return self;
+}
+
++(void)showOnWindow:(void (^)(void))complient{
+    
+    ConnectView *temp = [[self alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    //动画
+    UIWindow* window = [UIApplication sharedApplication].keyWindow;
+    if (!window) {
+        window = [[UIApplication sharedApplication].windows objectAtIndex:0];
+    }
+//    [window addSubview:temp];
+    [window insertSubview:temp atIndex:window.subviews.count];
+    [window bringSubviewToFront:temp];
+//     [temp initFromNib];
+    !complient ? :complient();
+}
+
++(void)dissmissOnWindow:(void (^)(bool))complient{
+    bool isFound = NO;
+    UIWindow* window = [UIApplication sharedApplication].keyWindow;
+    if (!window) {
+        window = [[UIApplication sharedApplication].windows objectAtIndex:0];
+    }
+    for (id temp in [window subviews]) {
+        if ([temp isKindOfClass:NSClassFromString(@"ConnectView") ]) {
+            NSLog(@"find ConnectView will remove from window%@",temp);
+            [((ConnectView *)temp) removeFromSuperview];
+            isFound = YES;
+        }
+    }
+    !complient? : complient(isFound);
+}
+
+
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

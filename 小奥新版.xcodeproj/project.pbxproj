@@ -13,6 +13,8 @@
 		C14CE5F71EA887CA007AE1AE /* ConnectView.m in Sources */ = {isa = PBXBuildFile; fileRef = C14CE5F61EA887CA007AE1AE /* ConnectView.m */; };
 		C18DCF771EC2B15C003AD61B /* ExpressionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18DCF761EC2B15C003AD61B /* ExpressionViewController.m */; };
 		C18DCF7A1EC2B7E2003AD61B /* ExpressionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C18DCF791EC2B7E2003AD61B /* ExpressionViewModel.m */; };
+		C18DCF7D1EC3148A003AD61B /* VoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18DCF7C1EC3148A003AD61B /* VoiceView.xib */; };
+		C18DCF801EC31842003AD61B /* HuntingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18DCF7F1EC31842003AD61B /* HuntingView.xib */; };
 		C18F59BC1EBC3E0E00D16CA7 /* SetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18F59BB1EBC3E0E00D16CA7 /* SetingViewController.m */; };
 		C18F59BF1EBC692900D16CA7 /* SetingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C18F59BE1EBC692900D16CA7 /* SetingViewModel.m */; };
 		C19228121EA5B62300B0166D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C19228111EA5B62300B0166D /* main.m */; };
@@ -85,6 +87,8 @@
 		C18DCF761EC2B15C003AD61B /* ExpressionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpressionViewController.m; sourceTree = "<group>"; };
 		C18DCF781EC2B7E2003AD61B /* ExpressionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpressionViewModel.h; sourceTree = "<group>"; };
 		C18DCF791EC2B7E2003AD61B /* ExpressionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpressionViewModel.m; sourceTree = "<group>"; };
+		C18DCF7C1EC3148A003AD61B /* VoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoiceView.xib; sourceTree = "<group>"; };
+		C18DCF7F1EC31842003AD61B /* HuntingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HuntingView.xib; sourceTree = "<group>"; };
 		C18F59BA1EBC3E0E00D16CA7 /* SetingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetingViewController.h; sourceTree = "<group>"; };
 		C18F59BB1EBC3E0E00D16CA7 /* SetingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetingViewController.m; sourceTree = "<group>"; };
 		C18F59BD1EBC692900D16CA7 /* SetingViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetingViewModel.h; sourceTree = "<group>"; };
@@ -221,6 +225,22 @@
 			name = "跳舞";
 			sourceTree = "<group>";
 		};
+		C18DCF7B1EC31469003AD61B /* 语音 */ = {
+			isa = PBXGroup;
+			children = (
+				C18DCF7C1EC3148A003AD61B /* VoiceView.xib */,
+			);
+			name = "语音";
+			sourceTree = "<group>";
+		};
+		C18DCF7E1EC317BB003AD61B /* 寻线 */ = {
+			isa = PBXGroup;
+			children = (
+				C18DCF7F1EC31842003AD61B /* HuntingView.xib */,
+			);
+			name = "寻线";
+			sourceTree = "<group>";
+		};
 		C19228041EA5B62200B0166D = {
 			isa = PBXGroup;
 			children = (
@@ -287,6 +307,8 @@
 		C19228431EA5C2BF00B0166D /* views */ = {
 			isa = PBXGroup;
 			children = (
+				C18DCF7E1EC317BB003AD61B /* 寻线 */,
+				C18DCF7B1EC31469003AD61B /* 语音 */,
 				C1A156CB1EC1BCC400E1090B /* 表情 */,
 				C19421FB1EBD982600220B8B /* 手绘 */,
 				C19421E61EBD602300220B8B /* 自定义表情 */,
@@ -577,9 +599,11 @@
 				C19421F41EBD61B200220B8B /* EditFaceView.xib in Resources */,
 				C19B14AE1EBB285B00CB9B86 /* SetingView.xib in Resources */,
 				C19228491EA5C3E500B0166D /* MainView.xib in Resources */,
+				C18DCF801EC31842003AD61B /* HuntingView.xib in Resources */,
 				C1A156CD1EC1BD0800E1090B /* ExpressionView.xib in Resources */,
 				C192284B1EA5C4D000B0166D /* HeadView.xib in Resources */,
 				C14CE5F41EA88584007AE1AE /* ConnectView.xib in Resources */,
+				C18DCF7D1EC3148A003AD61B /* VoiceView.xib in Resources */,
 				C19421FD1EBDA69600220B8B /* DrawingView.xib in Resources */,
 				C192281D1EA5B62300B0166D /* Assets.xcassets in Resources */,
 				C192281B1EA5B62300B0166D /* Main.storyboard in Resources */,

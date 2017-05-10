@@ -9,6 +9,7 @@
 #import "EditFaceViewController.h"
 #import "EditFaceView.h"
 #import "EditFaceViewModel.h"
+#import "ConnectView.h"
 
 @interface EditFaceViewController ()
 
@@ -24,6 +25,11 @@
     }];
     
     ((EditFaceView *)self.view).model = model;
+    
+    [ConnectView showOnWindow:nil];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [ConnectView dissmissOnWindow:nil];
+    });
 }
 
 - (void)didReceiveMemoryWarning {

@@ -71,16 +71,8 @@
 
 -(void)awakeFromNib{
     [super awakeFromNib];
- //   [self initFromNib];
+    NSLog(@"%s",__func__);
 }
-
--(void)initFromNib{
-    //如果你的xib的view没有指定类 owner指定self 并且将脱线添加到当前视图里面 fileown里面要指定类
-    [[NSBundle mainBundle]loadNibNamed:@"MainView" owner:self options:nil];
-    [self addSubview:self.content];
-    NSLog(@"%s ---%@",__func__,self);
-}
-
 
 -(instancetype)init{
     NSLog(@"--------init");
@@ -98,7 +90,7 @@
 -(instancetype)initWithFrame:(CGRect)frame{
     NSLog(@"%s",__func__);
     self = [super initWithFrame:frame];
-    [self initFromNib];
+ //   [self initFromNib];
     return self;
 }
 

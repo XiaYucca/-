@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MainViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+//    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+//    
+//    UIWindow *window = delegate.window;
+//    UIViewController *controller = [[MainViewController alloc] init];
+//    window.rootViewController = controller;
+////    UIView *aView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
+////    aView.backgroundColor = [UIColor blackColor];
+////    [controller.view addSubview:aView];
+//    [window makeKeyAndVisible];
+    
     return YES;
 }
 

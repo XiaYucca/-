@@ -10,4 +10,7 @@
 
 @interface ConnectView : UIView
 
++(void)showOnWindow:(void(^)(void))complient;
++(void)dissmissOnWindow:(void(^)(bool))complient;
+
 @end
