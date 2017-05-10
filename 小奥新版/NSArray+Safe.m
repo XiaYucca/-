@@ -23,7 +23,7 @@
     
     if (self.count-1 < index) {
         // 这里做一下异常处理，不然都不知道出错了。
-        
+        NSLog(@"index out of NSArray");
         @try {
             return [self lxz_objectAtIndex:index];
         }

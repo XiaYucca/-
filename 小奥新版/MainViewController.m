@@ -26,17 +26,19 @@
     
     MainViewModel *mainViewModel = [[MainViewModel alloc] init ];
     mainViewModel.pageListArr = @[@"重力",@"编程",@"手绘",@"寻线",@"语音",@"跳舞"];
-    mainViewModel.jumpPageListArr = @[@"MainViewController",
+    mainViewModel.jumpPageListArr = @[@"ExpressionViewController",
                                       @"EditFaceViewController",
+                                      @"ConnectViewController",
+                                      @"DrawingViewController",
                                       @"EditFaceViewController",
-                                      @"EditFaceViewController",
-                                      @"MainViewController",
-                                      @"MainViewController"];
+                                      @"EditFaceViewController"];
     
     WeakObj(self);
+    WeakObj(mainViewModel);
     mainViewModel.didSeletItemCallback = ^(UIView *view ,NSInteger index){
         NSLog(@"view:%@\n indx:%li",view,(long)index);
-        [[Route share]GoToControllerIsPush:NO ClassName:@"DrawingViewController" From:weakself PropertyDic:nil];
+        NSString *str = [weakmainViewModel.jumpPageListArr objectAtIndex:index];
+        [[Route share]GoToControllerIsPush:NO ClassName:str From:weakself PropertyDic:nil];
     };
 
 //   MainView *mainView = [[MainView alloc]initWithFrame:self.view.frame];

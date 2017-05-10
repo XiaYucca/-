@@ -81,6 +81,24 @@
             </objects>
             <point key="canvasLocation" x="665" y="-3349"/>
         </scene>
+        <!--Expression View Controller-->
+        <scene sceneID="L19-74-WWp">
+            <objects>
+                <viewController id="r2C-lx-D2L" customClass="ExpressionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qot-fx-Rea"/>
+                        <viewControllerLayoutGuide type="bottom" id="KaN-uT-bSP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ypS-Lm-W1Z">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jak-m3-Nkj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-395" y="-972"/>
+        </scene>
         <!--Drawing View Controller-->
         <scene sceneID="bYL-IE-pmj">
             <objects>

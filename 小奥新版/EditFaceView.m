@@ -119,11 +119,10 @@
 }
 
 -(IBAction)Close:(id)sender{
+    !self.model.close ?:self.model.close();
     [self.leftFaceView removeObserver:self forKeyPath:@"fontHexValue"];
     [self.rightFaceView removeObserver:self forKeyPath:@"fontHexValue"];
     [self removeFromSuperview];
-    
-    !self.model.close ?:self.model.close();
 }
 
 

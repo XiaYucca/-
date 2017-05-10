@@ -20,10 +20,10 @@
 
 
 -(NSArray *)jumpPageListArr{
-    if (!_pageListArr) {
-        _pageListArr = @[];
+    if (!_jumpPageListArr) {
+        _jumpPageListArr = @[];
     }
-    return _pageListArr;
+    return _jumpPageListArr;
 }
 
 -(void)didSeletItem:(void (^)(UIView *view, NSInteger index))callback{

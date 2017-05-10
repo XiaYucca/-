@@ -27,7 +27,7 @@ typedef enum : NSUInteger {
     NSLog(@"%@",self);
     __weak typeof(self) weakself = self;
     NSTimer *time = [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
-        static count = 0;
+        static int count = 0;
         NSLog(@"time +++");
         if (count++ >= 5) {
             [timer invalidate];
