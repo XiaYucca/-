@@ -10,7 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HuntingView">
+            <connections>
+                <outlet property="view" destination="sT7-xK-SHc" id="9J7-ql-w3Z"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="sT7-xK-SHc">
             <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
@@ -26,6 +30,9 @@
                                 <constraint firstAttribute="height" constant="28" id="gF0-rT-Xcq"/>
                             </constraints>
                             <state key="normal" backgroundImage="Arrow-icon-blue"/>
+                            <connections>
+                                <action selector="backBtnClick:" destination="-1" eventType="touchUpInside" id="HTB-DK-BvS"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqL-vV-hBt">
                             <rect key="frame" x="678" y="8" width="28" height="28"/>
@@ -34,6 +41,9 @@
                                 <constraint firstAttribute="height" constant="28" id="rwP-tu-dqP"/>
                             </constraints>
                             <state key="normal" backgroundImage="Gear-icon-blue"/>
+                            <connections>
+                                <action selector="setBtnClick:" destination="-1" eventType="touchUpInside" id="CXN-ti-cGt"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4u-m5-cJJ">
                             <rect key="frame" x="620" y="8" width="28" height="28"/>
@@ -42,6 +52,9 @@
                                 <constraint firstAttribute="height" constant="28" id="UXg-6F-Etk"/>
                             </constraints>
                             <state key="normal" backgroundImage="HELPicon-blue"/>
+                            <connections>
+                                <action selector="helpBtnClick:" destination="-1" eventType="touchUpInside" id="aZG-Qu-ASV"/>
+                            </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XTr-V1-VOK">
                             <rect key="frame" x="326.66666666666669" y="12" width="84" height="21"/>
@@ -98,6 +111,9 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLV-2d-YBf">
                             <rect key="frame" x="562" y="201" width="135" height="135"/>
                             <state key="normal" backgroundImage="Play-icon-"/>
+                            <connections>
+                                <action selector="actionBtnClick:" destination="-1" eventType="touchUpInside" id="uLh-Qr-fVK"/>
+                            </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yVj-DW-dgl">
                             <rect key="frame" x="56" y="136" width="90" height="200"/>

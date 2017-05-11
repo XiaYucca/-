@@ -28,10 +28,10 @@
     mainViewModel.pageListArr = @[@"重力",@"编程",@"手绘",@"寻线",@"语音",@"跳舞"];
     mainViewModel.jumpPageListArr = @[@"ExpressionViewController",
                                       @"EditFaceViewController",
-                                      @"ConnectViewController",
                                       @"DrawingViewController",
-                                      @"EditFaceViewController",
-                                      @"EditFaceViewController"];
+                                      @"HuntingViewController",
+                                      @"VoiceViewController",
+                                      @"DanceViewController"];
     
     WeakObj(self);
     WeakObj(mainViewModel);

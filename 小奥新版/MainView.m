@@ -27,7 +27,18 @@
 
 -(void)setModel:(MainViewModel *)model{
     if (model) {
-        self.pageList = [model.pageListArr mutableCopy];
+        self.pageList = [@[]mutableCopy];
+        [model.pageListArr enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            if ( [obj isKindOfClass:[NSString class]]) {
+                UIImage *image = [UIImage imageNamed:(NSString *)obj];
+                if (image) {
+                    [self.pageList addObject:image];
+                }else{
+                    NSLog(@"warning image name error !!!...");
+                }
+            }
+           
+        }];
         _model = model;
         [self.icarV reloadData];
     }
@@ -109,10 +120,12 @@
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view{
     
     UIImageView *imageV = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.icarV.frame.size.height, self.icarV.frame.size.height)];
-    id d = [self.pageList pop];
-    if ( [d isKindOfClass:[NSString class]]) {
-        imageV.image = [UIImage imageNamed:(NSString *)d];
-    }
+    id d = [self.pageList objectAtIndex:index];
+    NSLog(@"image : %@",d);
+    imageV.image = d;
+//    if ( [d isKindOfClass:[NSString class]]) {
+//        imageV.image = [UIImage imageNamed:(NSString *)d];
+//    }
     
     return  imageV;
 }

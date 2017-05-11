@@ -14,6 +14,10 @@
 		C18786E91EC3EEEA00955499 /* VoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = C18786E81EC3EEEA00955499 /* VoiceView.m */; };
 		C18786EC1EC3F83700955499 /* VoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18786EB1EC3F83700955499 /* VoiceViewController.m */; };
 		C18786EF1EC40EC500955499 /* VoiceViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C18786EE1EC40EC500955499 /* VoiceViewModel.m */; };
+		C18786F31EC42E3B00955499 /* DataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C18786F21EC42E3B00955499 /* DataStore.m */; };
+		C18786F61EC4521900955499 /* HuntingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C18786F51EC4521900955499 /* HuntingView.m */; };
+		C18786F91EC4554C00955499 /* HuntingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C18786F81EC4554C00955499 /* HuntingViewModel.m */; };
+		C18786FC1EC45C0400955499 /* HuntingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18786FB1EC45C0400955499 /* HuntingViewController.m */; };
 		C18DCF771EC2B15C003AD61B /* ExpressionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18DCF761EC2B15C003AD61B /* ExpressionViewController.m */; };
 		C18DCF7A1EC2B7E2003AD61B /* ExpressionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C18DCF791EC2B7E2003AD61B /* ExpressionViewModel.m */; };
 		C18DCF7D1EC3148A003AD61B /* VoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18DCF7C1EC3148A003AD61B /* VoiceView.xib */; };
@@ -92,6 +96,14 @@
 		C18786EB1EC3F83700955499 /* VoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceViewController.m; sourceTree = "<group>"; };
 		C18786ED1EC40EC500955499 /* VoiceViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceViewModel.h; sourceTree = "<group>"; };
 		C18786EE1EC40EC500955499 /* VoiceViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceViewModel.m; sourceTree = "<group>"; };
+		C18786F11EC42E3B00955499 /* DataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStore.h; sourceTree = "<group>"; };
+		C18786F21EC42E3B00955499 /* DataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStore.m; sourceTree = "<group>"; };
+		C18786F41EC4521900955499 /* HuntingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuntingView.h; sourceTree = "<group>"; };
+		C18786F51EC4521900955499 /* HuntingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuntingView.m; sourceTree = "<group>"; };
+		C18786F71EC4554C00955499 /* HuntingViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuntingViewModel.h; sourceTree = "<group>"; };
+		C18786F81EC4554C00955499 /* HuntingViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuntingViewModel.m; sourceTree = "<group>"; };
+		C18786FA1EC45C0400955499 /* HuntingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuntingViewController.h; sourceTree = "<group>"; };
+		C18786FB1EC45C0400955499 /* HuntingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuntingViewController.m; sourceTree = "<group>"; };
 		C18DCF751EC2B15C003AD61B /* ExpressionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpressionViewController.h; sourceTree = "<group>"; };
 		C18DCF761EC2B15C003AD61B /* ExpressionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpressionViewController.m; sourceTree = "<group>"; };
 		C18DCF781EC2B7E2003AD61B /* ExpressionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpressionViewModel.h; sourceTree = "<group>"; };
@@ -234,6 +246,15 @@
 			name = "跳舞";
 			sourceTree = "<group>";
 		};
+		C18786F01EC42E1400955499 /* datastore */ = {
+			isa = PBXGroup;
+			children = (
+				C18786F11EC42E3B00955499 /* DataStore.h */,
+				C18786F21EC42E3B00955499 /* DataStore.m */,
+			);
+			name = datastore;
+			sourceTree = "<group>";
+		};
 		C18DCF7B1EC31469003AD61B /* 语音 */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +269,8 @@
 			isa = PBXGroup;
 			children = (
 				C18DCF7F1EC31842003AD61B /* HuntingView.xib */,
+				C18786F41EC4521900955499 /* HuntingView.h */,
+				C18786F51EC4521900955499 /* HuntingView.m */,
 			);
 			name = "寻线";
 			sourceTree = "<group>";
@@ -277,6 +300,7 @@
 		C192280F1EA5B62300B0166D /* 小奥新版 */ = {
 			isa = PBXGroup;
 			children = (
+				C18786F01EC42E1400955499 /* datastore */,
 				C19228431EA5C2BF00B0166D /* views */,
 				C19228451EA5C35800B0166D /* controllers */,
 				C19228471EA5C39600B0166D /* models */,
@@ -328,10 +352,6 @@
 				C14CE5EF1EA884ED007AE1AE /* 提示连接 */,
 				C19228441EA5C2E600B0166D /* 首页 */,
 				C19228191EA5B62300B0166D /* Main.storyboard */,
-				C1A4098A1EB9A6C000874B8F /* Route.h */,
-				C1A4098B1EB9A6C000874B8F /* Route.m */,
-				C19849011EAF1B42006F3625 /* MessageRoute.h */,
-				C19849021EAF1B43006F3625 /* MessageRoute.m */,
 				C192281E1EA5B62300B0166D /* LaunchScreen.storyboard */,
 			);
 			name = views;
@@ -369,6 +389,8 @@
 				C194220F1EBDC14F00220B8B /* DrawingViewController.m */,
 				C18786EA1EC3F83700955499 /* VoiceViewController.h */,
 				C18786EB1EC3F83700955499 /* VoiceViewController.m */,
+				C18786FA1EC45C0400955499 /* HuntingViewController.h */,
+				C18786FB1EC45C0400955499 /* HuntingViewController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -387,6 +409,8 @@
 		C19228471EA5C39600B0166D /* models */ = {
 			isa = PBXGroup;
 			children = (
+				C18786F71EC4554C00955499 /* HuntingViewModel.h */,
+				C18786F81EC4554C00955499 /* HuntingViewModel.m */,
 				C18786ED1EC40EC500955499 /* VoiceViewModel.h */,
 				C18786EE1EC40EC500955499 /* VoiceViewModel.m */,
 				C18DCF781EC2B7E2003AD61B /* ExpressionViewModel.h */,
@@ -415,6 +439,10 @@
 		C192B4251EA6F74800DE32FD /* MyLib */ = {
 			isa = PBXGroup;
 			children = (
+				C1A4098A1EB9A6C000874B8F /* Route.h */,
+				C1A4098B1EB9A6C000874B8F /* Route.m */,
+				C19849011EAF1B42006F3625 /* MessageRoute.h */,
+				C19849021EAF1B43006F3625 /* MessageRoute.m */,
 				C19228581EA617DF00B0166D /* NSMutableArray+Queue.h */,
 				C19228591EA617DF00B0166D /* NSMutableArray+Queue.m */,
 			);
@@ -702,6 +730,7 @@
 				C19228181EA5B62300B0166D /* MainViewController.m in Sources */,
 				C1A156D01EC1BD1E00E1090B /* ExpressionView.m in Sources */,
 				C1A156CA1EC185B600E1090B /* DrawingViewModel.m in Sources */,
+				C18786F61EC4521900955499 /* HuntingView.m in Sources */,
 				C19421F21EBD617F00220B8B /* EditFaceView.m in Sources */,
 				C1A409811EB9821300874B8F /* MModel.m in Sources */,
 				C18DCF7A1EC2B7E2003AD61B /* ExpressionViewModel.m in Sources */,
@@ -714,6 +743,7 @@
 				C1A409861EB9828C00874B8F /* HYXMLParser.m in Sources */,
 				C1A409941EB9C41500874B8F /* SetingView.m in Sources */,
 				C18F59BC1EBC3E0E00D16CA7 /* SetingViewController.m in Sources */,
+				C18786F31EC42E3B00955499 /* DataStore.m in Sources */,
 				C18786E91EC3EEEA00955499 /* VoiceView.m in Sources */,
 				C14CE5F71EA887CA007AE1AE /* ConnectView.m in Sources */,
 				C19421EE1EBD604900220B8B /* LittleItem.m in Sources */,
@@ -728,8 +758,10 @@
 				C19228571EA5FD6900B0166D /* iCarousel.m in Sources */,
 				C18786EC1EC3F83700955499 /* VoiceViewController.m in Sources */,
 				C194220B1EBDBF8300220B8B /* HMView.m in Sources */,
+				C18786FC1EC45C0400955499 /* HuntingViewController.m in Sources */,
 				C19421ED1EBD604900220B8B /* FaceView.m in Sources */,
 				C19228151EA5B62300B0166D /* AppDelegate.m in Sources */,
+				C18786F91EC4554C00955499 /* HuntingViewModel.m in Sources */,
 				C19228121EA5B62300B0166D /* main.m in Sources */,
 				C19421F71EBD699100220B8B /* EditFaceViewController.m in Sources */,
 			);

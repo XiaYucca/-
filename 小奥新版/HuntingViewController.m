@@ -1,58 +1,44 @@
 //
-//  VoiceViewController.m
+//  HuntingViewController.m
 //  小奥新版
 //
 //  Created by RainPoll on 2017/5/11.
 //  Copyright © 2017年 RainPoll. All rights reserved.
 //
 
-#import "VoiceViewController.h"
-#import "VoiceView.h"
-#import "VoiceViewModel.h"
+#import "HuntingViewController.h"
+#import "HuntingView.h"
+#import "HuntingViewModel.h"
 
-@interface VoiceViewController ()
+@interface HuntingViewController ()
 
 @end
 
-@implementation VoiceViewController
+@implementation HuntingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    VoiceViewModel *model = [[VoiceViewModel alloc]init];
-    ((VoiceView *)self.view).model = model;
-    [model willShow:^BOOL(UIView *v) {
-        NSLog(@"%s",__func__);
-        return YES;
-    }];
+    HuntingViewModel *model = [[HuntingViewModel alloc]init];
+    WeakObj(self);
     [model willDissmiss:^BOOL(UIView *v) {
-        WeakObj(self);
         [[Route share]GoBackFromController:weakself];
         return YES;
     }];
-    
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        
-//        [model willShow:^BOOL(UIView *v) {
-//            NSLog(@"+++++++%s",__func__);
-//            return YES;
-//        }];
-//    });
+    ((HuntingView *)self.view).model = model;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-
+    // Dispose of any resources that can be recreated.
 }
-
--(void)loadView{
-    self.view = [VoiceView voiceViewWithFrame:[UIScreen mainScreen].bounds];
+-(void)loadView
+{
+    self.view = [[HuntingView alloc]initWithFrame:[UIScreen mainScreen].bounds];
 }
 
 /*
 #pragma mark - Navigation
-
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].

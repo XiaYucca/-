@@ -1,16 +1,15 @@
 //
-//  VoiceView.m
+//  HuntingView.m
 //  小奥新版
 //
 //  Created by RainPoll on 2017/5/11.
 //  Copyright © 2017年 RainPoll. All rights reserved.
 //
 
-#import "VoiceView.h"
-#import "VoiceViewModel.h"
-
-@interface VoiceView ()
-@property (nonatomic ,assign)CGRect sFrame;
+#import "HuntingView.h"
+@interface HuntingView ()
+@property (nonatomic ,weak)IBOutlet UIView *view;
+@property (nonatomic ,assign)CGRect fFrame;
 
 @property(nonatomic ,copy)BOOL(^willShowCallback)();
 @property(nonatomic ,copy)BOOL(^willDissmissCallback)();
@@ -19,17 +18,13 @@
 @property(nonatomic ,copy)void(^setBtnClickCallback)(UIButton *btn);
 @property(nonatomic ,copy)void(^voiceBtnClickCallback)(UIButton *btn);
 
+
 @end
 
-@implementation VoiceView{
-   // CGRect rFrame;
-}
+@implementation HuntingView
 @synthesize model = _model;
 
-
-
-#pragma mark -lazy load model;
--(void)setModel:(VoiceViewModel *)model{
+-(void)setModel:(HuntingViewModel *)model{
     if (model) {
         _model = model;
         [_model setValue:self forKey:@"view"];
@@ -41,29 +36,56 @@
         [_model addObserver:self forKeyPath:@"voiceBtnClickCallback" options:NSKeyValueObservingOptionNew context:nil];
     }
 }
--(VoiceViewModel *)model{
+
+-(BOOL (^)())willDissmissCallback{
+    if (!_willDissmissCallback) {
+        BOOL (^temp)(UIView *) = [self.model valueForKey:@"willDissmissCallback"];
+        WeakObj(self);
+        self.willDissmissCallback = ^BOOL(){
+            if (temp) {
+                return temp(weakself);
+            }else{
+                return YES;
+            }
+        };
+    }
+    return _willDissmissCallback;
+}
+
+-(HuntingViewModel *)model{
     if (!_model) {
-        self.model = [[VoiceViewModel alloc]init];
+        self.model = [[HuntingViewModel alloc]init];
     }
     return _model;
 }
 
-//-(BOOL (^)())willShowCallback{
-//    if (!_willShowCallback) {
-//        if (self.model) {
-//            BOOL (^temp)(UIView *) = [_model valueForKey:@"willShowCallback"];
-//            if (temp) {
-//                WeakObj(self);
-//                _willShowCallback = ^BOOL(void){
-//                    return temp(weakself);
-//                };
-//            }
-//        }
-//    }
-//    return _willShowCallback;
-//}
 
-#pragma mark - kvo 监听model中的callback 变化
+-(instancetype)initWithFrame:(CGRect)frame{
+    if (self = [super initWithFrame:frame]) {
+        [self initFromNib];
+        self.fFrame = frame;
+    }
+    return self;
+}
+
+-(void)awakeFromNib{
+    [super awakeFromNib];
+    [self initFromNib];
+}
+
+-(void)initFromNib{
+    [[NSBundle mainBundle]loadNibNamed:@"HuntingView" owner:self options:nil];
+    [self addSubview:_view];
+}
+
+
+-(void)drawRect:(CGRect)rect{
+    if (CGRectIsNull(self.fFrame)) {
+        self.frame = self.fFrame;
+    }
+}
+
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if (context == nil) {
@@ -73,7 +95,7 @@
             WeakObj(self);
             self.willShowCallback = ^BOOL(){
                 if (temp) {
-                   return temp(weakself);
+                    return temp(weakself);
                 }else{
                     return YES;
                 }
@@ -121,57 +143,42 @@
 
 
 
-+(instancetype)voiceViewWithFrame:(CGRect)frame
-{
-    VoiceView *temp = [[NSBundle mainBundle]loadNibNamed:@"VoiceView" owner:nil options:nil].firstObject;
-    temp.sFrame = frame;
-    return temp;
+
+-(IBAction)backBtnClick:(UIButton *)btn{
+    WeakObj(self);
+    !self.willDissmissCallback ? : self.willDissmissCallback(weakself);
 }
-
--(void)awakeFromNib{
-    [super awakeFromNib];
-    NSLog(@"%s",__func__);
+-(IBAction)helpBtnClick:(UIButton *)btn{
+    
 }
-
--(instancetype)initWithCoder:(NSCoder *)aDecoder{
-    if (self = [super initWithCoder:aDecoder]) {
-    }
-    NSLog(@"%s",__func__);
-    return self;
+-(IBAction)setBtnClick:(UIButton *)btn{
+    
 }
-
--(void)drawRect:(CGRect)rect{
-    self.frame = self.sFrame;
-}
-
--(IBAction)backBtnClick{
-     bool isReturn = !self.willDissmissCallback ? : self.willDissmissCallback();
-}
-
--(IBAction)helpBtnClick:(id)sender{
-
-}
-
--(IBAction)setBtnClick:(id)sender{
-
-}
--(IBAction)voiceBtnClick:(id)sender
-{
-   // !self.willShowCallback ?: self.willShowCallback();
+-(IBAction)actionBtnClick:(UIButton *)btn{
+    
 }
 
 -(void)dealloc{
+    
     @try{
         [self.model removeObserver:self forKeyPath:@"willShowCallback"];
         [self.model removeObserver:self forKeyPath:@"willDissmissCallback"];
         [self.model removeObserver:self forKeyPath:@"helpBtnClickCallback"];
         [self.model removeObserver:self forKeyPath:@"setBtnClickCallback"];
         [self.model removeObserver:self forKeyPath:@"voiceBtnClickCallback"];
+
     }
     @catch(NSException *e){
         NSLog(@"model remove observer error%@",e);
     }
-
 }
+
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
+}
+*/
 
 @end
