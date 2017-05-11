@@ -7,6 +7,8 @@
 //
 
 #import "VoiceViewController.h"
+#import "VoiceView.h"
+#import "VoiceViewModel.h"
 
 @interface VoiceViewController ()
 
@@ -17,11 +19,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    VoiceViewModel *model = [[VoiceViewModel alloc]init];
+    ((VoiceView *)self.view).model = model;
+    [model willShow:^BOOL(UIView *v) {
+        NSLog(@"%s",__func__);
+        return YES;
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+}
+
+-(void)loadView{
+    self.view = [VoiceView voiceViewWithFrame:[UIScreen mainScreen].bounds];
 }
 
 /*

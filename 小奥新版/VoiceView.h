@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+@class VoiceViewModel;
 
-@interface VoiceView : NSObject
+@interface VoiceView : UIView
+@property (nonatomic ,strong)VoiceViewModel *model;
+
++(instancetype)voiceViewWithFrame:(CGRect)frame;
 
 @end

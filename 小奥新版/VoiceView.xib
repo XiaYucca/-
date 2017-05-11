@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="VoiceView">
             <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -26,6 +26,9 @@
                                 <constraint firstAttribute="width" constant="28" id="uY9-3H-DxM"/>
                             </constraints>
                             <state key="normal" backgroundImage="Arrow-icon-blue"/>
+                            <connections>
+                                <action selector="backBtnClick" destination="iN0-l3-epB" eventType="touchUpInside" id="JeH-bj-bzy"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eml-Yy-Ra9">
                             <rect key="frame" x="678" y="8" width="28" height="28"/>
@@ -34,6 +37,9 @@
                                 <constraint firstAttribute="height" constant="28" id="OKR-by-Zee"/>
                             </constraints>
                             <state key="normal" backgroundImage="Gear-icon-blue"/>
+                            <connections>
+                                <action selector="setBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="pwc-cG-XqJ"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvr-AJ-9JD">
                             <rect key="frame" x="620" y="8" width="28" height="28"/>
@@ -42,6 +48,9 @@
                                 <constraint firstAttribute="height" constant="28" id="nM8-8X-WNR"/>
                             </constraints>
                             <state key="normal" backgroundImage="HELPicon-blue"/>
+                            <connections>
+                                <action selector="helpBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="AjJ-Xv-PQ4"/>
+                            </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rl7-je-29n">
                             <rect key="frame" x="326" y="11.666666666666664" width="84" height="21"/>
@@ -98,6 +107,9 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73P-wA-CBw">
                             <rect key="frame" x="562" y="201" width="135" height="135"/>
                             <state key="normal" backgroundImage="麦克风"/>
+                            <connections>
+                                <action selector="voiceBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="xLx-In-fyz"/>
+                            </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dKc-ck-ogh">
                             <rect key="frame" x="56" y="136" width="90" height="200"/>

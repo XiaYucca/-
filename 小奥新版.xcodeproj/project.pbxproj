@@ -11,6 +11,9 @@
 		C14CE5F31EA88584007AE1AE /* ConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C14CE5F11EA88584007AE1AE /* ConnectViewController.m */; };
 		C14CE5F41EA88584007AE1AE /* ConnectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C14CE5F21EA88584007AE1AE /* ConnectView.xib */; };
 		C14CE5F71EA887CA007AE1AE /* ConnectView.m in Sources */ = {isa = PBXBuildFile; fileRef = C14CE5F61EA887CA007AE1AE /* ConnectView.m */; };
+		C18786E91EC3EEEA00955499 /* VoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = C18786E81EC3EEEA00955499 /* VoiceView.m */; };
+		C18786EC1EC3F83700955499 /* VoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18786EB1EC3F83700955499 /* VoiceViewController.m */; };
+		C18786EF1EC40EC500955499 /* VoiceViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C18786EE1EC40EC500955499 /* VoiceViewModel.m */; };
 		C18DCF771EC2B15C003AD61B /* ExpressionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18DCF761EC2B15C003AD61B /* ExpressionViewController.m */; };
 		C18DCF7A1EC2B7E2003AD61B /* ExpressionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C18DCF791EC2B7E2003AD61B /* ExpressionViewModel.m */; };
 		C18DCF7D1EC3148A003AD61B /* VoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18DCF7C1EC3148A003AD61B /* VoiceView.xib */; };
@@ -83,6 +86,12 @@
 		C14CE5F21EA88584007AE1AE /* ConnectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectView.xib; sourceTree = "<group>"; };
 		C14CE5F51EA887CA007AE1AE /* ConnectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectView.h; sourceTree = "<group>"; };
 		C14CE5F61EA887CA007AE1AE /* ConnectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectView.m; sourceTree = "<group>"; };
+		C18786E71EC3EEEA00955499 /* VoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceView.h; sourceTree = "<group>"; };
+		C18786E81EC3EEEA00955499 /* VoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceView.m; sourceTree = "<group>"; };
+		C18786EA1EC3F83700955499 /* VoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceViewController.h; sourceTree = "<group>"; };
+		C18786EB1EC3F83700955499 /* VoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceViewController.m; sourceTree = "<group>"; };
+		C18786ED1EC40EC500955499 /* VoiceViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceViewModel.h; sourceTree = "<group>"; };
+		C18786EE1EC40EC500955499 /* VoiceViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceViewModel.m; sourceTree = "<group>"; };
 		C18DCF751EC2B15C003AD61B /* ExpressionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpressionViewController.h; sourceTree = "<group>"; };
 		C18DCF761EC2B15C003AD61B /* ExpressionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpressionViewController.m; sourceTree = "<group>"; };
 		C18DCF781EC2B7E2003AD61B /* ExpressionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpressionViewModel.h; sourceTree = "<group>"; };
@@ -229,6 +238,8 @@
 			isa = PBXGroup;
 			children = (
 				C18DCF7C1EC3148A003AD61B /* VoiceView.xib */,
+				C18786E71EC3EEEA00955499 /* VoiceView.h */,
+				C18786E81EC3EEEA00955499 /* VoiceView.m */,
 			);
 			name = "语音";
 			sourceTree = "<group>";
@@ -356,6 +367,8 @@
 				C19421F61EBD699100220B8B /* EditFaceViewController.m */,
 				C194220E1EBDC14F00220B8B /* DrawingViewController.h */,
 				C194220F1EBDC14F00220B8B /* DrawingViewController.m */,
+				C18786EA1EC3F83700955499 /* VoiceViewController.h */,
+				C18786EB1EC3F83700955499 /* VoiceViewController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -374,6 +387,8 @@
 		C19228471EA5C39600B0166D /* models */ = {
 			isa = PBXGroup;
 			children = (
+				C18786ED1EC40EC500955499 /* VoiceViewModel.h */,
+				C18786EE1EC40EC500955499 /* VoiceViewModel.m */,
 				C18DCF781EC2B7E2003AD61B /* ExpressionViewModel.h */,
 				C18DCF791EC2B7E2003AD61B /* ExpressionViewModel.m */,
 				C19421F81EBD7B4B00220B8B /* EditFaceViewModel.h */,
@@ -692,12 +707,14 @@
 				C18DCF7A1EC2B7E2003AD61B /* ExpressionViewModel.m in Sources */,
 				C192285A1EA617DF00B0166D /* NSMutableArray+Queue.m in Sources */,
 				C19422101EBDC14F00220B8B /* DrawingViewController.m in Sources */,
+				C18786EF1EC40EC500955499 /* VoiceViewModel.m in Sources */,
 				C19422091EBDBF8300220B8B /* XYDirectionCalculate.c in Sources */,
 				C1A409891EB987F500874B8F /* NSNull+Safe.m in Sources */,
 				C19228541EA5EA9400B0166D /* HeadView.m in Sources */,
 				C1A409861EB9828C00874B8F /* HYXMLParser.m in Sources */,
 				C1A409941EB9C41500874B8F /* SetingView.m in Sources */,
 				C18F59BC1EBC3E0E00D16CA7 /* SetingViewController.m in Sources */,
+				C18786E91EC3EEEA00955499 /* VoiceView.m in Sources */,
 				C14CE5F71EA887CA007AE1AE /* ConnectView.m in Sources */,
 				C19421EE1EBD604900220B8B /* LittleItem.m in Sources */,
 				C192285D1EA6188C00B0166D /* MainViewModel.m in Sources */,
@@ -709,6 +726,7 @@
 				C194220C1EBDBF8300220B8B /* HMBezierPath.m in Sources */,
 				C1A409901EB9C03000874B8F /* NSArray+Safe.m in Sources */,
 				C19228571EA5FD6900B0166D /* iCarousel.m in Sources */,
+				C18786EC1EC3F83700955499 /* VoiceViewController.m in Sources */,
 				C194220B1EBDBF8300220B8B /* HMView.m in Sources */,
 				C19421ED1EBD604900220B8B /* FaceView.m in Sources */,
 				C19228151EA5B62300B0166D /* AppDelegate.m in Sources */,

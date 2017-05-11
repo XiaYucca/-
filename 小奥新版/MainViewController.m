@@ -66,6 +66,7 @@
 
 -(void)loadView{
     self.view = [MainView MainView:[UIScreen mainScreen].bounds];
+//    self.view = [MainView MainView:CGRectMake(0, 0, 300, 200)];
 }
 
 - (void)didReceiveMemoryWarning {

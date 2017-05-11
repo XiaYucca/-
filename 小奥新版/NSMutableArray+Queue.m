@@ -28,7 +28,7 @@
 
 -(NSInteger)push:(id)obj{
     [self addObject:obj];
-    return self.count;
+    return self.count;  
 }
 
 

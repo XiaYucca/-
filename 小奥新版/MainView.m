@@ -16,11 +16,13 @@
 @property (strong, nonatomic) IBOutlet iCarousel *icarV;
 
 @property (strong, nonatomic) NSMutableArray *pageList;
+@property (nonatomic ,assign)CGRect rFrame;
 
 @end
 
 
 @implementation MainView
+
 
 
 -(void)setModel:(MainViewModel *)model{
@@ -53,6 +55,8 @@
     MainView *temp = [[NSBundle mainBundle]loadNibNamed:@"MainView" owner:self options:nil].firstObject;
     NSLog(@"temp %@",temp);
     temp.frame = frame;
+    temp.rFrame = frame;
+    
     return temp;
 //    return  self;
 }
@@ -72,6 +76,8 @@
 -(void)awakeFromNib{
     [super awakeFromNib];
     NSLog(@"%s",__func__);
+    
+  
 }
 
 -(instancetype)init{
@@ -91,6 +97,7 @@
     NSLog(@"%s",__func__);
     self = [super initWithFrame:frame];
  //   [self initFromNib];
+ 
     return self;
 }
 
@@ -145,6 +152,8 @@
 - (void)drawRect:(CGRect)rect {
     NSLog(@"%s",__func__);
     [self setupIcarView];
+    
+    self.frame = self.rFrame;
 }
 
 
