@@ -8,6 +8,7 @@
 
 #import "VoiceView.h"
 #import "VoiceViewModel.h"
+#import "SiriView.h"
 
 @interface VoiceView ()
 @property (nonatomic ,assign)CGRect sFrame;
@@ -18,6 +19,8 @@
 @property(nonatomic ,copy)void(^helpBtnClickCallback)(UIButton *btn);
 @property(nonatomic ,copy)void(^setBtnClickCallback)(UIButton *btn);
 @property(nonatomic ,copy)void(^voiceBtnClickCallback)(UIButton *btn);
+
+@property(nonatomic ,weak)IBOutlet UIView *siriView;
 
 @end
 
@@ -119,6 +122,31 @@
     }
 }
 
+#pragma mark - load siriView
+-(void)loadSiriView{
+    SiriView * siri = [[SiriView alloc] initWithFrame:CGRectMake(0, 0,350,60 ) ];
+
+    __weak SiriView * weakSiri = siri;
+ 
+    static CGFloat normalizedValue = 0.1;
+    
+    
+    
+    siri.siriLevelCallback = ^() {
+        weakSiri.level = normalizedValue;
+    };
+    
+    siri.level = 0.5;
+    
+    [NSTimer scheduledTimerWithTimeInterval:0.025 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        static CGFloat index = 0;;
+        index += 0.05;
+        normalizedValue = sinf(index);
+        
+    }];
+    
+    [self.siriView addSubview:siri];
+}
 
 
 +(instancetype)voiceViewWithFrame:(CGRect)frame
@@ -142,6 +170,7 @@
 
 -(void)drawRect:(CGRect)rect{
     self.frame = self.sFrame;
+    [self loadSiriView];
 }
 
 -(IBAction)backBtnClick{

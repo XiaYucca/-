@@ -25,12 +25,19 @@
 @synthesize model = _model;
 
 -(void)setModel:(HuntingViewModel *)model{
+    if(_model){
+        [_model removeObserver:self forKeyPath:@"willShowCallback"];
+        [_model removeObserver:self forKeyPath:@"willDissmissCallback"];
+        [_model removeObserver:self forKeyPath:@"helpBtnClickCallback"];
+        [_model removeObserver:self forKeyPath:@"setBtnClickCallback"];
+        [_model removeObserver:self forKeyPath:@"voiceBtnClickCallback"];
+    }
     if (model) {
         _model = model;
         [_model setValue:self forKey:@"view"];
         [_model addObserver:self forKeyPath:@"willShowCallback" options:NSKeyValueObservingOptionNew context:nil];
         [_model addObserver:self forKeyPath:@"willDissmissCallback" options:NSKeyValueObservingOptionNew context:nil];
-        
+    
         [_model addObserver:self forKeyPath:@"helpBtnClickCallback" options:NSKeyValueObservingOptionNew context:nil];
         [_model addObserver:self forKeyPath:@"setBtnClickCallback" options:NSKeyValueObservingOptionNew context:nil];
         [_model addObserver:self forKeyPath:@"voiceBtnClickCallback" options:NSKeyValueObservingOptionNew context:nil];
@@ -77,7 +84,6 @@
     [[NSBundle mainBundle]loadNibNamed:@"HuntingView" owner:self options:nil];
     [self addSubview:_view];
 }
-
 
 -(void)drawRect:(CGRect)rect{
     if (CGRectIsNull(self.fFrame)) {

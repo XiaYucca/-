@@ -39,6 +39,7 @@
 		C19228571EA5FD6900B0166D /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = C19228561EA5FD6900B0166D /* iCarousel.m */; };
 		C192285A1EA617DF00B0166D /* NSMutableArray+Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = C19228591EA617DF00B0166D /* NSMutableArray+Queue.m */; };
 		C192285D1EA6188C00B0166D /* MainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C192285C1EA6188C00B0166D /* MainViewModel.m */; };
+		C1937D661EC55235007EC7B7 /* SiriView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1937D651EC55235007EC7B7 /* SiriView.m */; };
 		C19421ED1EBD604900220B8B /* FaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = C19421E81EBD604900220B8B /* FaceView.m */; };
 		C19421EE1EBD604900220B8B /* LittleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C19421EA1EBD604900220B8B /* LittleItem.m */; };
 		C19421F21EBD617F00220B8B /* EditFaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = C19421F11EBD617F00220B8B /* EditFaceView.m */; };
@@ -143,6 +144,8 @@
 		C19228591EA617DF00B0166D /* NSMutableArray+Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Queue.m"; sourceTree = "<group>"; };
 		C192285B1EA6188C00B0166D /* MainViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewModel.h; sourceTree = "<group>"; };
 		C192285C1EA6188C00B0166D /* MainViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewModel.m; sourceTree = "<group>"; };
+		C1937D641EC55235007EC7B7 /* SiriView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiriView.h; sourceTree = "<group>"; };
+		C1937D651EC55235007EC7B7 /* SiriView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiriView.m; sourceTree = "<group>"; };
 		C19421E71EBD604900220B8B /* FaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceView.h; sourceTree = "<group>"; };
 		C19421E81EBD604900220B8B /* FaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceView.m; sourceTree = "<group>"; };
 		C19421E91EBD604900220B8B /* LittleItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LittleItem.h; sourceTree = "<group>"; };
@@ -258,6 +261,8 @@
 		C18DCF7B1EC31469003AD61B /* 语音 */ = {
 			isa = PBXGroup;
 			children = (
+				C1937D641EC55235007EC7B7 /* SiriView.h */,
+				C1937D651EC55235007EC7B7 /* SiriView.m */,
 				C18DCF7C1EC3148A003AD61B /* VoiceView.xib */,
 				C18786E71EC3EEEA00955499 /* VoiceView.h */,
 				C18786E81EC3EEEA00955499 /* VoiceView.m */,
@@ -760,6 +765,7 @@
 				C194220B1EBDBF8300220B8B /* HMView.m in Sources */,
 				C18786FC1EC45C0400955499 /* HuntingViewController.m in Sources */,
 				C19421ED1EBD604900220B8B /* FaceView.m in Sources */,
+				C1937D661EC55235007EC7B7 /* SiriView.m in Sources */,
 				C19228151EA5B62300B0166D /* AppDelegate.m in Sources */,
 				C18786F91EC4554C00955499 /* HuntingViewModel.m in Sources */,
 				C19228121EA5B62300B0166D /* main.m in Sources */,

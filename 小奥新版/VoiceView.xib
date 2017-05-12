@@ -120,11 +120,11 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vew-pC-I1i">
-                            <rect key="frame" x="268" y="129" width="200" height="4"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <rect key="frame" x="193" y="129" width="350" height="60"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="200" id="cuS-BV-HJd"/>
-                                <constraint firstAttribute="height" constant="4" id="rVL-oj-Xdn"/>
+                                <constraint firstAttribute="width" constant="350" id="cuS-BV-HJd"/>
+                                <constraint firstAttribute="height" constant="60" id="rVL-oj-Xdn"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -149,6 +149,9 @@
                 <constraint firstItem="Bu8-nP-k8e" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="z6s-Km-xaD"/>
                 <constraint firstAttribute="trailing" secondItem="lSM-5m-vzX" secondAttribute="trailing" id="zQ8-z2-6jz"/>
             </constraints>
+            <connections>
+                <outlet property="siriView" destination="Vew-pC-I1i" id="ZkG-hN-gFR"/>
+            </connections>
         </view>
     </objects>
     <resources>
