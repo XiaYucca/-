@@ -16,6 +16,7 @@
 
 @interface SetingView ()
 @property (nonatomic ,weak)IBOutlet UIView *content;
+@property (nonatomic ,assign)CGRect sFrame;
 
 @end
 
@@ -45,7 +46,7 @@
       canRemove = _model.viewWillDissmiss(weakself);
     }
     if (canRemove) {
-           [self removeFromSuperview];
+        [self removeFromSuperview];
     }
   //  NSLog(@"%@",self.model);
 }
@@ -99,6 +100,14 @@
     musicBtn.selected = !self.model.enableMusic;
 }
 
+-(instancetype)initWithFrame:(CGRect)frame{
+    if (self = [super initWithFrame:frame]) {
+        self.sFrame = frame;
+        [self initFromNib];
+    }
+    return self;
+}
+
 -(void)initFromNib{
     WeakObj(self);
     if (_model.viewWillShow) {
@@ -110,7 +119,15 @@
 }
 
 -(void)awakeFromNib{
+    [super awakeFromNib];
     [self initFromNib];
+
+}
+
+-(void)drawRect:(CGRect)rect{
+    if (CGRectIsNull(self.sFrame)) {
+        self.frame = self.sFrame;
+    }
 }
 
 @end

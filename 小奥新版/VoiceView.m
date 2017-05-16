@@ -200,7 +200,6 @@
     @catch(NSException *e){
         NSLog(@"model remove observer error%@",e);
     }
-
 }
 
 @end

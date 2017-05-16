@@ -245,8 +245,7 @@
         [self.layer addSublayer:waveline];
         [self.waves addObject:waveline];
     }
-    
-}            
+}
 
 -(void)displayCallFun{
     
@@ -305,10 +304,10 @@
         CGFloat progress = 1.0f - (CGFloat)i / self.numberOfWaves;
         CGFloat normedAmplitude = (1.5f * progress - 0.5f) * self.amplitude;
         
-       // NSLog(@"normedAmplitude %f",_amplitude);
-//        if (_amplitude < 0.06) {
+//      NSLog(@"normedAmplitude %f",_amplitude);
+//      if (_amplitude < 0.06) {
 //            normedAmplitude = 0.0;
-//        }
+//      }
         CGFloat x= 0;
         
         for( x = 0; x<self.waveWidth + self.density; x += self.density) {
@@ -371,16 +370,12 @@
         
 //        waveline.fillColor = [UIColor whiteColor].CGColor;
 //        waveline.strokeColor = [UIColor whiteColor].CGColor;
-        
-        
         if (i == 0) {
             _gradientLayer.mask = waveline;
         }else if(i >= 3){
             _gradientLayer_other.mask = waveline;
         }
-        
     }
-    
 }
 
 @end

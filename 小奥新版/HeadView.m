@@ -19,7 +19,6 @@
 }
 
 +(instancetype)headView:(CGRect)frame{
-
     HeadView *head = [[[NSBundle mainBundle]loadNibNamed:@"HeadView" owner:nil options:nil]firstObject];;
     head.frame = frame;
     return head;

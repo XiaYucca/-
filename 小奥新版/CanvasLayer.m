@@ -108,27 +108,21 @@
 //            
 //            [path stroke];
 //        }
-    
+ //   CGContextRef context =  UIGraphicsGetCurrentContext();
+ //   NSLog(@"%p",ctx);
+    UIGraphicsPushContext(ctx);
+//    CGContextClearRect(ctx, self.frame);
     static int index = 0;
     
     if (index<2) {
-      // self.backgroundColor = [UIColor redColor].CGColor;
-       // [self.lightImage drawInRect:CGRectMake(0, 0, 30, 30)];
         CGContextDrawImage(ctx, CGRectMake(0, 0, 40, 40), self.lightImage.CGImage);
     }else {
-      //  self.backgroundColor = [UIColor whiteColor].CGColor;
-        [self.darkImage drawInRect:CGRectMake(0, 0, 40, 40)];
         CGContextDrawImage(ctx, CGRectMake(0, 0, 40, 40), self.darkImage.CGImage);
     }
-   
     if (index ++ == 4) {
         index = 0;
     }
-    
- 
-   
-    
-    
+    UIGraphicsPopContext();
 }
 
 -(void)drawImage

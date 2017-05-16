@@ -65,6 +65,9 @@
 		C1A4098C1EB9A6C000874B8F /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A4098B1EB9A6C000874B8F /* Route.m */; };
 		C1A409901EB9C03000874B8F /* NSArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A4098F1EB9C03000874B8F /* NSArray+Safe.m */; };
 		C1A409941EB9C41500874B8F /* SetingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A409931EB9C41500874B8F /* SetingView.m */; };
+		C1FB193D1ECAA7520014830B /* SignInView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1FB193B1ECAA7520014830B /* SignInView.m */; };
+		C1FB193E1ECAA7520014830B /* SignInView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1FB193C1ECAA7520014830B /* SignInView.xib */; };
+		C1FB19411ECAA7DF0014830B /* SignInViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C1FB19401ECAA7DF0014830B /* SignInViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,6 +196,11 @@
 		C1A4098F1EB9C03000874B8F /* NSArray+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Safe.m"; sourceTree = "<group>"; };
 		C1A409921EB9C41500874B8F /* SetingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetingView.h; sourceTree = "<group>"; };
 		C1A409931EB9C41500874B8F /* SetingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetingView.m; sourceTree = "<group>"; };
+		C1FB193A1ECAA7520014830B /* SignInView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInView.h; sourceTree = "<group>"; };
+		C1FB193B1ECAA7520014830B /* SignInView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInView.m; sourceTree = "<group>"; };
+		C1FB193C1ECAA7520014830B /* SignInView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInView.xib; sourceTree = "<group>"; };
+		C1FB193F1ECAA7DF0014830B /* SignInViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewModel.h; sourceTree = "<group>"; };
+		C1FB19401ECAA7DF0014830B /* SignInViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewModel.m; sourceTree = "<group>"; };
 		E0B22A62BF581736403C8833 /* libPods-小奥新版.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-小奥新版.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE440878A2B42E0C37A3CE08 /* Pods-小奥新版.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-小奥新版.debug.xcconfig"; path = "Pods/Target Support Files/Pods-小奥新版/Pods-小奥新版.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -347,6 +355,7 @@
 		C19228431EA5C2BF00B0166D /* views */ = {
 			isa = PBXGroup;
 			children = (
+				C1FB19391ECAA71F0014830B /* 签到 */,
 				C18DCF7E1EC317BB003AD61B /* 寻线 */,
 				C18DCF7B1EC31469003AD61B /* 语音 */,
 				C1A156CB1EC1BCC400E1090B /* 表情 */,
@@ -414,6 +423,8 @@
 		C19228471EA5C39600B0166D /* models */ = {
 			isa = PBXGroup;
 			children = (
+				C1FB193F1ECAA7DF0014830B /* SignInViewModel.h */,
+				C1FB19401ECAA7DF0014830B /* SignInViewModel.m */,
 				C18786F71EC4554C00955499 /* HuntingViewModel.h */,
 				C18786F81EC4554C00955499 /* HuntingViewModel.m */,
 				C18786ED1EC40EC500955499 /* VoiceViewModel.h */,
@@ -521,6 +532,16 @@
 				C19B14AD1EBB285B00CB9B86 /* SetingView.xib */,
 			);
 			name = "设置";
+			sourceTree = "<group>";
+		};
+		C1FB19391ECAA71F0014830B /* 签到 */ = {
+			isa = PBXGroup;
+			children = (
+				C1FB193A1ECAA7520014830B /* SignInView.h */,
+				C1FB193B1ECAA7520014830B /* SignInView.m */,
+				C1FB193C1ECAA7520014830B /* SignInView.xib */,
+			);
+			name = "签到";
 			sourceTree = "<group>";
 		};
 		C877637A0614664E8325E833 /* Frameworks */ = {
@@ -653,6 +674,7 @@
 				C14CE5F41EA88584007AE1AE /* ConnectView.xib in Resources */,
 				C18DCF7D1EC3148A003AD61B /* VoiceView.xib in Resources */,
 				C19421FD1EBDA69600220B8B /* DrawingView.xib in Resources */,
+				C1FB193E1ECAA7520014830B /* SignInView.xib in Resources */,
 				C192281D1EA5B62300B0166D /* Assets.xcassets in Resources */,
 				C192281B1EA5B62300B0166D /* Main.storyboard in Resources */,
 			);
@@ -729,8 +751,10 @@
 			files = (
 				C1A409821EB9821300874B8F /* MModel+test.m in Sources */,
 				C1A4098C1EB9A6C000874B8F /* Route.m in Sources */,
+				C1FB19411ECAA7DF0014830B /* SignInViewModel.m in Sources */,
 				C18F59BF1EBC692900D16CA7 /* SetingViewModel.m in Sources */,
 				C19422001EBDA73800220B8B /* DrawingView.m in Sources */,
+				C1FB193D1ECAA7520014830B /* SignInView.m in Sources */,
 				C18DCF771EC2B15C003AD61B /* ExpressionViewController.m in Sources */,
 				C19228181EA5B62300B0166D /* MainViewController.m in Sources */,
 				C1A156D01EC1BD1E00E1090B /* ExpressionView.m in Sources */,

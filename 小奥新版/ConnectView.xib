@@ -71,17 +71,45 @@
                         <constraint firstAttribute="height" constant="190" id="ffO-OE-LjI"/>
                     </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="版本号V1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xef-57-TJw">
+                    <rect key="frame" x="30" y="397" width="51.333333333333329" height="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.21592089533805847" green="0.72578257322311401" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="®奥松机器人" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ci5-yP-XgK">
+                    <rect key="frame" x="596" y="397" width="110" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="110" id="NF4-sW-0uI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.21592089533805847" green="0.72578257322311401" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未连接蓝牙" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiM-wm-VQ8">
+                    <rect key="frame" x="321" y="310" width="94" height="20.333333333333314"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="Ci5-yP-XgK" secondAttribute="trailing" constant="30" id="3Lg-EW-NpD"/>
                 <constraint firstItem="HH4-Pj-uNB" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="3ta-uz-lCo"/>
                 <constraint firstItem="8wl-0f-hn9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="6Q1-Wq-xuf"/>
+                <constraint firstAttribute="bottom" secondItem="Xef-57-TJw" secondAttribute="bottom" constant="5" id="8NT-gt-VEh"/>
                 <constraint firstItem="8wl-0f-hn9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9P2-SE-MjL"/>
+                <constraint firstItem="Xef-57-TJw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="Ffj-1g-r1X"/>
                 <constraint firstItem="Ocb-dJ-i07" firstAttribute="width" secondItem="HH4-Pj-uNB" secondAttribute="width" multiplier="0.2" id="LtJ-tC-uQo"/>
                 <constraint firstItem="HH4-Pj-uNB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="S8N-NG-aKS"/>
                 <constraint firstItem="Ocb-dJ-i07" firstAttribute="centerY" secondItem="HH4-Pj-uNB" secondAttribute="centerY" id="ZsV-ue-SWN"/>
                 <constraint firstItem="Ocb-dJ-i07" firstAttribute="centerX" secondItem="HH4-Pj-uNB" secondAttribute="centerX" id="aBJ-Yb-HDZ"/>
+                <constraint firstItem="oiM-wm-VQ8" firstAttribute="centerX" secondItem="Ocb-dJ-i07" secondAttribute="centerX" id="cjg-yH-rT3"/>
                 <constraint firstItem="Ocb-dJ-i07" firstAttribute="height" secondItem="HH4-Pj-uNB" secondAttribute="height" multiplier="0.8" id="kDo-a1-eU0"/>
+                <constraint firstItem="oiM-wm-VQ8" firstAttribute="width" secondItem="Ocb-dJ-i07" secondAttribute="width" id="lkB-a9-4ud"/>
+                <constraint firstItem="oiM-wm-VQ8" firstAttribute="top" secondItem="Ocb-dJ-i07" secondAttribute="bottom" constant="8" id="naV-Mx-DBh"/>
+                <constraint firstAttribute="bottom" secondItem="Ci5-yP-XgK" secondAttribute="bottom" constant="5" id="nvd-B4-L50"/>
                 <constraint firstAttribute="trailing" secondItem="8wl-0f-hn9" secondAttribute="trailing" id="v1r-SV-jDf"/>
             </constraints>
             <point key="canvasLocation" x="115" y="-116"/>

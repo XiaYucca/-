@@ -91,7 +91,6 @@
     }
 }
 
-
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if (context == nil) {
@@ -161,7 +160,7 @@
     
 }
 -(IBAction)actionBtnClick:(UIButton *)btn{
-    
+
 }
 
 -(void)dealloc{
@@ -172,7 +171,6 @@
         [self.model removeObserver:self forKeyPath:@"helpBtnClickCallback"];
         [self.model removeObserver:self forKeyPath:@"setBtnClickCallback"];
         [self.model removeObserver:self forKeyPath:@"voiceBtnClickCallback"];
-
     }
     @catch(NSException *e){
         NSLog(@"model remove observer error%@",e);

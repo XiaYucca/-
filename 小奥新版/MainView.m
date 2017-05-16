@@ -16,6 +16,9 @@
 @property (strong, nonatomic) IBOutlet iCarousel *icarV;
 
 @property (strong, nonatomic) NSMutableArray *pageList;
+
+@property(nonatomic, copy)void(^didClickSetBtnCallback)(void);
+
 @property (nonatomic ,assign)CGRect rFrame;
 
 @end
@@ -23,9 +26,21 @@
 
 @implementation MainView
 
+@synthesize model = _model;
 
+
+-(MainViewModel *)model{
+    if (!_model) {
+        _model = [[MainViewModel alloc]init];
+        [_model addObserver:self forKeyPath:@"didClickSetBtnCallback" options:NSKeyValueObservingOptionNew context:nil];
+    }
+    return _model;
+}
 
 -(void)setModel:(MainViewModel *)model{
+    if (_model) {
+        [_model removeObserver:self forKeyPath:@"didClickSetBtnCallback"];
+    }
     if (model) {
         self.pageList = [@[]mutableCopy];
         [model.pageListArr enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -40,6 +55,7 @@
            
         }];
         _model = model;
+        [_model addObserver:self forKeyPath:@"didClickSetBtnCallback" options:NSKeyValueObservingOptionNew context:nil];
         [self.icarV reloadData];
     }
 }
@@ -59,7 +75,12 @@
     return _didSeletItemCallback;
 }
 
-
+-(void (^)(void))didClickSetBtnCallback{
+    if (!_didClickSetBtnCallback) {
+        _didClickSetBtnCallback = [[_model valueForKey:@"didClickSetBtnCallback"] copy];
+    }
+    return _didClickSetBtnCallback;
+}
 
 +(instancetype)MainView:(CGRect)frame{
     //用这种方法不需要在fileowner设置self 需要指定wiew 为当前类 并且所属的连线 都拖出来的属性都和改view相关
@@ -85,10 +106,26 @@
 }
 
 -(void)awakeFromNib{
+    
+//   NSInvocationOperation *option = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(test) object:nil];
+//    
+//    NSOperationQueue *queue = [[NSOperationQueue alloc]init];
+//    [queue addOperation:option];
+//    
+//    [queue addOperationWithBlock:^{
+//        NSLog(@"test nsopration queue");
+//    }];
+
+    //assert(0);
+
+    
     [super awakeFromNib];
     NSLog(@"%s",__func__);
     
   
+}
+-(void)test{
+    NSLog(@"%s",__func__);
 }
 
 -(instancetype)init{
@@ -108,7 +145,6 @@
     NSLog(@"%s",__func__);
     self = [super initWithFrame:frame];
  //   [self initFromNib];
- 
     return self;
 }
 
@@ -166,8 +202,33 @@
     NSLog(@"%s",__func__);
     [self setupIcarView];
     
-    self.frame = self.rFrame;
+    if(CGRectIsNull(self.rFrame)){
+        self.frame = self.rFrame;
+    }
 }
 
+-(IBAction)setBtnClick:(id)sender{
+    ! self.didClickSetBtnCallback?:self.didClickSetBtnCallback();
+}
+-(IBAction)helpBtnClick:(id)sender{
+    
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if (context == nil) {
+        if ([keyPath isEqualToString:@"didClickSetBtnCallback"]) {
+            self.didClickSetBtnCallback = [change[@"new"]copy];
+        }
+    } else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+}
+
+-(void)dealloc{
+    if (_model) {
+        [_model removeObserver:self forKeyPath:@"didClickSetBtnCallback"];
+    }
+}
 
 @end

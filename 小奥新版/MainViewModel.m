@@ -8,6 +8,11 @@
 
 #import "MainViewModel.h"
 
+@interface MainViewModel ()
+
+@property(nonatomic, copy)void(^didClickSetBtnCallback)(void);
+@end
+
 @implementation MainViewModel
 
 
@@ -29,6 +34,8 @@
 -(void)didSeletItem:(void (^)(UIView *view, NSInteger index))callback{
     _didSeletItemCallback = callback;
 }
-
+-(void)didClickSetBtn:(void (^)(void))callback{
+    _didClickSetBtnCallback = callback;
+}
 
 @end

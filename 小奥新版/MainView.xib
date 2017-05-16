@@ -33,6 +33,9 @@
                                 <constraint firstAttribute="width" constant="28" id="yK5-ae-5C5"/>
                             </constraints>
                             <state key="normal" backgroundImage="Gear-orange-icon"/>
+                            <connections>
+                                <action selector="setBtnClick:" destination="lge-jx-NZR" eventType="touchUpInside" id="fmZ-JU-nVu"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVR-MZ-9M3">
                             <rect key="frame" x="620" y="11" width="28" height="28"/>
@@ -41,6 +44,9 @@
                                 <constraint firstAttribute="width" constant="28" id="YV2-UP-rtT"/>
                             </constraints>
                             <state key="normal" backgroundImage="HELP-orange-icon"/>
+                            <connections>
+                                <action selector="helpBtnClick:" destination="lge-jx-NZR" eventType="touchUpInside" id="8xr-Iv-MVe"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.96691578629999997" green="0.45497143270000001" blue="0.19362476470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -62,6 +68,21 @@
                         <outlet property="delegate" destination="lge-jx-NZR" id="fht-Z7-jHD"/>
                     </connections>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="版本号V1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62t-gL-7Ju">
+                    <rect key="frame" x="30" y="397" width="51.333333333333329" height="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="®奥松机器人" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ew7-cZ-27v">
+                    <rect key="frame" x="596" y="397" width="110" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="110" id="bIq-op-oxy"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.99108022451400757" green="0.9573168158531189" blue="0.84843021631240845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -70,9 +91,13 @@
                 <constraint firstItem="ciP-iW-Nd2" firstAttribute="leading" secondItem="lge-jx-NZR" secondAttribute="leading" id="DoN-nl-6Ce"/>
                 <constraint firstItem="ciP-iW-Nd2" firstAttribute="centerX" secondItem="fbG-eH-0Ni" secondAttribute="centerX" id="M2q-qC-uaX"/>
                 <constraint firstItem="fbG-eH-0Ni" firstAttribute="leading" secondItem="lge-jx-NZR" secondAttribute="leading" id="Q7S-zB-Yf7"/>
+                <constraint firstAttribute="bottom" secondItem="62t-gL-7Ju" secondAttribute="bottom" constant="5" id="SEK-89-Zqb"/>
                 <constraint firstAttribute="bottom" secondItem="ciP-iW-Nd2" secondAttribute="bottom" constant="40" id="dxY-HC-FDw"/>
+                <constraint firstAttribute="trailing" secondItem="Ew7-cZ-27v" secondAttribute="trailing" constant="30" id="fhQ-4B-89g"/>
+                <constraint firstItem="62t-gL-7Ju" firstAttribute="leading" secondItem="lge-jx-NZR" secondAttribute="leading" constant="30" id="h5w-PE-TAe"/>
                 <constraint firstItem="ciP-iW-Nd2" firstAttribute="top" secondItem="fbG-eH-0Ni" secondAttribute="bottom" constant="50" id="ptl-V0-ty3"/>
                 <constraint firstItem="fbG-eH-0Ni" firstAttribute="top" secondItem="lge-jx-NZR" secondAttribute="top" id="trk-y3-xfh"/>
+                <constraint firstItem="Ew7-cZ-27v" firstAttribute="bottom" secondItem="62t-gL-7Ju" secondAttribute="bottom" id="yUZ-ra-eoe"/>
             </constraints>
             <connections>
                 <outlet property="icarV" destination="ciP-iW-Nd2" id="M8w-Ua-1Rf"/>

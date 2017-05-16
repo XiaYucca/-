@@ -18,4 +18,6 @@
 
 -(void)didSeletItem:(void(^)(UIView *view ,NSInteger index))callback;
 
+-(void)didClickSetBtn:(void(^)(void))callback;
+
 @end

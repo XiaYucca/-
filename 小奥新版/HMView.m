@@ -113,11 +113,13 @@
 -(void)drawRect:(CGRect)rect
 {
     //所有的路劲都渲染一次
-    CGContextRef context =  UIGraphicsGetCurrentContext();
-  
-    UIGraphicsPushContext(context);
+    //  UIGraphicsPopContext();
+#warning ios10 以后好像没有如果没有push 就会有那样contex 0x0 的问题
     
-
+    CGContextRef context =  UIGraphicsGetCurrentContext();
+    UIGraphicsPushContext(context);
+    // NSLog(@"======%p",context);
+    
     for (int i = 0; i < self.path.count; i++) {
         HMBezierPath * path = self.path[i];
         

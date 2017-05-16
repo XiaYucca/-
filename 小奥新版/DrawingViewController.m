@@ -44,6 +44,11 @@
     self.view =drawV;
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 
 /*
 #pragma mark - Navigation
