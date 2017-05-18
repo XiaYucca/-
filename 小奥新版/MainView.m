@@ -18,6 +18,7 @@
 @property (strong, nonatomic) NSMutableArray *pageList;
 
 @property(nonatomic, copy)void(^didClickSetBtnCallback)(void);
+@property(nonatomic, copy)void(^didClickHelpBtnCallback)(void);
 
 @property (nonatomic ,assign)CGRect rFrame;
 
@@ -33,6 +34,7 @@
     if (!_model) {
         _model = [[MainViewModel alloc]init];
         [_model addObserver:self forKeyPath:@"didClickSetBtnCallback" options:NSKeyValueObservingOptionNew context:nil];
+         [_model addObserver:self forKeyPath:@"didClickHelpBtnCallback" options:NSKeyValueObservingOptionNew context:nil];
     }
     return _model;
 }
@@ -40,6 +42,7 @@
 -(void)setModel:(MainViewModel *)model{
     if (_model) {
         [_model removeObserver:self forKeyPath:@"didClickSetBtnCallback"];
+        [_model removeObserver:self forKeyPath:@"didClickHelpBtnCallback"];
     }
     if (model) {
         self.pageList = [@[]mutableCopy];
@@ -56,6 +59,8 @@
         }];
         _model = model;
         [_model addObserver:self forKeyPath:@"didClickSetBtnCallback" options:NSKeyValueObservingOptionNew context:nil];
+        [_model addObserver:self forKeyPath:@"didClickHelpBtnCallback" options:NSKeyValueObservingOptionNew context:nil];
+
         [self.icarV reloadData];
     }
 }
@@ -80,6 +85,12 @@
         _didClickSetBtnCallback = [[_model valueForKey:@"didClickSetBtnCallback"] copy];
     }
     return _didClickSetBtnCallback;
+}
+-(void (^)(void))didClickHelpBtnCallback{
+    if (!_didClickHelpBtnCallback) {
+        _didClickHelpBtnCallback = [[_model valueForKey:@"didClickHelpBtnCallback"] copy];
+    }
+    return _didClickHelpBtnCallback;
 }
 
 +(instancetype)MainView:(CGRect)frame{
@@ -211,7 +222,7 @@
     ! self.didClickSetBtnCallback?:self.didClickSetBtnCallback();
 }
 -(IBAction)helpBtnClick:(id)sender{
-    
+    ! self.didClickHelpBtnCallback?:self.didClickHelpBtnCallback();
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -219,6 +230,9 @@
     if (context == nil) {
         if ([keyPath isEqualToString:@"didClickSetBtnCallback"]) {
             self.didClickSetBtnCallback = [change[@"new"]copy];
+        }
+        if ([keyPath isEqualToString:@"didClickHelpBtnCallback"]) {
+            self.didClickHelpBtnCallback = [change[@"new"]copy];
         }
     } else {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];

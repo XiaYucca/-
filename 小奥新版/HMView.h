@@ -25,6 +25,9 @@
 
 @property(nonatomic,copy)CGFloat(^lineWidthBlock)();
 
+-(void)hmViewAnimationDidStart:(void(^)(void))callback;
+-(void)hmViewAnimationDidStop:(void(^)(void))callback;
+
 -(void)clear;
 -(void)back;
 -(void)erase;

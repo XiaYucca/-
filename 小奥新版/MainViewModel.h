@@ -19,5 +19,6 @@
 -(void)didSeletItem:(void(^)(UIView *view ,NSInteger index))callback;
 
 -(void)didClickSetBtn:(void(^)(void))callback;
+-(void)didClickHelpBtn:(void(^)(void))callback;
 
 @end

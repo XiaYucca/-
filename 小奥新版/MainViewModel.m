@@ -9,7 +9,7 @@
 #import "MainViewModel.h"
 
 @interface MainViewModel ()
-
+@property(nonatomic, copy)void(^didClickHelpBtnCallback)(void);
 @property(nonatomic, copy)void(^didClickSetBtnCallback)(void);
 @end
 
@@ -34,8 +34,11 @@
 -(void)didSeletItem:(void (^)(UIView *view, NSInteger index))callback{
     _didSeletItemCallback = callback;
 }
+
 -(void)didClickSetBtn:(void (^)(void))callback{
     _didClickSetBtnCallback = callback;
 }
-
+-(void)didClickHelpBtn:(void (^)(void))callback{
+    _didClickHelpBtnCallback = callback;
+}
 @end

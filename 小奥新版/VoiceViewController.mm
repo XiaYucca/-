@@ -143,9 +143,14 @@
 - (void)timerFired:(id)sender
 {
     // 获取语音音量级别
-    int voiceLevel = [[BDVoiceRecognitionClient sharedInstance] getCurrentDBLevelMeter];
     
-    NSString *statusMsg = [NSLocalizedString(@"StringLogVoiceLevel", nil) stringByAppendingFormat:@": %d", voiceLevel];
+  //  if ([[BDVoiceRecognitionClient sharedInstance]listenCurrentDBLevelMeter]){
+        int voiceLevel = [[BDVoiceRecognitionClient sharedInstance] getCurrentDBLevelMeter];
+        
+        NSString *statusMsg = [NSLocalizedString(@"StringLogVoiceLevel", nil) stringByAppendingFormat:@": %d", voiceLevel];
+        
+        NSLog(@"+++++++:%@",statusMsg);
+ //   }
  //   [clientSampleViewController logOutToLogView:statusMsg];
 }
 
@@ -155,14 +160,11 @@
 - (void)VoiceRecognitionClientWorkStatus:(int) aStatus obj:(id)aObj{
     
     NSLog(@"status--%d   obj---%@",aStatus,aObj);
-    
     switch (aStatus)
     {
         case EVoiceRecognitionClientWorkStatusSentenceEnd:{
-            
             break;
         }
-            
         case EVoiceRecognitionClientWorkStatusFlushData: // 连续上屏中间结果
         {
             NSString *text = [aObj objectAtIndex:0];
@@ -240,7 +242,6 @@
             NSLog(@"EVoiceRecognitionClientWorkStatusReceiveData--%@",tmpString);
             break;
         }
-            
         case EVoiceRecognitionClientWorkStatusEnd:{
             NSLog(@"说话完成");
             printf("说话完成");
@@ -278,11 +279,11 @@
 //             }
              case EVoiceRecognitionClientWorkStatusStartWorkIng: // 识别库开始识别工作，用户可以说话
              {
-             if ([BDVRSConfig sharedInstance].voiceLevelMeter)  // 开启语音音量监听
-             {
-                 [self startVoiceLevelMeterTimer];
-             }
-             break;
+                 if ([BDVRSConfig sharedInstance].voiceLevelMeter)  // 开启语音音量监听
+                 {
+                     [self startVoiceLevelMeterTimer];
+                 }
+                 break;
              }
              case EVoiceRecognitionClientWorkStatusNone:
              case EVoiceRecognitionClientWorkPlayStartTone:

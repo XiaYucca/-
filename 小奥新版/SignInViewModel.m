@@ -12,6 +12,9 @@
 @property(nonatomic,copy)void(^didSelectItemCallback)(NSInteger btntag);
 @property(nonatomic,copy)void(^willCloseCallback)(void);
 
+@property(nonatomic,assign)NSInteger currSignedDay;
+@property(nonatomic,assign)NSInteger signedDay;
+
 
 @end
 

@@ -42,6 +42,9 @@
 
 @property (nonatomic, copy)void (^outsideBlock)(CGPoint p, BOOL * stop);
 
+@property (nonatomic, copy)void (^didStart)(void);
+@property (nonatomic, copy)void (^didStop)(void);
+
 @end
 
 @implementation HMView
@@ -87,6 +90,13 @@
 -(void)touchOutsideView:(void (^)(CGPoint ,BOOL *))outsideBlock
 {
     self.outsideBlock = outsideBlock;
+}
+-(void)hmViewAnimationDidStart:(void (^)(void))callback
+{
+    self.didStart=callback;
+}
+-(void)hmViewAnimationDidStop:(void (^)(void))callback{
+    self.didStop = callback;
 }
 
 
@@ -175,7 +185,9 @@
     
     
     [self.points addObject:pos];
-
+    
+    
+    !self.didStart ?: self.didStart();
 }
 
 
@@ -263,7 +275,7 @@
 
 -(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-  
+    !self.didStop? :self.didStop();
 }
 
 
@@ -384,6 +396,7 @@
         {
            // [self clear];
             //   [self.timer invalidate];
+
         }
     
 }
@@ -392,7 +405,7 @@
 
 -(void)reStart{
     index = 0;
-    
+
     if (self.points.count) {
         XYPosition *p = [self.points objectAtIndex:0];
         self.cLayer.position = p.point;

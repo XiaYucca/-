@@ -11,6 +11,9 @@
 		C14CE5F31EA88584007AE1AE /* ConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C14CE5F11EA88584007AE1AE /* ConnectViewController.m */; };
 		C14CE5F41EA88584007AE1AE /* ConnectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C14CE5F21EA88584007AE1AE /* ConnectView.xib */; };
 		C14CE5F71EA887CA007AE1AE /* ConnectView.m in Sources */ = {isa = PBXBuildFile; fileRef = C14CE5F61EA887CA007AE1AE /* ConnectView.m */; };
+		C18379FC1ECD3B9F0072976C /* SiriViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18379FB1ECD3B9F0072976C /* SiriViewController.m */; };
+		C18379FF1ECD71970072976C /* HelpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18379FE1ECD71970072976C /* HelpView.xib */; };
+		C1837A011ECD74C10072976C /* HelpView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1837A001ECD74C10072976C /* HelpView.m */; };
 		C18786E91EC3EEEA00955499 /* VoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = C18786E81EC3EEEA00955499 /* VoiceView.m */; };
 		C18786EC1EC3F83700955499 /* VoiceViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C18786EB1EC3F83700955499 /* VoiceViewController.mm */; };
 		C18786EF1EC40EC500955499 /* VoiceViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C18786EE1EC40EC500955499 /* VoiceViewModel.m */; };
@@ -120,6 +123,11 @@
 		C14CE5F21EA88584007AE1AE /* ConnectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectView.xib; sourceTree = "<group>"; };
 		C14CE5F51EA887CA007AE1AE /* ConnectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectView.h; sourceTree = "<group>"; };
 		C14CE5F61EA887CA007AE1AE /* ConnectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectView.m; sourceTree = "<group>"; };
+		C18379FA1ECD3B9F0072976C /* SiriViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiriViewController.h; sourceTree = "<group>"; };
+		C18379FB1ECD3B9F0072976C /* SiriViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiriViewController.m; sourceTree = "<group>"; };
+		C18379FE1ECD71970072976C /* HelpView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpView.xib; sourceTree = "<group>"; };
+		C1837A001ECD74C10072976C /* HelpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpView.m; sourceTree = "<group>"; };
+		C1837A021ECD74E10072976C /* HelpView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelpView.h; sourceTree = "<group>"; };
 		C18786E71EC3EEEA00955499 /* VoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceView.h; sourceTree = "<group>"; };
 		C18786E81EC3EEEA00955499 /* VoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceView.m; sourceTree = "<group>"; };
 		C18786EA1EC3F83700955499 /* VoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceViewController.h; sourceTree = "<group>"; };
@@ -333,6 +341,16 @@
 			name = "提示连接";
 			sourceTree = "<group>";
 		};
+		C18379FD1ECD71720072976C /* 帮助 */ = {
+			isa = PBXGroup;
+			children = (
+				C18379FE1ECD71970072976C /* HelpView.xib */,
+				C1837A021ECD74E10072976C /* HelpView.h */,
+				C1837A001ECD74C10072976C /* HelpView.m */,
+			);
+			name = "帮助";
+			sourceTree = "<group>";
+		};
 		C186E9C71EAAF5EC00951E7B /* 跳舞 */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +370,8 @@
 		C18DCF7B1EC31469003AD61B /* 语音 */ = {
 			isa = PBXGroup;
 			children = (
+				C18379FA1ECD3B9F0072976C /* SiriViewController.h */,
+				C18379FB1ECD3B9F0072976C /* SiriViewController.m */,
 				C1937D641EC55235007EC7B7 /* SiriView.h */,
 				C1937D651EC55235007EC7B7 /* SiriView.m */,
 				C18DCF7C1EC3148A003AD61B /* VoiceView.xib */,
@@ -441,6 +461,7 @@
 		C19228431EA5C2BF00B0166D /* views */ = {
 			isa = PBXGroup;
 			children = (
+				C18379FD1ECD71720072976C /* 帮助 */,
 				C1FB19391ECAA71F0014830B /* 签到 */,
 				C18DCF7E1EC317BB003AD61B /* 寻线 */,
 				C18DCF7B1EC31469003AD61B /* 语音 */,
@@ -876,6 +897,7 @@
 				C19CE7D41ECC2759007091B5 /* BDVoiceRecognitionClientResources in Resources */,
 				C18DCF7D1EC3148A003AD61B /* VoiceView.xib in Resources */,
 				C19421FD1EBDA69600220B8B /* DrawingView.xib in Resources */,
+				C18379FF1ECD71970072976C /* HelpView.xib in Resources */,
 				C1FB193E1ECAA7520014830B /* SignInView.xib in Resources */,
 				C19CE7FF1ECC27BE007091B5 /* s_1 in Resources */,
 				C192281D1EA5B62300B0166D /* Assets.xcassets in Resources */,
@@ -966,6 +988,7 @@
 				C18786F61EC4521900955499 /* HuntingView.m in Sources */,
 				C19421F21EBD617F00220B8B /* EditFaceView.m in Sources */,
 				C1A409811EB9821300874B8F /* MModel.m in Sources */,
+				C18379FC1ECD3B9F0072976C /* SiriViewController.m in Sources */,
 				C18DCF7A1EC2B7E2003AD61B /* ExpressionViewModel.m in Sources */,
 				C192285A1EA617DF00B0166D /* NSMutableArray+Queue.m in Sources */,
 				C19CE7FB1ECC27BE007091B5 /* BDVRSConfig.m in Sources */,
@@ -1002,6 +1025,7 @@
 				C1937D661EC55235007EC7B7 /* SiriView.m in Sources */,
 				C19228151EA5B62300B0166D /* AppDelegate.m in Sources */,
 				C18786F91EC4554C00955499 /* HuntingViewModel.m in Sources */,
+				C1837A011ECD74C10072976C /* HelpView.m in Sources */,
 				C19228121EA5B62300B0166D /* main.m in Sources */,
 				C19CE7D21ECBE907007091B5 /* NetWork.m in Sources */,
 				C19421F71EBD699100220B8B /* EditFaceViewController.m in Sources */,

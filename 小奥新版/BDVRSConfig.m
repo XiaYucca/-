@@ -34,13 +34,14 @@
         playEndMusicSwitch = NO;
         _recognitionProperty = [[NSNumber numberWithInt: EVoiceRecognitionPropertyInput] retain];
         recognitionLanguage = EVoiceRecognitionLanguageChinese;
-        voiceLevelMeter = NO;
+        voiceLevelMeter = YES;
         uiHintMusicSwitch = YES;
 		isNeedNLU = NO;
         
 		NSString *tmpString = [[BDVoiceRecognitionClient sharedInstance] libVer];
 		_libVersion = [[NSString alloc] initWithString:tmpString];
         _theme = [[BDTheme lightBlueTheme] retain];
+       // [BDVoiceRecognitionClient sharedInstance].listenCurrentDBLevelMeter= YES;
 	}
 	return self;
 }

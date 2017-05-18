@@ -20,6 +20,7 @@
 #import "SignInViewModel.h"
 
 #import "DataStore.h"
+#import "HelpView.h"
 
 #import "NSData+ImageContentType.h"
 
@@ -36,7 +37,9 @@ tmp;\
 
 @end
 
-@implementation MainViewController
+@implementation MainViewController{
+    bool isSignIn;
+}
 
 -(void)test{
    id t = VerifyValue(@1);
@@ -47,7 +50,9 @@ tmp;\
     
     SignInViewModel *model = [[SignInViewModel alloc]init];
     [model viewDidSelectItem:^(NSInteger btntag) {
-        NSLog(@"selected item %d",btntag);
+        
+        NSLog(@"selected item %ld",btntag);
+        
     }];
  //   model
     
@@ -59,7 +64,7 @@ tmp;\
 //        NSLog(@"signView dissmissOnWindow");
 //      //  return YES;
 //    }];
-    //signView.model= model;
+//    signView.model= model;
     
 }
 
@@ -71,9 +76,14 @@ tmp;\
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-    [SignInView showOnWindow:^{
-        
-    }];
+    
+    if(!isSignIn){
+        [SignInView showOnWindow:^{
+            
+        }];
+        isSignIn = YES;
+    }
+
     
 //    DataStore *store = [[DataStore alloc]init];
 //    [store test];
@@ -87,21 +97,31 @@ tmp;\
 
     
     MainViewModel *mainViewModel = [[MainViewModel alloc] init ];
-    mainViewModel.pageListArr = @[@"跳舞",@"语音",@"寻线",@"手绘",@"编程",@"重力"];
+    mainViewModel.pageListArr = @[@"跳舞",@"语音",@"寻线",@"手绘",@"编程",@"重力",@"摇杆"];
     mainViewModel.jumpPageListArr = @[@"ExpressionViewController",
-                                      @"EditFaceViewController",
-                                      @"DrawingViewController",
-                                      @"HuntingViewController",
                                       @"VoiceViewController",
-                                      @"DanceViewController"];
+                                      @"HuntingViewController",
+                                      @"DrawingViewController",
+                                      @"EditFaceViewController",
+                                      @"DanceViewController",
+                                      @"DanceViewController"
+                                      ];
     
     WeakObj(self);
     WeakObj(mainViewModel);
     mainViewModel.didSeletItemCallback = ^(UIView *view ,NSInteger index){
+        if(index > 4)
+            return;
         NSLog(@"view:%@\n indx:%li",view,(long)index);
         NSString *str = [weakmainViewModel.jumpPageListArr objectAtIndex:index];
         [[Route share]GoToControllerIsPush:NO ClassName:str From:weakself PropertyDic:nil];
+        
     };
+    
+    [mainViewModel didClickHelpBtn:^{
+        NSLog(@"%s",__func__);
+        [[HelpView helpViewFromNib] showOnWindow];
+    }];
     
     ((MainView *)self.view).model = mainViewModel;
     [mainViewModel didClickSetBtn:^{

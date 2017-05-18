@@ -308,6 +308,7 @@
 //      if (_amplitude < 0.06) {
 //            normedAmplitude = 0.0;
 //      }
+        
         CGFloat x= 0;
         
         for( x = 0; x<self.waveWidth + self.density; x += self.density) {

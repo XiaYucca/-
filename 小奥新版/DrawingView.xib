@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DrawingView">
             <connections>
+                <outlet property="btnPlay" destination="RRM-wp-hQF" id="Gxg-cM-163"/>
+                <outlet property="btnRestart" destination="WAj-yc-gUG" id="lIo-Lm-6YZ"/>
+                <outlet property="btnWrite" destination="zrL-1o-Xq1" id="RXu-Ap-358"/>
                 <outlet property="content" destination="iN0-l3-epB" id="gWj-Gh-bRz"/>
                 <outlet property="hmView" destination="cOk-P1-Owc" id="CYE-4r-BJ5"/>
             </connections>
@@ -65,7 +68,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="界面" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9H1-li-czi">
-                                    <rect key="frame" x="42" y="-0.66666666666666607" width="42" height="21"/>
+                                    <rect key="frame" x="42" y="-0.33333333333333393" width="42" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="3dU-id-sgB"/>
                                         <constraint firstAttribute="width" constant="42" id="Bqi-Ct-GsQ"/>
@@ -107,27 +110,30 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Mr-nY-F3h">
                             <rect key="frame" x="0.0" y="0.0" width="118" height="364"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrL-1o-Xq1">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrL-1o-Xq1">
                                     <rect key="frame" x="33" y="124" width="52" height="52"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="52" id="Z1V-gV-m53"/>
                                         <constraint firstAttribute="height" constant="52" id="o3p-8J-0eL"/>
                                     </constraints>
                                     <state key="normal" backgroundImage="Pen-icon-"/>
+                                    <state key="selected" backgroundImage="Pen-icon_选择-"/>
                                     <connections>
                                         <action selector="enableDraw:" destination="-1" eventType="touchUpInside" id="suF-nw-7Lk"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAj-yc-gUG">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAj-yc-gUG">
                                     <rect key="frame" x="33" y="264" width="52" height="52"/>
                                     <state key="normal" backgroundImage="Reload-icon"/>
+                                    <state key="selected" backgroundImage="Reload-icon_选择"/>
                                     <connections>
                                         <action selector="restartDraw:" destination="-1" eventType="touchUpInside" id="FIY-My-Ym4"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRM-wp-hQF">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRM-wp-hQF">
                                     <rect key="frame" x="33" y="194" width="52" height="52"/>
-                                    <state key="normal" backgroundImage="Play-icon-"/>
+                                    <state key="normal" backgroundImage="Play-icon-draw"/>
+                                    <state key="selected" backgroundImage="Play-icon-draw-选择"/>
                                     <connections>
                                         <action selector="playDrawPath:" destination="-1" eventType="touchUpInside" id="FHa-SU-K8k"/>
                                     </connections>
@@ -213,8 +219,11 @@
         <image name="Gear-icon-blue" width="28" height="28"/>
         <image name="HELPicon-blue" width="28" height="28"/>
         <image name="Pen-icon-" width="52" height="52"/>
-        <image name="Play-icon-" width="52" height="52"/>
+        <image name="Pen-icon_选择-" width="52" height="52"/>
+        <image name="Play-icon-draw" width="52" height="52"/>
+        <image name="Play-icon-draw-选择" width="52" height="52"/>
         <image name="Reload-icon" width="52" height="52"/>
+        <image name="Reload-icon_选择" width="52" height="52"/>
         <image name="手绘区" width="599" height="339"/>
     </resources>
 </document>

@@ -14,6 +14,10 @@
 
 @property(nonatomic ,weak)IBOutlet UIView *content;
 @property(nonatomic ,weak)IBOutlet HMView *hmView;
+
+@property(nonatomic ,weak)IBOutlet UIButton *btnWrite;
+@property(nonatomic ,weak)IBOutlet UIButton *btnPlay;
+@property(nonatomic ,weak)IBOutlet UIButton *btnRestart;
 //@property (nonatomic ,strong) UIView *number;
 
 @end
@@ -64,13 +68,24 @@
 {
     self.hmView.lineColor = [UIColor blueColor];
     self.hmView.lineWidth = 8;
+    
+    [self.hmView hmViewAnimationDidStart:^{
+        self.btnWrite.selected = YES;
+    }];
+    [self.hmView hmViewAnimationDidStop:^{
+        self.btnWrite.selected = NO;
+    }];
+    
 //    [self.hmView reStart];
 }
 
 -(IBAction)restartDraw:(id)sender{
+    self.btnPlay.selected = NO;
+    self.btnWrite.selected = NO;
     [self.hmView clear];
 }
 -(IBAction)playDrawPath:(id)sender{
+    ((UIButton *)sender).selected = !((UIButton *)sender).selected;
     [self.hmView reStart];
 }
 -(IBAction)enableDraw:(id)sender{
