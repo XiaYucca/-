@@ -138,17 +138,17 @@
     NSLog(@"%@",window.subviews);
     
     [window insertSubview:temp atIndex:window.subviews.count];
-    
+    [window bringSubviewToFront:temp];
 
-        temp.transform = CGAffineTransformMakeScale(0.01, 0.01);
-    [UIView animateWithDuration:2.5 delay:0.1 usingSpringWithDamping:0.5 initialSpringVelocity:0.5 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        temp.transform = CGAffineTransformIdentity;
-        
-    } completion:nil];
+//    temp.transform = CGAffineTransformMakeScale(0.01, 0.01);
+//    [UIView animateWithDuration:2.5 delay:0.1 usingSpringWithDamping:0.5 initialSpringVelocity:0.5 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+//        temp.transform = CGAffineTransformIdentity;
+//        
+//    } completion:nil];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [window bringSubviewToFront:temp];
-    });
+   // dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    //  [window bringSubviewToFront:temp];
+   // });
 
     //     [temp initFromNib];
     !complient ? :complient();

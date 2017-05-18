@@ -24,6 +24,7 @@
 @implementation HuntingView
 @synthesize model = _model;
 
+
 -(void)setModel:(HuntingViewModel *)model{
     if(_model){
         [_model removeObserver:self forKeyPath:@"willShowCallback"];

@@ -10,4 +10,5 @@
 
 @interface DataStore : NSObject
 
+-(void)test;
 @end

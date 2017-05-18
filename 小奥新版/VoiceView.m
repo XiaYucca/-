@@ -38,7 +38,6 @@
         [_model setValue:self forKey:@"view"];
         [_model addObserver:self forKeyPath:@"willShowCallback" options:NSKeyValueObservingOptionNew context:nil];
         [_model addObserver:self forKeyPath:@"willDissmissCallback" options:NSKeyValueObservingOptionNew context:nil];
-        
         [_model addObserver:self forKeyPath:@"helpBtnClickCallback" options:NSKeyValueObservingOptionNew context:nil];
         [_model addObserver:self forKeyPath:@"setBtnClickCallback" options:NSKeyValueObservingOptionNew context:nil];
         [_model addObserver:self forKeyPath:@"voiceBtnClickCallback" options:NSKeyValueObservingOptionNew context:nil];
@@ -186,7 +185,8 @@
 }
 -(IBAction)voiceBtnClick:(id)sender
 {
-   // !self.willShowCallback ?: self.willShowCallback();
+    WeakObj(sender);
+    !self.voiceBtnClickCallback ? : self.voiceBtnClickCallback(weaksender);
 }
 
 -(void)dealloc{

@@ -251,7 +251,7 @@
     
     static int isOpen = 0;
   //  int  lineSpead = (int)(_lineFlowSpead);
-    NSLog(@"=====%i",lineSpead);
+  //  NSLog(@"=====%i",lineSpead);
     if (isOpen ++ > lineSpead) {
         id obj = [self.queueArr pop];
         [self.queueArr unshift:obj];

@@ -12,7 +12,7 @@
 		C14CE5F41EA88584007AE1AE /* ConnectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C14CE5F21EA88584007AE1AE /* ConnectView.xib */; };
 		C14CE5F71EA887CA007AE1AE /* ConnectView.m in Sources */ = {isa = PBXBuildFile; fileRef = C14CE5F61EA887CA007AE1AE /* ConnectView.m */; };
 		C18786E91EC3EEEA00955499 /* VoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = C18786E81EC3EEEA00955499 /* VoiceView.m */; };
-		C18786EC1EC3F83700955499 /* VoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18786EB1EC3F83700955499 /* VoiceViewController.m */; };
+		C18786EC1EC3F83700955499 /* VoiceViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C18786EB1EC3F83700955499 /* VoiceViewController.mm */; };
 		C18786EF1EC40EC500955499 /* VoiceViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C18786EE1EC40EC500955499 /* VoiceViewModel.m */; };
 		C18786F31EC42E3B00955499 /* DataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C18786F21EC42E3B00955499 /* DataStore.m */; };
 		C18786F61EC4521900955499 /* HuntingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C18786F51EC4521900955499 /* HuntingView.m */; };
@@ -55,6 +55,32 @@
 		C19422101EBDC14F00220B8B /* DrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C194220F1EBDC14F00220B8B /* DrawingViewController.m */; };
 		C19849031EAF1B43006F3625 /* MessageRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = C19849021EAF1B43006F3625 /* MessageRoute.m */; };
 		C19B14AE1EBB285B00CB9B86 /* SetingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19B14AD1EBB285B00CB9B86 /* SetingView.xib */; };
+		C19CE7D21ECBE907007091B5 /* NetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = C19CE7D11ECBE907007091B5 /* NetWork.m */; };
+		C19CE7D41ECC2759007091B5 /* BDVoiceRecognitionClientResources in Resources */ = {isa = PBXBuildFile; fileRef = C19CE7D31ECC2759007091B5 /* BDVoiceRecognitionClientResources */; };
+		C19CE7FA1ECC27BE007091B5 /* VoicesViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C19CE7D71ECC27BE007091B5 /* VoicesViewController.mm */; };
+		C19CE7FB1ECC27BE007091B5 /* BDVRSConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C19CE7D91ECC27BE007091B5 /* BDVRSConfig.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C19CE7FC1ECC27BE007091B5 /* CADebugMacros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C19CE7DC1ECC27BE007091B5 /* CADebugMacros.cpp */; };
+		C19CE7FD1ECC27BE007091B5 /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C19CE7DF1ECC27BE007091B5 /* CAStreamBasicDescription.cpp */; };
+		C19CE7FE1ECC27BE007091B5 /* CAXException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C19CE7E11ECC27BE007091B5 /* CAXException.cpp */; };
+		C19CE7FF1ECC27BE007091B5 /* s_1 in Resources */ = {isa = PBXBuildFile; fileRef = C19CE7E41ECC27BE007091B5 /* s_1 */; };
+		C19CE8001ECC27BE007091B5 /* s_2_InputMethod in Resources */ = {isa = PBXBuildFile; fileRef = C19CE7E51ECC27BE007091B5 /* s_2_InputMethod */; };
+		C19CE8011ECC27BE007091B5 /* s_2_Navi in Resources */ = {isa = PBXBuildFile; fileRef = C19CE7E61ECC27BE007091B5 /* s_2_Navi */; };
+		C19CE8021ECC27BE007091B5 /* bdasr_temp_license.dat in Resources */ = {isa = PBXBuildFile; fileRef = C19CE7E81ECC27BE007091B5 /* bdasr_temp_license.dat */; };
+		C19CE8031ECC27BE007091B5 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C19CE7EB1ECC27BE007091B5 /* TTTAttributedLabel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C19CE8041ECC27BE007091B5 /* libBDVoiceRecognitionClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CE7ED1ECC27BE007091B5 /* libBDVoiceRecognitionClient.a */; };
+		C19CE8051ECC27BE007091B5 /* NSMutableArray+Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = C19CE7F91ECC27BE007091B5 /* NSMutableArray+Queue.m */; };
+		C19CE8071ECC28A3007091B5 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CE8061ECC28A3007091B5 /* CoreTelephony.framework */; };
+		C19CE8091ECC28BA007091B5 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CE8081ECC28BA007091B5 /* CoreText.framework */; };
+		C19CE80B1ECC28C6007091B5 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CE80A1ECC28C6007091B5 /* GLKit.framework */; };
+		C19CE80D1ECC28D8007091B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CE80C1ECC28D8007091B5 /* QuartzCore.framework */; };
+		C19CE80F1ECC28E5007091B5 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CE80E1ECC28E5007091B5 /* OpenGLES.framework */; };
+		C19CE8111ECC28F2007091B5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CE8101ECC28F2007091B5 /* CoreLocation.framework */; };
+		C19CE8131ECC28FD007091B5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CE8121ECC28FD007091B5 /* CFNetwork.framework */; };
+		C19CE8151ECC290D007091B5 /* libz.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CE8141ECC290D007091B5 /* libz.1.tbd */; };
+		C19CE8171ECC2916007091B5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CE8161ECC2916007091B5 /* Security.framework */; };
+		C19CE8191ECC2925007091B5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CE8181ECC2925007091B5 /* SystemConfiguration.framework */; };
+		C19CE81B1ECC292D007091B5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CE81A1ECC292D007091B5 /* AVFoundation.framework */; };
+		C19CE81D1ECC293E007091B5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19CE81C1ECC293E007091B5 /* AudioToolbox.framework */; };
 		C1A156CA1EC185B600E1090B /* DrawingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A156C91EC185B600E1090B /* DrawingViewModel.m */; };
 		C1A156CD1EC1BD0800E1090B /* ExpressionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1A156CC1EC1BD0800E1090B /* ExpressionView.xib */; };
 		C1A156D01EC1BD1E00E1090B /* ExpressionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A156CF1EC1BD1E00E1090B /* ExpressionView.m */; };
@@ -97,7 +123,7 @@
 		C18786E71EC3EEEA00955499 /* VoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceView.h; sourceTree = "<group>"; };
 		C18786E81EC3EEEA00955499 /* VoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceView.m; sourceTree = "<group>"; };
 		C18786EA1EC3F83700955499 /* VoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceViewController.h; sourceTree = "<group>"; };
-		C18786EB1EC3F83700955499 /* VoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceViewController.m; sourceTree = "<group>"; };
+		C18786EB1EC3F83700955499 /* VoiceViewController.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = VoiceViewController.mm; sourceTree = "<group>"; };
 		C18786ED1EC40EC500955499 /* VoiceViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceViewModel.h; sourceTree = "<group>"; };
 		C18786EE1EC40EC500955499 /* VoiceViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceViewModel.m; sourceTree = "<group>"; };
 		C18786F11EC42E3B00955499 /* DataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStore.h; sourceTree = "<group>"; };
@@ -176,6 +202,50 @@
 		C19849011EAF1B42006F3625 /* MessageRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageRoute.h; sourceTree = "<group>"; };
 		C19849021EAF1B43006F3625 /* MessageRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageRoute.m; sourceTree = "<group>"; };
 		C19B14AD1EBB285B00CB9B86 /* SetingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetingView.xib; sourceTree = "<group>"; };
+		C19CE7D01ECBE907007091B5 /* NetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWork.h; sourceTree = "<group>"; };
+		C19CE7D11ECBE907007091B5 /* NetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWork.m; sourceTree = "<group>"; };
+		C19CE7D31ECC2759007091B5 /* BDVoiceRecognitionClientResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BDVoiceRecognitionClientResources; sourceTree = "<group>"; };
+		C19CE7D61ECC27BE007091B5 /* VoicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoicesViewController.h; sourceTree = "<group>"; };
+		C19CE7D71ECC27BE007091B5 /* VoicesViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VoicesViewController.mm; sourceTree = "<group>"; };
+		C19CE7D81ECC27BE007091B5 /* BDVRSConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDVRSConfig.h; sourceTree = "<group>"; };
+		C19CE7D91ECC27BE007091B5 /* BDVRSConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDVRSConfig.m; sourceTree = "<group>"; };
+		C19CE7DC1ECC27BE007091B5 /* CADebugMacros.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugMacros.cpp; sourceTree = "<group>"; };
+		C19CE7DD1ECC27BE007091B5 /* CADebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugMacros.h; sourceTree = "<group>"; };
+		C19CE7DE1ECC27BE007091B5 /* CAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAMath.h; sourceTree = "<group>"; };
+		C19CE7DF1ECC27BE007091B5 /* CAStreamBasicDescription.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAStreamBasicDescription.cpp; sourceTree = "<group>"; };
+		C19CE7E01ECC27BE007091B5 /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
+		C19CE7E11ECC27BE007091B5 /* CAXException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAXException.cpp; sourceTree = "<group>"; };
+		C19CE7E21ECC27BE007091B5 /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
+		C19CE7E41ECC27BE007091B5 /* s_1 */ = {isa = PBXFileReference; lastKnownFileType = file; path = s_1; sourceTree = "<group>"; };
+		C19CE7E51ECC27BE007091B5 /* s_2_InputMethod */ = {isa = PBXFileReference; lastKnownFileType = file; path = s_2_InputMethod; sourceTree = "<group>"; };
+		C19CE7E61ECC27BE007091B5 /* s_2_Navi */ = {isa = PBXFileReference; lastKnownFileType = file; path = s_2_Navi; sourceTree = "<group>"; };
+		C19CE7E81ECC27BE007091B5 /* bdasr_temp_license.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bdasr_temp_license.dat; sourceTree = "<group>"; };
+		C19CE7EA1ECC27BE007091B5 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
+		C19CE7EB1ECC27BE007091B5 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
+		C19CE7ED1ECC27BE007091B5 /* libBDVoiceRecognitionClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBDVoiceRecognitionClient.a; sourceTree = "<group>"; };
+		C19CE7EF1ECC27BE007091B5 /* BDRecognizerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDRecognizerViewController.h; sourceTree = "<group>"; };
+		C19CE7F01ECC27BE007091B5 /* BDRecognizerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDRecognizerViewDelegate.h; sourceTree = "<group>"; };
+		C19CE7F11ECC27BE007091B5 /* BDRecognizerViewParamsObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDRecognizerViewParamsObject.h; sourceTree = "<group>"; };
+		C19CE7F21ECC27BE007091B5 /* BDTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDTheme.h; sourceTree = "<group>"; };
+		C19CE7F31ECC27BE007091B5 /* BDVoiceRecognitionClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDVoiceRecognitionClient.h; sourceTree = "<group>"; };
+		C19CE7F41ECC27BE007091B5 /* BDVRDataUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDVRDataUploader.h; sourceTree = "<group>"; };
+		C19CE7F51ECC27BE007091B5 /* BDVRFileRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDVRFileRecognizer.h; sourceTree = "<group>"; };
+		C19CE7F61ECC27BE007091B5 /* BDVRRawDataRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDVRRawDataRecognizer.h; sourceTree = "<group>"; };
+		C19CE7F71ECC27BE007091B5 /* BDVRUIPromptTextCustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDVRUIPromptTextCustom.h; sourceTree = "<group>"; };
+		C19CE7F81ECC27BE007091B5 /* NSMutableArray+Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Queue.h"; sourceTree = "<group>"; };
+		C19CE7F91ECC27BE007091B5 /* NSMutableArray+Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Queue.m"; sourceTree = "<group>"; };
+		C19CE8061ECC28A3007091B5 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		C19CE8081ECC28BA007091B5 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		C19CE80A1ECC28C6007091B5 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		C19CE80C1ECC28D8007091B5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C19CE80E1ECC28E5007091B5 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		C19CE8101ECC28F2007091B5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C19CE8121ECC28FD007091B5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C19CE8141ECC290D007091B5 /* libz.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.tbd; path = usr/lib/libz.1.tbd; sourceTree = SDKROOT; };
+		C19CE8161ECC2916007091B5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C19CE8181ECC2925007091B5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C19CE81A1ECC292D007091B5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C19CE81C1ECC293E007091B5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C1A156C81EC185B600E1090B /* DrawingViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingViewModel.h; sourceTree = "<group>"; };
 		C1A156C91EC185B600E1090B /* DrawingViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingViewModel.m; sourceTree = "<group>"; };
 		C1A156CC1EC1BD0800E1090B /* ExpressionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpressionView.xib; sourceTree = "<group>"; };
@@ -210,7 +280,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C19CE81D1ECC293E007091B5 /* AudioToolbox.framework in Frameworks */,
+				C19CE81B1ECC292D007091B5 /* AVFoundation.framework in Frameworks */,
+				C19CE8191ECC2925007091B5 /* SystemConfiguration.framework in Frameworks */,
+				C19CE8171ECC2916007091B5 /* Security.framework in Frameworks */,
+				C19CE8151ECC290D007091B5 /* libz.1.tbd in Frameworks */,
+				C19CE8131ECC28FD007091B5 /* CFNetwork.framework in Frameworks */,
+				C19CE8111ECC28F2007091B5 /* CoreLocation.framework in Frameworks */,
+				C19CE80F1ECC28E5007091B5 /* OpenGLES.framework in Frameworks */,
+				C19CE80D1ECC28D8007091B5 /* QuartzCore.framework in Frameworks */,
+				C19CE80B1ECC28C6007091B5 /* GLKit.framework in Frameworks */,
+				C19CE8091ECC28BA007091B5 /* CoreText.framework in Frameworks */,
+				C19CE8071ECC28A3007091B5 /* CoreTelephony.framework in Frameworks */,
 				1A6F9B3B5C6F680676B19AE2 /* libPods-小奥新版.a in Frameworks */,
+				C19CE8041ECC27BE007091B5 /* libBDVoiceRecognitionClient.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +396,9 @@
 		C192280F1EA5B62300B0166D /* 小奥新版 */ = {
 			isa = PBXGroup;
 			children = (
+				C19CE7D51ECC2785007091B5 /* baiduVoice */,
+				C19CE7D31ECC2759007091B5 /* BDVoiceRecognitionClientResources */,
+				C19CE7CF1ECBE8C1007091B5 /* network */,
 				C18786F01EC42E1400955499 /* datastore */,
 				C19228431EA5C2BF00B0166D /* views */,
 				C19228451EA5C35800B0166D /* controllers */,
@@ -402,7 +488,7 @@
 				C194220E1EBDC14F00220B8B /* DrawingViewController.h */,
 				C194220F1EBDC14F00220B8B /* DrawingViewController.m */,
 				C18786EA1EC3F83700955499 /* VoiceViewController.h */,
-				C18786EB1EC3F83700955499 /* VoiceViewController.m */,
+				C18786EB1EC3F83700955499 /* VoiceViewController.mm */,
 				C18786FA1EC45C0400955499 /* HuntingViewController.h */,
 				C18786FB1EC45C0400955499 /* HuntingViewController.m */,
 			);
@@ -505,6 +591,107 @@
 			name = HMView;
 			sourceTree = "<group>";
 		};
+		C19CE7CF1ECBE8C1007091B5 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				C19CE7D01ECBE907007091B5 /* NetWork.h */,
+				C19CE7D11ECBE907007091B5 /* NetWork.m */,
+			);
+			name = network;
+			sourceTree = "<group>";
+		};
+		C19CE7D51ECC2785007091B5 /* baiduVoice */ = {
+			isa = PBXGroup;
+			children = (
+				C19CE7D61ECC27BE007091B5 /* VoicesViewController.h */,
+				C19CE7D71ECC27BE007091B5 /* VoicesViewController.mm */,
+				C19CE7D81ECC27BE007091B5 /* BDVRSConfig.h */,
+				C19CE7D91ECC27BE007091B5 /* BDVRSConfig.m */,
+				C19CE7DA1ECC27BE007091B5 /* Third-party */,
+				C19CE7EC1ECC27BE007091B5 /* libBDVoiceRecognitionClient */,
+				C19CE7EE1ECC27BE007091B5 /* Headers */,
+			);
+			name = baiduVoice;
+			sourceTree = "<group>";
+		};
+		C19CE7DA1ECC27BE007091B5 /* Third-party */ = {
+			isa = PBXGroup;
+			children = (
+				C19CE7DB1ECC27BE007091B5 /* CoreAudioUtility */,
+				C19CE7E31ECC27BE007091B5 /* Data */,
+				C19CE7E71ECC27BE007091B5 /* License */,
+				C19CE7E91ECC27BE007091B5 /* TTTAttributedLabel */,
+			);
+			path = "Third-party";
+			sourceTree = "<group>";
+		};
+		C19CE7DB1ECC27BE007091B5 /* CoreAudioUtility */ = {
+			isa = PBXGroup;
+			children = (
+				C19CE7DC1ECC27BE007091B5 /* CADebugMacros.cpp */,
+				C19CE7DD1ECC27BE007091B5 /* CADebugMacros.h */,
+				C19CE7DE1ECC27BE007091B5 /* CAMath.h */,
+				C19CE7DF1ECC27BE007091B5 /* CAStreamBasicDescription.cpp */,
+				C19CE7E01ECC27BE007091B5 /* CAStreamBasicDescription.h */,
+				C19CE7E11ECC27BE007091B5 /* CAXException.cpp */,
+				C19CE7E21ECC27BE007091B5 /* CAXException.h */,
+			);
+			path = CoreAudioUtility;
+			sourceTree = "<group>";
+		};
+		C19CE7E31ECC27BE007091B5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C19CE7E41ECC27BE007091B5 /* s_1 */,
+				C19CE7E51ECC27BE007091B5 /* s_2_InputMethod */,
+				C19CE7E61ECC27BE007091B5 /* s_2_Navi */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C19CE7E71ECC27BE007091B5 /* License */ = {
+			isa = PBXGroup;
+			children = (
+				C19CE7E81ECC27BE007091B5 /* bdasr_temp_license.dat */,
+			);
+			path = License;
+			sourceTree = "<group>";
+		};
+		C19CE7E91ECC27BE007091B5 /* TTTAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				C19CE7EA1ECC27BE007091B5 /* TTTAttributedLabel.h */,
+				C19CE7EB1ECC27BE007091B5 /* TTTAttributedLabel.m */,
+			);
+			path = TTTAttributedLabel;
+			sourceTree = "<group>";
+		};
+		C19CE7EC1ECC27BE007091B5 /* libBDVoiceRecognitionClient */ = {
+			isa = PBXGroup;
+			children = (
+				C19CE7ED1ECC27BE007091B5 /* libBDVoiceRecognitionClient.a */,
+			);
+			path = libBDVoiceRecognitionClient;
+			sourceTree = "<group>";
+		};
+		C19CE7EE1ECC27BE007091B5 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				C19CE7EF1ECC27BE007091B5 /* BDRecognizerViewController.h */,
+				C19CE7F01ECC27BE007091B5 /* BDRecognizerViewDelegate.h */,
+				C19CE7F11ECC27BE007091B5 /* BDRecognizerViewParamsObject.h */,
+				C19CE7F21ECC27BE007091B5 /* BDTheme.h */,
+				C19CE7F31ECC27BE007091B5 /* BDVoiceRecognitionClient.h */,
+				C19CE7F41ECC27BE007091B5 /* BDVRDataUploader.h */,
+				C19CE7F51ECC27BE007091B5 /* BDVRFileRecognizer.h */,
+				C19CE7F61ECC27BE007091B5 /* BDVRRawDataRecognizer.h */,
+				C19CE7F71ECC27BE007091B5 /* BDVRUIPromptTextCustom.h */,
+				C19CE7F81ECC27BE007091B5 /* NSMutableArray+Queue.h */,
+				C19CE7F91ECC27BE007091B5 /* NSMutableArray+Queue.m */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
 		C1A156CB1EC1BCC400E1090B /* 表情 */ = {
 			isa = PBXGroup;
 			children = (
@@ -547,6 +734,18 @@
 		C877637A0614664E8325E833 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C19CE81C1ECC293E007091B5 /* AudioToolbox.framework */,
+				C19CE81A1ECC292D007091B5 /* AVFoundation.framework */,
+				C19CE8181ECC2925007091B5 /* SystemConfiguration.framework */,
+				C19CE8161ECC2916007091B5 /* Security.framework */,
+				C19CE8141ECC290D007091B5 /* libz.1.tbd */,
+				C19CE8121ECC28FD007091B5 /* CFNetwork.framework */,
+				C19CE8101ECC28F2007091B5 /* CoreLocation.framework */,
+				C19CE80E1ECC28E5007091B5 /* OpenGLES.framework */,
+				C19CE80C1ECC28D8007091B5 /* QuartzCore.framework */,
+				C19CE80A1ECC28C6007091B5 /* GLKit.framework */,
+				C19CE8081ECC28BA007091B5 /* CoreText.framework */,
+				C19CE8061ECC28A3007091B5 /* CoreTelephony.framework */,
 				E0B22A62BF581736403C8833 /* libPods-小奥新版.a */,
 			);
 			name = Frameworks;
@@ -665,17 +864,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				C19228201EA5B62300B0166D /* LaunchScreen.storyboard in Resources */,
+				C19CE8011ECC27BE007091B5 /* s_2_Navi in Resources */,
 				C19421F41EBD61B200220B8B /* EditFaceView.xib in Resources */,
 				C19B14AE1EBB285B00CB9B86 /* SetingView.xib in Resources */,
+				C19CE8001ECC27BE007091B5 /* s_2_InputMethod in Resources */,
 				C19228491EA5C3E500B0166D /* MainView.xib in Resources */,
 				C18DCF801EC31842003AD61B /* HuntingView.xib in Resources */,
 				C1A156CD1EC1BD0800E1090B /* ExpressionView.xib in Resources */,
 				C192284B1EA5C4D000B0166D /* HeadView.xib in Resources */,
 				C14CE5F41EA88584007AE1AE /* ConnectView.xib in Resources */,
+				C19CE7D41ECC2759007091B5 /* BDVoiceRecognitionClientResources in Resources */,
 				C18DCF7D1EC3148A003AD61B /* VoiceView.xib in Resources */,
 				C19421FD1EBDA69600220B8B /* DrawingView.xib in Resources */,
 				C1FB193E1ECAA7520014830B /* SignInView.xib in Resources */,
+				C19CE7FF1ECC27BE007091B5 /* s_1 in Resources */,
 				C192281D1EA5B62300B0166D /* Assets.xcassets in Resources */,
+				C19CE8021ECC27BE007091B5 /* bdasr_temp_license.dat in Resources */,
 				C192281B1EA5B62300B0166D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -764,6 +968,7 @@
 				C1A409811EB9821300874B8F /* MModel.m in Sources */,
 				C18DCF7A1EC2B7E2003AD61B /* ExpressionViewModel.m in Sources */,
 				C192285A1EA617DF00B0166D /* NSMutableArray+Queue.m in Sources */,
+				C19CE7FB1ECC27BE007091B5 /* BDVRSConfig.m in Sources */,
 				C19422101EBDC14F00220B8B /* DrawingViewController.m in Sources */,
 				C18786EF1EC40EC500955499 /* VoiceViewModel.m in Sources */,
 				C19422091EBDBF8300220B8B /* XYDirectionCalculate.c in Sources */,
@@ -772,10 +977,13 @@
 				C1A409861EB9828C00874B8F /* HYXMLParser.m in Sources */,
 				C1A409941EB9C41500874B8F /* SetingView.m in Sources */,
 				C18F59BC1EBC3E0E00D16CA7 /* SetingViewController.m in Sources */,
+				C19CE7FA1ECC27BE007091B5 /* VoicesViewController.mm in Sources */,
 				C18786F31EC42E3B00955499 /* DataStore.m in Sources */,
+				C19CE7FC1ECC27BE007091B5 /* CADebugMacros.cpp in Sources */,
 				C18786E91EC3EEEA00955499 /* VoiceView.m in Sources */,
 				C14CE5F71EA887CA007AE1AE /* ConnectView.m in Sources */,
 				C19421EE1EBD604900220B8B /* LittleItem.m in Sources */,
+				C19CE7FE1ECC27BE007091B5 /* CAXException.cpp in Sources */,
 				C192285D1EA6188C00B0166D /* MainViewModel.m in Sources */,
 				C14CE5F31EA88584007AE1AE /* ConnectViewController.m in Sources */,
 				C19228511EA5C54200B0166D /* MainView.m in Sources */,
@@ -785,15 +993,19 @@
 				C194220C1EBDBF8300220B8B /* HMBezierPath.m in Sources */,
 				C1A409901EB9C03000874B8F /* NSArray+Safe.m in Sources */,
 				C19228571EA5FD6900B0166D /* iCarousel.m in Sources */,
-				C18786EC1EC3F83700955499 /* VoiceViewController.m in Sources */,
+				C19CE7FD1ECC27BE007091B5 /* CAStreamBasicDescription.cpp in Sources */,
+				C18786EC1EC3F83700955499 /* VoiceViewController.mm in Sources */,
 				C194220B1EBDBF8300220B8B /* HMView.m in Sources */,
+				C19CE8051ECC27BE007091B5 /* NSMutableArray+Queue.m in Sources */,
 				C18786FC1EC45C0400955499 /* HuntingViewController.m in Sources */,
 				C19421ED1EBD604900220B8B /* FaceView.m in Sources */,
 				C1937D661EC55235007EC7B7 /* SiriView.m in Sources */,
 				C19228151EA5B62300B0166D /* AppDelegate.m in Sources */,
 				C18786F91EC4554C00955499 /* HuntingViewModel.m in Sources */,
 				C19228121EA5B62300B0166D /* main.m in Sources */,
+				C19CE7D21ECBE907007091B5 /* NetWork.m in Sources */,
 				C19421F71EBD699100220B8B /* EditFaceViewController.m in Sources */,
+				C19CE8031ECC27BE007091B5 /* TTTAttributedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -940,13 +1152,19 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FE440878A2B42E0C37A3CE08 /* Pods-小奥新版.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				DEVELOPMENT_TEAM = 7QBZV3YGDE;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "小奥新版/PrefixHeader.pch";
 				INFOPLIST_FILE = "小奥新版/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.alsrobort.www.----";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/小奥新版/libBDVoiceRecognitionClient",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alsrobort.www.Rain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -955,13 +1173,19 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1A3237C18474AC201208222F /* Pods-小奥新版.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				DEVELOPMENT_TEAM = 7QBZV3YGDE;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PREFIX_HEADER = "小奥新版/PrefixHeader.pch";
 				INFOPLIST_FILE = "小奥新版/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.alsrobort.www.----";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/小奥新版/libBDVoiceRecognitionClient",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alsrobort.www.Rain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

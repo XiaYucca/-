@@ -19,6 +19,8 @@
 #import "SignInView.h"
 #import "SignInViewModel.h"
 
+#import "DataStore.h"
+
 #import "NSData+ImageContentType.h"
 
 #define VerifyValue(value)\
@@ -52,9 +54,7 @@ tmp;\
 //    SignInView *signView = [[SignInView alloc]initWithFrame:self.view.frame];
 //    [self.view addSubview:signView];
     
-    [SignInView showOnWindow:^{
-        
-    }];
+
 //    [SignInView dissmissOnWindow:^(bool dissMiss) {
 //        NSLog(@"signView dissmissOnWindow");
 //      //  return YES;
@@ -70,6 +70,14 @@ tmp;\
     NSLog(@"class_typeof%@ --self%@",t,self);
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [SignInView showOnWindow:^{
+        
+    }];
+    
+//    DataStore *store = [[DataStore alloc]init];
+//    [store test];
+}
 
 - (void)viewDidLoad {
  
@@ -127,14 +135,12 @@ tmp;\
 //        [self presentViewController:edit animated:YES completion:nil];
 //   });
 
-//    HeadView *headV = [HeadView headView:CGRectMake(0, 0, 200, 200)];
-//    [self.view addSubview:headV];
-       [self test];
+//   HeadView *headV = [HeadView headView:CGRectMake(0, 0, 200, 200)];
+//   [self.view addSubview:headV];
+    [self test];
     
 }
--(void)viewDidAppear:(BOOL)animated{
-    
-}
+
 
 -(void)loadView{
     self.view = [MainView MainView:[UIScreen mainScreen].bounds];

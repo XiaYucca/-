@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -107,6 +107,7 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73P-wA-CBw">
                             <rect key="frame" x="562" y="201" width="135" height="135"/>
                             <state key="normal" backgroundImage="麦克风"/>
+                            <state key="highlighted" backgroundImage="麦克风-点击"/>
                             <connections>
                                 <action selector="voiceBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="xLx-In-fyz"/>
                             </connections>
@@ -219,5 +220,6 @@
         <image name="Gear-icon-blue" width="28" height="28"/>
         <image name="HELPicon-blue" width="28" height="28"/>
         <image name="麦克风" width="135" height="135"/>
+        <image name="麦克风-点击" width="135" height="135"/>
     </resources>
 </document>
