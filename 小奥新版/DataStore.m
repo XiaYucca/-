@@ -71,6 +71,7 @@
         NSString *content= [result stringForColumn:@"content"];
         NSLog(@"ID: %zd, time: %@, path: %@ content:%@" , ID, time, path, content);
     }
+    
 //    BOOL result_close = [db_base close];
 //    if (result_close) {
 //        NSLog(@"table close successed");

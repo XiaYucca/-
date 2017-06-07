@@ -21,10 +21,20 @@
 		C18786F61EC4521900955499 /* HuntingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C18786F51EC4521900955499 /* HuntingView.m */; };
 		C18786F91EC4554C00955499 /* HuntingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C18786F81EC4554C00955499 /* HuntingViewModel.m */; };
 		C18786FC1EC45C0400955499 /* HuntingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18786FB1EC45C0400955499 /* HuntingViewController.m */; };
+		C189C64A1EE7F4DE00457055 /* HandleSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = C189C6491EE7F4DE00457055 /* HandleSlider.xib */; };
+		C189C64D1EE7F79600457055 /* HandleSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = C189C64C1EE7F79600457055 /* HandleSlider.m */; };
+		C189C6501EE7FC6F00457055 /* SteeringWheel.m in Sources */ = {isa = PBXBuildFile; fileRef = C189C64F1EE7FC6F00457055 /* SteeringWheel.m */; };
 		C18DCF771EC2B15C003AD61B /* ExpressionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18DCF761EC2B15C003AD61B /* ExpressionViewController.m */; };
 		C18DCF7A1EC2B7E2003AD61B /* ExpressionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C18DCF791EC2B7E2003AD61B /* ExpressionViewModel.m */; };
 		C18DCF7D1EC3148A003AD61B /* VoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18DCF7C1EC3148A003AD61B /* VoiceView.xib */; };
 		C18DCF801EC31842003AD61B /* HuntingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18DCF7F1EC31842003AD61B /* HuntingView.xib */; };
+		C18E515B1EE67BE400857FA7 /* ScenarioSimulation.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18E515A1EE67BE400857FA7 /* ScenarioSimulation.xib */; };
+		C18E515E1EE67C2F00857FA7 /* ScenarioSimulation.m in Sources */ = {isa = PBXBuildFile; fileRef = C18E515D1EE67C2F00857FA7 /* ScenarioSimulation.m */; };
+		C18E51641EE6A05800857FA7 /* SerialGATT.m in Sources */ = {isa = PBXBuildFile; fileRef = C18E51611EE6A05800857FA7 /* SerialGATT.m */; };
+		C18E51651EE6A05800857FA7 /* XYSerialManage.m in Sources */ = {isa = PBXBuildFile; fileRef = C18E51631EE6A05800857FA7 /* XYSerialManage.m */; };
+		C18E51691EE6ABE200857FA7 /* OperationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18E51681EE6ABE200857FA7 /* OperationController.m */; };
+		C18E516C1EE6AD7600857FA7 /* OperationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C18E516B1EE6AD7600857FA7 /* OperationView.m */; };
+		C18E516E1EE6ADAE00857FA7 /* OperationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18E516D1EE6ADAE00857FA7 /* OperationView.xib */; };
 		C18F59BC1EBC3E0E00D16CA7 /* SetingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18F59BB1EBC3E0E00D16CA7 /* SetingViewController.m */; };
 		C18F59BF1EBC692900D16CA7 /* SetingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C18F59BE1EBC692900D16CA7 /* SetingViewModel.m */; };
 		C19228121EA5B62300B0166D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C19228111EA5B62300B0166D /* main.m */; };
@@ -57,6 +67,10 @@
 		C194220C1EBDBF8300220B8B /* HMBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = C19422081EBDBF8300220B8B /* HMBezierPath.m */; };
 		C19422101EBDC14F00220B8B /* DrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C194220F1EBDC14F00220B8B /* DrawingViewController.m */; };
 		C19849031EAF1B43006F3625 /* MessageRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = C19849021EAF1B43006F3625 /* MessageRoute.m */; };
+		C19964F81EE4EBCB00650FC7 /* FindMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19964F71EE4EBCB00650FC7 /* FindMapView.xib */; };
+		C19964FA1EE4EC1700650FC7 /* FindMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = C19964F91EE4EC1700650FC7 /* FindMapView.m */; };
+		C19964FE1EE4F68000650FC7 /* FindMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C19964FD1EE4F68000650FC7 /* FindMapViewController.m */; };
+		C19965011EE51FC900650FC7 /* DrawLine.m in Sources */ = {isa = PBXBuildFile; fileRef = C19965001EE51FC900650FC7 /* DrawLine.m */; };
 		C19B14AE1EBB285B00CB9B86 /* SetingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19B14AD1EBB285B00CB9B86 /* SetingView.xib */; };
 		C19CE7D21ECBE907007091B5 /* NetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = C19CE7D11ECBE907007091B5 /* NetWork.m */; };
 		C19CE7D41ECC2759007091B5 /* BDVoiceRecognitionClientResources in Resources */ = {isa = PBXBuildFile; fileRef = C19CE7D31ECC2759007091B5 /* BDVoiceRecognitionClientResources */; };
@@ -142,12 +156,29 @@
 		C18786F81EC4554C00955499 /* HuntingViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuntingViewModel.m; sourceTree = "<group>"; };
 		C18786FA1EC45C0400955499 /* HuntingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuntingViewController.h; sourceTree = "<group>"; };
 		C18786FB1EC45C0400955499 /* HuntingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuntingViewController.m; sourceTree = "<group>"; };
+		C189C6491EE7F4DE00457055 /* HandleSlider.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HandleSlider.xib; sourceTree = "<group>"; };
+		C189C64B1EE7F79600457055 /* HandleSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandleSlider.h; sourceTree = "<group>"; };
+		C189C64C1EE7F79600457055 /* HandleSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandleSlider.m; sourceTree = "<group>"; };
+		C189C64E1EE7FC6F00457055 /* SteeringWheel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteeringWheel.h; sourceTree = "<group>"; };
+		C189C64F1EE7FC6F00457055 /* SteeringWheel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteeringWheel.m; sourceTree = "<group>"; };
 		C18DCF751EC2B15C003AD61B /* ExpressionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpressionViewController.h; sourceTree = "<group>"; };
 		C18DCF761EC2B15C003AD61B /* ExpressionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpressionViewController.m; sourceTree = "<group>"; };
 		C18DCF781EC2B7E2003AD61B /* ExpressionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpressionViewModel.h; sourceTree = "<group>"; };
 		C18DCF791EC2B7E2003AD61B /* ExpressionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpressionViewModel.m; sourceTree = "<group>"; };
 		C18DCF7C1EC3148A003AD61B /* VoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoiceView.xib; sourceTree = "<group>"; };
 		C18DCF7F1EC31842003AD61B /* HuntingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HuntingView.xib; sourceTree = "<group>"; };
+		C18E515A1EE67BE400857FA7 /* ScenarioSimulation.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScenarioSimulation.xib; sourceTree = "<group>"; };
+		C18E515C1EE67C2F00857FA7 /* ScenarioSimulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScenarioSimulation.h; sourceTree = "<group>"; };
+		C18E515D1EE67C2F00857FA7 /* ScenarioSimulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScenarioSimulation.m; sourceTree = "<group>"; };
+		C18E51601EE6A05800857FA7 /* SerialGATT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SerialGATT.h; sourceTree = "<group>"; };
+		C18E51611EE6A05800857FA7 /* SerialGATT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SerialGATT.m; sourceTree = "<group>"; };
+		C18E51621EE6A05800857FA7 /* XYSerialManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSerialManage.h; sourceTree = "<group>"; };
+		C18E51631EE6A05800857FA7 /* XYSerialManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSerialManage.m; sourceTree = "<group>"; };
+		C18E51671EE6ABE200857FA7 /* OperationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationController.h; sourceTree = "<group>"; };
+		C18E51681EE6ABE200857FA7 /* OperationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperationController.m; sourceTree = "<group>"; };
+		C18E516A1EE6AD7600857FA7 /* OperationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationView.h; sourceTree = "<group>"; };
+		C18E516B1EE6AD7600857FA7 /* OperationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperationView.m; sourceTree = "<group>"; };
+		C18E516D1EE6ADAE00857FA7 /* OperationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OperationView.xib; sourceTree = "<group>"; };
 		C18F59BA1EBC3E0E00D16CA7 /* SetingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetingViewController.h; sourceTree = "<group>"; };
 		C18F59BB1EBC3E0E00D16CA7 /* SetingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetingViewController.m; sourceTree = "<group>"; };
 		C18F59BD1EBC692900D16CA7 /* SetingViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetingViewModel.h; sourceTree = "<group>"; };
@@ -209,6 +240,13 @@
 		C194220F1EBDC14F00220B8B /* DrawingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingViewController.m; sourceTree = "<group>"; };
 		C19849011EAF1B42006F3625 /* MessageRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageRoute.h; sourceTree = "<group>"; };
 		C19849021EAF1B43006F3625 /* MessageRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageRoute.m; sourceTree = "<group>"; };
+		C19964F71EE4EBCB00650FC7 /* FindMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindMapView.xib; sourceTree = "<group>"; };
+		C19964F91EE4EC1700650FC7 /* FindMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindMapView.m; sourceTree = "<group>"; };
+		C19964FB1EE4EC3000650FC7 /* FindMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindMapView.h; sourceTree = "<group>"; };
+		C19964FC1EE4F68000650FC7 /* FindMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindMapViewController.h; sourceTree = "<group>"; };
+		C19964FD1EE4F68000650FC7 /* FindMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindMapViewController.m; sourceTree = "<group>"; };
+		C19964FF1EE51FC900650FC7 /* DrawLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawLine.h; sourceTree = "<group>"; };
+		C19965001EE51FC900650FC7 /* DrawLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawLine.m; sourceTree = "<group>"; };
 		C19B14AD1EBB285B00CB9B86 /* SetingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetingView.xib; sourceTree = "<group>"; };
 		C19CE7D01ECBE907007091B5 /* NetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWork.h; sourceTree = "<group>"; };
 		C19CE7D11ECBE907007091B5 /* NetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWork.m; sourceTree = "<group>"; };
@@ -391,6 +429,42 @@
 			name = "寻线";
 			sourceTree = "<group>";
 		};
+		C18E51591EE67B5800857FA7 /* 情景模拟 */ = {
+			isa = PBXGroup;
+			children = (
+				C18E515A1EE67BE400857FA7 /* ScenarioSimulation.xib */,
+				C18E515C1EE67C2F00857FA7 /* ScenarioSimulation.h */,
+				C18E515D1EE67C2F00857FA7 /* ScenarioSimulation.m */,
+			);
+			name = "情景模拟";
+			sourceTree = "<group>";
+		};
+		C18E515F1EE6A01900857FA7 /* serial */ = {
+			isa = PBXGroup;
+			children = (
+				C18E51601EE6A05800857FA7 /* SerialGATT.h */,
+				C18E51611EE6A05800857FA7 /* SerialGATT.m */,
+				C18E51621EE6A05800857FA7 /* XYSerialManage.h */,
+				C18E51631EE6A05800857FA7 /* XYSerialManage.m */,
+			);
+			name = serial;
+			sourceTree = "<group>";
+		};
+		C18E51661EE6AACA00857FA7 /* 操作 */ = {
+			isa = PBXGroup;
+			children = (
+				C189C64E1EE7FC6F00457055 /* SteeringWheel.h */,
+				C189C64F1EE7FC6F00457055 /* SteeringWheel.m */,
+				C18E516A1EE6AD7600857FA7 /* OperationView.h */,
+				C18E516B1EE6AD7600857FA7 /* OperationView.m */,
+				C189C6491EE7F4DE00457055 /* HandleSlider.xib */,
+				C189C64B1EE7F79600457055 /* HandleSlider.h */,
+				C189C64C1EE7F79600457055 /* HandleSlider.m */,
+				C18E516D1EE6ADAE00857FA7 /* OperationView.xib */,
+			);
+			name = "操作";
+			sourceTree = "<group>";
+		};
 		C19228041EA5B62200B0166D = {
 			isa = PBXGroup;
 			children = (
@@ -461,6 +535,9 @@
 		C19228431EA5C2BF00B0166D /* views */ = {
 			isa = PBXGroup;
 			children = (
+				C18E51661EE6AACA00857FA7 /* 操作 */,
+				C18E51591EE67B5800857FA7 /* 情景模拟 */,
+				C19964F61EE4EB8300650FC7 /* 选择地图 */,
 				C18379FD1ECD71720072976C /* 帮助 */,
 				C1FB19391ECAA71F0014830B /* 签到 */,
 				C18DCF7E1EC317BB003AD61B /* 寻线 */,
@@ -512,6 +589,10 @@
 				C18786EB1EC3F83700955499 /* VoiceViewController.mm */,
 				C18786FA1EC45C0400955499 /* HuntingViewController.h */,
 				C18786FB1EC45C0400955499 /* HuntingViewController.m */,
+				C19964FC1EE4F68000650FC7 /* FindMapViewController.h */,
+				C19964FD1EE4F68000650FC7 /* FindMapViewController.m */,
+				C18E51671EE6ABE200857FA7 /* OperationController.h */,
+				C18E51681EE6ABE200857FA7 /* OperationController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -555,6 +636,8 @@
 				C192285C1EA6188C00B0166D /* MainViewModel.m */,
 				C1A156C81EC185B600E1090B /* DrawingViewModel.h */,
 				C1A156C91EC185B600E1090B /* DrawingViewModel.m */,
+				C19964FF1EE51FC900650FC7 /* DrawLine.h */,
+				C19965001EE51FC900650FC7 /* DrawLine.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -562,6 +645,7 @@
 		C192B4251EA6F74800DE32FD /* MyLib */ = {
 			isa = PBXGroup;
 			children = (
+				C18E515F1EE6A01900857FA7 /* serial */,
 				C1A4098A1EB9A6C000874B8F /* Route.h */,
 				C1A4098B1EB9A6C000874B8F /* Route.m */,
 				C19849011EAF1B42006F3625 /* MessageRoute.h */,
@@ -610,6 +694,16 @@
 				C19422081EBDBF8300220B8B /* HMBezierPath.m */,
 			);
 			name = HMView;
+			sourceTree = "<group>";
+		};
+		C19964F61EE4EB8300650FC7 /* 选择地图 */ = {
+			isa = PBXGroup;
+			children = (
+				C19964F71EE4EBCB00650FC7 /* FindMapView.xib */,
+				C19964F91EE4EC1700650FC7 /* FindMapView.m */,
+				C19964FB1EE4EC3000650FC7 /* FindMapView.h */,
+			);
+			name = "选择地图";
 			sourceTree = "<group>";
 		};
 		C19CE7CF1ECBE8C1007091B5 /* network */ = {
@@ -888,12 +982,16 @@
 				C19CE8011ECC27BE007091B5 /* s_2_Navi in Resources */,
 				C19421F41EBD61B200220B8B /* EditFaceView.xib in Resources */,
 				C19B14AE1EBB285B00CB9B86 /* SetingView.xib in Resources */,
+				C18E516E1EE6ADAE00857FA7 /* OperationView.xib in Resources */,
 				C19CE8001ECC27BE007091B5 /* s_2_InputMethod in Resources */,
 				C19228491EA5C3E500B0166D /* MainView.xib in Resources */,
 				C18DCF801EC31842003AD61B /* HuntingView.xib in Resources */,
 				C1A156CD1EC1BD0800E1090B /* ExpressionView.xib in Resources */,
 				C192284B1EA5C4D000B0166D /* HeadView.xib in Resources */,
+				C18E515B1EE67BE400857FA7 /* ScenarioSimulation.xib in Resources */,
 				C14CE5F41EA88584007AE1AE /* ConnectView.xib in Resources */,
+				C189C64A1EE7F4DE00457055 /* HandleSlider.xib in Resources */,
+				C19964F81EE4EBCB00650FC7 /* FindMapView.xib in Resources */,
 				C19CE7D41ECC2759007091B5 /* BDVoiceRecognitionClientResources in Resources */,
 				C18DCF7D1EC3148A003AD61B /* VoiceView.xib in Resources */,
 				C19421FD1EBDA69600220B8B /* DrawingView.xib in Resources */,
@@ -990,17 +1088,24 @@
 				C1A409811EB9821300874B8F /* MModel.m in Sources */,
 				C18379FC1ECD3B9F0072976C /* SiriViewController.m in Sources */,
 				C18DCF7A1EC2B7E2003AD61B /* ExpressionViewModel.m in Sources */,
+				C189C6501EE7FC6F00457055 /* SteeringWheel.m in Sources */,
+				C18E51651EE6A05800857FA7 /* XYSerialManage.m in Sources */,
 				C192285A1EA617DF00B0166D /* NSMutableArray+Queue.m in Sources */,
 				C19CE7FB1ECC27BE007091B5 /* BDVRSConfig.m in Sources */,
 				C19422101EBDC14F00220B8B /* DrawingViewController.m in Sources */,
+				C19964FA1EE4EC1700650FC7 /* FindMapView.m in Sources */,
+				C18E51641EE6A05800857FA7 /* SerialGATT.m in Sources */,
 				C18786EF1EC40EC500955499 /* VoiceViewModel.m in Sources */,
 				C19422091EBDBF8300220B8B /* XYDirectionCalculate.c in Sources */,
 				C1A409891EB987F500874B8F /* NSNull+Safe.m in Sources */,
+				C189C64D1EE7F79600457055 /* HandleSlider.m in Sources */,
 				C19228541EA5EA9400B0166D /* HeadView.m in Sources */,
+				C18E51691EE6ABE200857FA7 /* OperationController.m in Sources */,
 				C1A409861EB9828C00874B8F /* HYXMLParser.m in Sources */,
 				C1A409941EB9C41500874B8F /* SetingView.m in Sources */,
 				C18F59BC1EBC3E0E00D16CA7 /* SetingViewController.m in Sources */,
 				C19CE7FA1ECC27BE007091B5 /* VoicesViewController.mm in Sources */,
+				C19965011EE51FC900650FC7 /* DrawLine.m in Sources */,
 				C18786F31EC42E3B00955499 /* DataStore.m in Sources */,
 				C19CE7FC1ECC27BE007091B5 /* CADebugMacros.cpp in Sources */,
 				C18786E91EC3EEEA00955499 /* VoiceView.m in Sources */,
@@ -1011,9 +1116,11 @@
 				C14CE5F31EA88584007AE1AE /* ConnectViewController.m in Sources */,
 				C19228511EA5C54200B0166D /* MainView.m in Sources */,
 				C19421FA1EBD7B4B00220B8B /* EditFaceViewModel.m in Sources */,
+				C18E516C1EE6AD7600857FA7 /* OperationView.m in Sources */,
 				C19849031EAF1B43006F3625 /* MessageRoute.m in Sources */,
 				C194220A1EBDBF8300220B8B /* CanvasLayer.m in Sources */,
 				C194220C1EBDBF8300220B8B /* HMBezierPath.m in Sources */,
+				C18E515E1EE67C2F00857FA7 /* ScenarioSimulation.m in Sources */,
 				C1A409901EB9C03000874B8F /* NSArray+Safe.m in Sources */,
 				C19228571EA5FD6900B0166D /* iCarousel.m in Sources */,
 				C19CE7FD1ECC27BE007091B5 /* CAStreamBasicDescription.cpp in Sources */,
@@ -1029,6 +1136,7 @@
 				C19228121EA5B62300B0166D /* main.m in Sources */,
 				C19CE7D21ECBE907007091B5 /* NetWork.m in Sources */,
 				C19421F71EBD699100220B8B /* EditFaceViewController.m in Sources */,
+				C19964FE1EE4F68000650FC7 /* FindMapViewController.m in Sources */,
 				C19CE8031ECC27BE007091B5 /* TTTAttributedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,6 +11,25 @@
 
 @implementation NetWork
 
++(instancetype)network{
+    static NetWork *instance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [[self alloc]init];
+    });
+    return instance;
+}
+
+-(instancetype)netWork{
+    return [NetWork network];
+}
+
+-(void)test{
+
+//    dispatch_release(group);
+//    dispatch_release(semaphore);
+    
+}
 
 
 @end

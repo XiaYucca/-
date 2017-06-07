@@ -174,7 +174,6 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
 #endif
 
 #ifdef ICAROUSEL_IOS
-
 - (id)initWithFrame:(CGRect)frame
 {
     if ((self = [super initWithFrame:frame]))
@@ -183,7 +182,6 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
     }
     return self;
 }
-
 #else
 
 - (id)initWithFrame:(NSRect)frame

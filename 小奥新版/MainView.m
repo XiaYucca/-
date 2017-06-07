@@ -189,7 +189,6 @@
         transform = CATransform3DScale(transform, scale, scale, 1);
         
     }else{
-        
         transform = CATransform3DScale(transform, min_scale, min_scale, 1);
     }
     

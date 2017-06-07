@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,7 +29,7 @@
                                 <constraint firstAttribute="width" constant="28" id="5jL-rd-7fg"/>
                                 <constraint firstAttribute="height" constant="28" id="gF0-rT-Xcq"/>
                             </constraints>
-                            <state key="normal" backgroundImage="Arrow-icon-blue"/>
+                            <state key="normal" backgroundImage="Arrow-icon-purple"/>
                             <connections>
                                 <action selector="backBtnClick:" destination="-1" eventType="touchUpInside" id="HTB-DK-BvS"/>
                             </connections>
@@ -40,7 +40,7 @@
                                 <constraint firstAttribute="width" constant="28" id="Yi1-8I-IXX"/>
                                 <constraint firstAttribute="height" constant="28" id="rwP-tu-dqP"/>
                             </constraints>
-                            <state key="normal" backgroundImage="Gear-icon-blue"/>
+                            <state key="normal" backgroundImage="Gear-icon-purple"/>
                             <connections>
                                 <action selector="setBtnClick:" destination="-1" eventType="touchUpInside" id="CXN-ti-cGt"/>
                             </connections>
@@ -51,7 +51,7 @@
                                 <constraint firstAttribute="width" constant="28" id="ANP-Uv-kyo"/>
                                 <constraint firstAttribute="height" constant="28" id="UXg-6F-Etk"/>
                             </constraints>
-                            <state key="normal" backgroundImage="HELPicon-blue"/>
+                            <state key="normal" backgroundImage="HELPicon-purple"/>
                             <connections>
                                 <action selector="helpBtnClick:" destination="-1" eventType="touchUpInside" id="aZG-Qu-ASV"/>
                             </connections>
@@ -220,9 +220,9 @@
         </view>
     </objects>
     <resources>
-        <image name="Arrow-icon-blue" width="28" height="28"/>
-        <image name="Gear-icon-blue" width="28" height="28"/>
-        <image name="HELPicon-blue" width="28" height="28"/>
+        <image name="Arrow-icon-purple" width="28" height="28"/>
+        <image name="Gear-icon-purple" width="28" height="28"/>
+        <image name="HELPicon-purple" width="28" height="28"/>
         <image name="Play-icon-" width="135" height="135"/>
     </resources>
 </document>

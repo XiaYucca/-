@@ -25,7 +25,7 @@
                                 <constraint firstAttribute="height" constant="28" id="sJ6-ZG-lYS"/>
                                 <constraint firstAttribute="width" constant="28" id="uY9-3H-DxM"/>
                             </constraints>
-                            <state key="normal" backgroundImage="Arrow-icon-blue"/>
+                            <state key="normal" backgroundImage="Arrow-icon-green"/>
                             <connections>
                                 <action selector="backBtnClick" destination="iN0-l3-epB" eventType="touchUpInside" id="JeH-bj-bzy"/>
                             </connections>
@@ -36,7 +36,7 @@
                                 <constraint firstAttribute="width" constant="28" id="FCP-gC-p3b"/>
                                 <constraint firstAttribute="height" constant="28" id="OKR-by-Zee"/>
                             </constraints>
-                            <state key="normal" backgroundImage="Gear-icon-blue"/>
+                            <state key="normal" backgroundImage="Gear-icon-green"/>
                             <connections>
                                 <action selector="setBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="pwc-cG-XqJ"/>
                             </connections>
@@ -47,7 +47,7 @@
                                 <constraint firstAttribute="width" constant="28" id="2AT-Kk-lt0"/>
                                 <constraint firstAttribute="height" constant="28" id="nM8-8X-WNR"/>
                             </constraints>
-                            <state key="normal" backgroundImage="HELPicon-blue"/>
+                            <state key="normal" backgroundImage="HELPicon-green"/>
                             <connections>
                                 <action selector="helpBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="AjJ-Xv-PQ4"/>
                             </connections>
@@ -216,9 +216,9 @@
         </view>
     </objects>
     <resources>
-        <image name="Arrow-icon-blue" width="28" height="28"/>
-        <image name="Gear-icon-blue" width="28" height="28"/>
-        <image name="HELPicon-blue" width="28" height="28"/>
+        <image name="Arrow-icon-green" width="28" height="28"/>
+        <image name="Gear-icon-green" width="28" height="28"/>
+        <image name="HELPicon-green" width="28" height="28"/>
         <image name="麦克风" width="135" height="135"/>
         <image name="麦克风-点击" width="135" height="135"/>
     </resources>

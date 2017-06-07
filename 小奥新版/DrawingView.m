@@ -75,8 +75,7 @@
     [self.hmView hmViewAnimationDidStop:^{
         self.btnWrite.selected = NO;
     }];
-    
-//    [self.hmView reStart];
+    //    [self.hmView reStart];
 }
 
 -(IBAction)restartDraw:(id)sender{
@@ -84,6 +83,7 @@
     self.btnWrite.selected = NO;
     [self.hmView clear];
 }
+
 -(IBAction)playDrawPath:(id)sender{
     ((UIButton *)sender).selected = !((UIButton *)sender).selected;
     [self.hmView reStart];

@@ -53,6 +53,8 @@
     [super viewDidLoad];
     [self setupView];
     
+    XLog(@"setview view did load");
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -25,7 +25,6 @@
 
 @property(nonatomic ,copy)void(^selectItem)(NSInteger tag);
 @property(nonatomic ,copy)void(^close)(void);
-
 @property(nonatomic ,copy)int(^test)(int);
 
 @end
@@ -51,7 +50,6 @@
                 }
             }
         }
-
     }
 }
 //绑定model callback

@@ -16,8 +16,15 @@
 //#import <UIKit/UIKit.h>
 //
 #import "Route.h"
+
 #endif
 
+#define XLog(fmt, ...) NSLog((@"[%s[line:%d]] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+
 #define WeakObj(o) __weak typeof(o) weak##o = o
+#define StrongObj(o) __strong typeof(o) o= weak##o
+
 
 #endif /* PrefixHeader_pch */
+
+

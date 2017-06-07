@@ -4,4 +4,5 @@ target '小奥新版' do
 pod 'AFNetworking', '~> 3.0'
 pod 'FMDB'
 pod 'SDWebImage', '~>3.8'
+#pod 'OpenCV'
 end

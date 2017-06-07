@@ -22,6 +22,12 @@
 
 -(void)viewDidSelectItem:(void(^)(NSInteger btntag))callback{
     self.didSelectItemCallback = callback;
+    WeakObj(self);
+    [weakself viewWillClose:nil];
+    
+    
+//    StrongObj(self);
+//    [self viewWillClose:nil];
 }
 
 -(void)viewWillClose:(void(^)())callback{
