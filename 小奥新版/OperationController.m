@@ -24,7 +24,12 @@
 }
 
 -(void)loadView{
-    self.view = [[OperationView alloc]initWithFrame: [UIScreen mainScreen].bounds];
+    OperationView *opv =[[OperationView alloc]initWithFrame: [UIScreen mainScreen].bounds];
+    self.view = opv;
+    opv.callBack = ^(UIAlertController *vc){
+        [self presentViewController:vc animated:YES completion:nil];
+    } ;
+    
 }
 
 @end

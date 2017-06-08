@@ -24,11 +24,15 @@
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gn1-KX-N1F">
                     <rect key="frame" x="-0.66666666666666607" y="71" width="22.333333333333336" height="34"/>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstAttribute="height" constant="34" id="NIL-IK-AOD"/>
                         <constraint firstAttribute="width" constant="22" id="fSG-Jk-i61"/>
                     </constraints>
                     <state key="normal" backgroundImage="手部控制-按键"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="ox0-JI-tEq" appends="YES" id="JYK-KQ-CaU"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -39,8 +43,14 @@
                 <constraint firstItem="Exu-VH-kEf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="scw-jl-lPN"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="centY" destination="GfL-mv-wcr" id="46W-BN-Wfv"/>
+                <outlet property="panGesture" destination="ox0-JI-tEq" id="EPC-NE-iNm"/>
+                <outlet property="processBtn" destination="Gn1-KX-N1F" id="jEl-jh-at0"/>
+            </connections>
             <point key="canvasLocation" x="-148" y="55"/>
         </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="ox0-JI-tEq"/>
     </objects>
     <resources>
         <image name="手部控制-按键" width="22" height="34"/>

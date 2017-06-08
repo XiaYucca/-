@@ -32,27 +32,20 @@
 - (void)drawRect:(CGRect)rect {
     
     [self setupView];
-    
 }
 -(void)setupView
 {
     UIImageView *imagV = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
     [self addSubview:imagV];
     _bgImage? imagV.image = _bgImage : nil;
-    
-    
     UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, DRBTN_NOMAL_R, DRBTN_NOMAL_R)];
     
     [btn setBackgroundImage:self.btnDrgImage forState:UIControlStateNormal];
-    
-    
-    
     btn.center = imagV.center;
     
   //  btn.backgroundColor = [UIColor blueColor];
     
     [btn addTarget:self action:@selector(dericionDown:) forControlEvents:UIControlEventTouchDown];
-    
     [btn addTarget:self action:@selector(dericionUp:) forControlEvents:UIControlEventTouchUpInside];
     
     self.derictionBtn = btn;
@@ -64,10 +57,10 @@
     
     [self addGestureRecognizer:pan];
     
-//    
 //    if ([btn respondsToSelector:@selector(setDisableAnimation:)]) {
 //        [btn setDisableAnimation:YES];
 //    }
+    
     self.origionCenter = btn.center;
 }
 
@@ -90,6 +83,21 @@
     self.alpha = 1;
 }
 
+-(void)setAngle:(float)angle{
+    if (angle < - 0.999) {
+        return;
+    }
+    if (_angle != angle) {
+        // 1.在view上面挪动的距离
+        CGPoint translation = CGPointMake(cos(angle) * self.frame.size.width * MAX_EFFECTIVE_DISTANCE*0.5 , sin(angle) * self.frame.size.width * MAX_EFFECTIVE_DISTANCE*0.5);
+        
+        CGPoint center = self.origionCenter;
+        self.derictionBtn.center = getLocationWithTranslation(center, translation, self.frame.size.width * MIN_EFFECTIVE_DISTANCE * 0.5, self.frame.size.width * MAX_EFFECTIVE_DISTANCE*0.5);
+    
+        NSInteger result = [self autoSendOrderWithTranslation:translation];
+        _angle = angle;
+    }
+}
 
 - (void)derictionDrag:(UIPanGestureRecognizer *)sender {
     static int i = 0;

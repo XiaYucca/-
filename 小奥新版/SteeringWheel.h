@@ -31,8 +31,11 @@ typedef enum {
 
 @property (nonatomic ,copy)void(^didDrag)(DERICTION der);
 
+@property (nonatomic ,assign)float angle;
+
 
 -(void)didDidDrag:(void(^)(DERICTION der))didDrag;
+
 
 
 @end

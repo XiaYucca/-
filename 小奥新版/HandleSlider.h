@@ -10,4 +10,13 @@
 
 @interface HandleSlider : UIView
 
+@property (nonatomic ,weak) UIPanGestureRecognizer *pan;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *centY;
+
+@property (nonatomic ,assign)CGFloat progress;
+
++(instancetype)handleSlider;
+
+-(void)sliderDidChangleValue:(void(^)(CGFloat progress))callback;
+
 @end

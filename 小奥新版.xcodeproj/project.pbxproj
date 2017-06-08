@@ -66,6 +66,7 @@
 		C194220B1EBDBF8300220B8B /* HMView.m in Sources */ = {isa = PBXBuildFile; fileRef = C19422061EBDBF8300220B8B /* HMView.m */; };
 		C194220C1EBDBF8300220B8B /* HMBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = C19422081EBDBF8300220B8B /* HMBezierPath.m */; };
 		C19422101EBDC14F00220B8B /* DrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C194220F1EBDC14F00220B8B /* DrawingViewController.m */; };
+		C19802DD1EE8FE51006E0855 /* SaveOpration.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19802DC1EE8FE51006E0855 /* SaveOpration.xib */; };
 		C19849031EAF1B43006F3625 /* MessageRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = C19849021EAF1B43006F3625 /* MessageRoute.m */; };
 		C19964F81EE4EBCB00650FC7 /* FindMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19964F71EE4EBCB00650FC7 /* FindMapView.xib */; };
 		C19964FA1EE4EC1700650FC7 /* FindMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = C19964F91EE4EC1700650FC7 /* FindMapView.m */; };
@@ -238,6 +239,7 @@
 		C19422081EBDBF8300220B8B /* HMBezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMBezierPath.m; sourceTree = "<group>"; };
 		C194220E1EBDC14F00220B8B /* DrawingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingViewController.h; sourceTree = "<group>"; };
 		C194220F1EBDC14F00220B8B /* DrawingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingViewController.m; sourceTree = "<group>"; };
+		C19802DC1EE8FE51006E0855 /* SaveOpration.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaveOpration.xib; sourceTree = "<group>"; };
 		C19849011EAF1B42006F3625 /* MessageRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageRoute.h; sourceTree = "<group>"; };
 		C19849021EAF1B43006F3625 /* MessageRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageRoute.m; sourceTree = "<group>"; };
 		C19964F71EE4EBCB00650FC7 /* FindMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindMapView.xib; sourceTree = "<group>"; };
@@ -457,6 +459,7 @@
 				C189C64F1EE7FC6F00457055 /* SteeringWheel.m */,
 				C18E516A1EE6AD7600857FA7 /* OperationView.h */,
 				C18E516B1EE6AD7600857FA7 /* OperationView.m */,
+				C19802DC1EE8FE51006E0855 /* SaveOpration.xib */,
 				C189C6491EE7F4DE00457055 /* HandleSlider.xib */,
 				C189C64B1EE7F79600457055 /* HandleSlider.h */,
 				C189C64C1EE7F79600457055 /* HandleSlider.m */,
@@ -982,6 +985,7 @@
 				C19CE8011ECC27BE007091B5 /* s_2_Navi in Resources */,
 				C19421F41EBD61B200220B8B /* EditFaceView.xib in Resources */,
 				C19B14AE1EBB285B00CB9B86 /* SetingView.xib in Resources */,
+				C19802DD1EE8FE51006E0855 /* SaveOpration.xib in Resources */,
 				C18E516E1EE6ADAE00857FA7 /* OperationView.xib in Resources */,
 				C19CE8001ECC27BE007091B5 /* s_2_InputMethod in Resources */,
 				C19228491EA5C3E500B0166D /* MainView.xib in Resources */,

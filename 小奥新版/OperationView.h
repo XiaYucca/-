@@ -70,4 +70,8 @@ static const NSString *INSTRUCT_STOPMP3 = @"stopmp3";
 
 @property (nonatomic ,weak)IBOutlet UIView *steeringWheel;
 
+@property (nonatomic ,weak) UIView *wheel;
+
+@property (nonatomic ,copy) void(^callBack)(UIAlertController *alertVC);
+
 @end
