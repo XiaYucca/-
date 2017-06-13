@@ -18,6 +18,12 @@
 @implementation SerialGATT
 {
     BOOL hasResponse;
+    
+    int mainServer;
+    int writeServerId;
+    int readServerID;
+    int noteServerID;
+    
 }
 
 @synthesize delegate;
@@ -39,6 +45,9 @@
  *  If this is found, the notfication is set. 
  *
  */
+
+
+
 -(void) notification:(int)serviceUUID characteristicUUID:(int)characteristicUUID p:(CBPeripheral *)p on:(BOOL)on {
     UInt16 s = [self swap:serviceUUID];
     UInt16 c = [self swap:characteristicUUID];
@@ -82,10 +91,17 @@
  *
  */
 
+-(void)xiaoAoSerialSetup{
+    mainServer = fileService;
+    writeServerId = fileSub;
+//    int readServerID;
+    readServerID = fileReadNotif;
+}
+
 -(void) setup
 {
     manager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
-    
+    [self xiaoAoSerialSetup];
    // [manager scanForPeripheralsWithServices:nil options:@{CBCentralManagerScanOptionAllowDuplicatesKey:@0}];
 }
 
@@ -146,8 +162,8 @@
     NSLog(@"Name : %s\r\n",[peripheral.name cStringUsingEncoding:NSStringEncodingConversionAllowLossy]);
     printf("isConnected : %d\r\n",peripheral.state);
     printf("-------------------------------------\r\n");
-    
 }
+
 
 /*
  * connect
@@ -159,7 +175,6 @@
     //if (![peripheral isConnected]) {
         [manager connectPeripheral:peripheral options:nil];
            // }
-    
 }
 
 /*
@@ -175,34 +190,38 @@
 #pragma mark - basic operations for SerialGATT service
 -(void) write:(CBPeripheral *)peripheral data:(NSData *)data
 {
+    
+    NSLog(@"mainServerIDVD--%x  writeServerId ---%x",mainServer,writeServerId);
     hasResponse = NO;
     [self writeValue:fileService characteristicUUID:fileSub p:peripheral data:data];
-    //[self writeValue:mainService characteristicUUID:mainSub3 p:peripheral data:data];
     
+    //[self writeValue:mainService characteristicUUID:mainSub3 p:peripheral data:data];
 }
 -(void) writeWithResponse:(CBPeripheral *)peripheral data:(NSData *)data response:(void (^)(BOOL))response
 {
      hasResponse = YES;
-     [self writeValue:fileService characteristicUUID:fileSub p:peripheral data:data];
+     [self writeValue:mainServer characteristicUUID:writeServerId p:peripheral data:data];
      self.didWriteData = response;
 }
 
--(void) read:(CBPeripheral *)peripheral
-{
-    printf("begin reading\n");
-    
-    printf("now can reading......\n");
-   // [peripheral readValueForCharacteristic:<#(nonnull CBCharacteristic *)#>];;
-    
-    [self readValue:fileService characteristicUUID:fileSub  p:peripheral];
-}
+//-(void) read:(CBPeripheral *)peripheral
+//{
+//    printf("begin reading\n");
+//    
+//    printf("now can reading......\n");
+//   // [peripheral readValueForCharacteristic:<#(nonnull CBCharacteristic *)#>];;
+//    
+//    [self readValue:mainServer characteristicUUID:readServerID  p:peripheral];
+//}
+//
+//-(void) notify: (CBPeripheral *)peripheral on:(BOOL)on
+//{
+//    [self notification:mainServer  characteristicUUID:fileReadNotif p:peripheral on:YES];
+//
+//    //[peripheral setNotifyValue:on forCharacteristic:dataNotifyCharacteristic];
+//}
 
--(void) notify: (CBPeripheral *)peripheral on:(BOOL)on
-{
-    [self notification:fileService characteristicUUID:fileReadNotif p:peripheral on:YES];
 
-    //[peripheral setNotifyValue:on forCharacteristic:dataNotifyCharacteristic];
-}
 
 #pragma mark - Finding CBServices and CBCharacteristics
 
@@ -240,7 +259,6 @@
     if ([temp respondsToSelector:@selector(centralManagerDidUpdateState:)]) {
         [delegate centralManagerDidUpdateState: central];
     }
-
     NSLog(@"centeal ------>%ld",central.state);
 }
 
@@ -296,6 +314,8 @@
   //  printf("%s\n++++++++%d", __FUNCTION__,peripherals.count);
 }
 
+
+//已经连接
 -(void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral
 {
     activePeripheral = peripheral;
@@ -314,6 +334,8 @@
     printf("connected to the active peripheral\n");
 }
 
+
+//失去连接
 -(void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error
 {
     activePeripheral = nil;
@@ -325,8 +347,10 @@
             [delegate peripheralMissConnect:peripheral];
         }
    // }
+    
+    
 }
-
+//连接失败
 -(void)centralManager:(CBCentralManager *)central didFailToConnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error
 {
     NSLog(@"failed to connect to peripheral %@: %@\n", [peripheral name], [error localizedDescription]);
@@ -336,15 +360,13 @@
 
 -(void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error
 {
-   // printf("in updateValueForCharacteristic function\n");
+    printf("in updateValueForCharacteristic function\n");
     
     if (error) {
         printf("updateValueForCharacteristic failed\n");
         return;
     }
     [delegate serialGATTCharValueUpdated:characteristic.UUID.UUIDString value:characteristic.value];
-
-
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
@@ -355,6 +377,12 @@
     
     !self.didWriteData ? :self.didWriteData(YES);
 }
+
+//- (void)peripheral:(CBPeripheral *)peripheral didUpdateNotificationStateForCharacteristic:(CBCharacteristic *)characteristic error:(nullable NSError *)error
+//{
+//    NSLog(@"通知接受 notefication start receive");
+//}
+
 
 - (void)peripheral:(CBPeripheral *)peripheral didWriteValueForDescriptor:(CBDescriptor *)descriptor error:(NSError *)error
 {
@@ -400,7 +428,7 @@
     if (!error) {
     #warning xiugai
         
-        printf("Services of peripheral with UUID : %@ found\r\n", [peripheral.identifier UUIDString]/*[self UUIDToString:peripheral.UUID]*/);
+        NSLog(@"Services of peripheral with UUID : %@ found\r\n", peripheral.services/*[self UUIDToString:peripheral.UUID]*/);
         [self getAllCharacteristicsFromKeyfob:peripheral];
     }
     else {
@@ -421,19 +449,59 @@
  */
 
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error {
+    
+   // NSLog(@"_______%@",service);
+    
+    //[self CBUUIDToInt:service.UUID];
+    
     if (!error) {
+//        int tmp = [self CBUUIDToInt:service.UUID];
+//        if (tmp >0xff00) {
+//            
+//            NSLog(@"find main server");
+//            mainServer = tmp;
+//        }
+        
+    
+        
         printf(" service with UUID : %s found\r\n",[self CBUUIDToString:service.UUID]);
+        
+        
+        
         for(int i=0; i < service.characteristics.count; i++) {
             CBCharacteristic *c = [service.characteristics objectAtIndex:i];
+            
             NSLog(@"Found characteristic %s\r\n",[ self CBUUIDToString:c.UUID]);
-            CBService *s = [peripheral.services objectAtIndex:(peripheral.services.count - 1)];
+            
+            CBService *s = [peripheral.services objectAtIndex:(0)];
+            
             if([self compareCBUUID:service.UUID UUID2:s.UUID]) {
+               
                 printf("Finished discovering characteristics\n");
+                printf("test\n");
+                
+                [self progressProperties:peripheral WithCharacteristic:c];
+               
+                //  mainServer = [self CBUUIDToInt:service.UUID];
+                
                 //char data = 0x01;
                 //NSData *d = [[NSData alloc] initWithBytes:&data length:1];
                 //[self writeValue:mainService characteristicUUID:mainSub p:peripheral data:d];
-                //[self writeValue:fileService characteristicUUID:fileSub p:peripheral data:d];
-                [self notify:peripheral on:YES];
+                
+                
+               // [self writeValue:fileService characteristicUUID:fileSub p:peripheral data:d];
+                
+//                NSLog(@"find properties %lx",c.properties);
+                
+//                if (c.properties ==0x10){
+//                    NSLog(@"has CBCharacteristicPropertyNotify");
+//                    
+//                    [peripheral setNotifyValue:YES forCharacteristic:c];
+//                }
+                
+
+
+                
             }
             
         }
@@ -443,9 +511,63 @@
     }
 }
 
+//    typedef NS_OPTIONS(NSUInteger, CBCharacteristicProperties) {
+//        CBCharacteristicPropertyBroadcast												= 0x01,
+//        CBCharacteristicPropertyRead													= 0x02,
+//        CBCharacteristicPropertyWriteWithoutResponse									= 0x04,
+//        CBCharacteristicPropertyWrite													= 0x08,
+//        CBCharacteristicPropertyNotify													= 0x10,
+//        CBCharacteristicPropertyIndicate												= 0x20,
+//        CBCharacteristicPropertyAuthenticatedSignedWrites								= 0x40,
+//        CBCharacteristicPropertyExtendedProperties										= 0x80,
+//        CBCharacteristicPropertyNotifyEncryptionRequired NS_ENUM_AVAILABLE(NA, 6_0)		= 0x100,
+//        CBCharacteristicPropertyIndicateEncryptionRequired NS_ENUM_AVAILABLE(NA, 6_0)	= 0x200
+//    };
+-(void)progressProperties:(CBPeripheral*)p WithCharacteristic:(CBCharacteristic *)c{
+    
+
+    int temp = [self CBUUIDToInt:c.service.UUID];
+
+    
+    printf("++++\nmainServer%x  charact%x  c.properties--%lx \n",temp,[self CBUUIDToInt:c.UUID],(unsigned long)c.properties);
+    
+    if (temp != 0xffe0) {
+        return;
+    }
+    mainServer = temp;
+    
+    if (c.properties==0) {
+        printf("default write \n");
+        writeServerId = [self CBUUIDToInt:c.UUID];
+    }
+    if(c.properties & 0x02){
+        printf("has read \n");
+        //[self readValue:0xffe0 characteristicUUID:0xffe1 p:self.activePeripheral];
+        [p readValueForCharacteristic:c];
+    }
+    if (c.properties &0x04){
+        
+        printf("has CBCharacteristicPropertyWriteWithoutResponse\n");
+        
+    }
+    if (c.properties &0x08){
+        printf("has CBCharacteristicPropertyWrite\n");
+        writeServerId = [self CBUUIDToInt:c.UUID];
+        
+        //p writeValue:<#(nonnull NSData *)#> forDescriptor:<#(nonnull CBDescriptor *)#>
+    }
+    if (c.properties &0x10){
+        printf("has CBCharacteristicPropertyNotify\n");
+        noteServerID = [self CBUUIDToInt:c.UUID];
+        [p setNotifyValue:YES forCharacteristic:c];
+    }
+  
+
+}
+
 //-(void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary<NSString *,id> *)advertisementData RSSI:(NSNumber *)RSSI
 //{
-//    
+//
 //}
 
 
@@ -538,6 +660,7 @@
     if (memcmp(b1, (char *)&b2, 2) == 0) return 1;
     else return 0;
 }
+
 /*
  *  @method CBUUIDToInt
  *
@@ -589,6 +712,8 @@
         CBService *s = [p.services objectAtIndex:i];
         if ([self compareCBUUID:s.UUID UUID2:UUID]) return s;
     }
+    printf("find service");
+    
     return nil; //Service not found on this peripheral
 }
 
@@ -637,12 +762,12 @@
     CBUUID *cu = [CBUUID UUIDWithData:cd];
     CBService *service = [self findServiceFromUUIDEx:su p:p];
     if (!service) {
-        printf("Write Could not find service with UUID %s on peripheral with UUID %s\r\n",[self CBUUIDToString:su],/*[self UUIDToString:p.UUID]*/ [[p.identifier UUIDString] UTF8String]);
+        printf("Write Could not find service with UUID %s on peripheral with UUID %s\r\n",[self CBUUIDToString:su],[[p.identifier UUIDString] UTF8String]);
         return;
     }
     CBCharacteristic *characteristic = [self findCharacteristicFromUUIDEx:cu service:service];
     if (!characteristic) {
-        printf("Write Could not find characteristic with UUID %s on service with UUID %s on peripheral with UUID %s\r\n",[self CBUUIDToString:cu],[self CBUUIDToString:su], [[p.identifier UUIDString] UTF8String]/*[self UUIDToString:p.UUID]*/);
+        printf("Write Could not find characteristic with UUID %s on service with UUID %s on peripheral with UUID %s\r\n",[self CBUUIDToString:cu],[self CBUUIDToString:su], [[p.identifier UUIDString] UTF8String]);
         return;
     }
   
@@ -682,6 +807,7 @@
     CBUUID *su = [CBUUID UUIDWithData:sd];
     CBUUID *cu = [CBUUID UUIDWithData:cd];
     CBService *service = [self findServiceFromUUIDEx:su p:p];
+    
     if (!service) {
         printf("Could not find service with UUID %s on peripheral with UUID %s\r\n",[self CBUUIDToString:su],/*[self UUIDToString:p.UUID]*/ [[p.identifier UUIDString]UTF8String]);
         return;

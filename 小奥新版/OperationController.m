@@ -8,6 +8,7 @@
 
 #import "OperationController.h"
 #import "OperationView.h"
+#import "ConnectViewController.h"
 
 @interface OperationController ()
 
@@ -30,6 +31,14 @@
         [self presentViewController:vc animated:YES completion:nil];
     } ;
     
+    opv.setBtnClickCallBack = ^(){
+       // [[Route share]GoToControllerIsPush:YES ClassName:@"ConnectViewController" From:self PropertyDic:nil];
+        [self presentViewController:[[ConnectViewController alloc]init] animated:NO completion:nil];
+        
+    };
+//    opv.setBtnClickCallBack = ^{
+//        [Route share]GoToControllerIsPush:YES ClassName:"" From:<#(UIViewController *)#> PropertyDic:<#(NSDictionary *)#>
+//    };
 }
 
 @end

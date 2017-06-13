@@ -114,7 +114,7 @@
             [sender setTranslation:CGPointZero inView:sender.view];
             
             [UIView animateWithDuration:0.5 animations:^{
-                    self.alpha = 1;
+                self.alpha = 1;
             }];
 
             break;
@@ -123,9 +123,7 @@
     
     // 1.在view上面挪动的距离
     CGPoint translation = [sender translationInView:sender.view];
-    
     CGPoint center = self.origionCenter;
-    
     
     self.derictionBtn.center = getLocationWithTranslation(center, translation, self.frame.size.width * MIN_EFFECTIVE_DISTANCE * 0.5, self.frame.size.width * MAX_EFFECTIVE_DISTANCE*0.5);
     

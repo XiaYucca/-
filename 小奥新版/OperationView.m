@@ -12,6 +12,9 @@
 #import "NSMutableArray+Queue.h"
 #import "SteeringWheel.h"
 #import "HandleSlider.h"
+#import "ConnectView.h"
+#import "SaveOpration.h"
+
 
 #import "Route.h"
 
@@ -198,8 +201,9 @@ static NSUInteger gloab_time = 0;
 
 @implementation OperationView
 {
-    UIView *item;
     BOOL isRecord;
+    
+    UIView *itemView;
 }
 
 -(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -231,11 +235,11 @@ static NSUInteger gloab_time = 0;
 }
 
 -(void)test {
-    item = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
-    item.backgroundColor = [UIColor lightGrayColor];
-    [self.contentView addSubview:item];
-    item.layer.cornerRadius = 25;
-    item.layer.masksToBounds = YES;
+    itemView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
+    itemView.backgroundColor = [UIColor lightGrayColor];
+    [self.contentView addSubview:itemView];
+    itemView.layer.cornerRadius = 25;
+    itemView.layer.masksToBounds = YES;
     
     UIButton *btn = [self viewWithTag:100];
     btn.highlighted = YES;
@@ -335,38 +339,6 @@ static NSUInteger gloab_time = 0;
 }
 
 
-
--(IBAction)btnClick:(UIButton *)sender{
-    
-    if (isRecord) {
-        TaskRecode *task = [TaskRecode taskRecode];
-        task.taskBlock = ^(TaskRecode *task) {
-            sender.highlighted = YES;
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                sender.highlighted = NO;
-            });
-        };
-        [RecodeManage addTaskToManage:task];
-    }
-    switch (sender.tag) {
-        case 100:
-            
-            break;
-        case 200:
-            
-            break;
-        case 300:
-            
-            break;
-        case 400:
-            
-            break;
-            
-        default:
-            break;
-    }
-}
-
 -(void)awakeFromNib
 {
     XLog(@"awake");
@@ -388,15 +360,15 @@ static NSUInteger gloab_time = 0;
         XLog(@"return point %@,event:%@",NSStringFromCGPoint(point),event);
         TaskRecode *task = [TaskRecode taskRecode];
         task.taskBlock = ^() {
-            item.center = point;
-            item.alpha = 0.7;
+            itemView.center = point;
+            itemView.alpha = 0.7;
             [UIView animateWithDuration:0.3 animations:^{
-                item.alpha = 1.0;
+                itemView.alpha = 1.0;
             } completion:^(BOOL finished) {
                 [UIView animateWithDuration:0.3 animations:^{
-                    item.alpha = 0.5;
+                    itemView.alpha = 0.5;
                 } completion:^(BOOL finished) {
-                    item.alpha = 0;
+                    itemView.alpha = 0;
                 }];
             }];
         };
@@ -416,6 +388,7 @@ static NSUInteger gloab_time = 0;
         isRecord = NO;
         [RecodeManage stopRecode];
         [self showSheet];
+        [self clearTimeTick];
     }else{
         isRecord = YES;
         view.hidden = NO;
@@ -477,7 +450,11 @@ static NSUInteger gloab_time = 0;
     label.text = timeStr;
 }
 
-
+-(void)clearTimeTick{
+    UILabel *label = [self viewWithTag:20];
+    NSString *timeStr = @"00:00:00";
+    label.text = timeStr;
+}
 
 - (UIViewController *)viewController {
     for (UIView* next = [self superview]; next; next = next.superview) {
@@ -489,7 +466,6 @@ static NSUInteger gloab_time = 0;
     return nil;
 }
 
-
 -(IBAction)btnTaskStopClick:(id)sender{
     isRecord = NO;
     [RecodeManage stopRecode];
@@ -499,7 +475,6 @@ static NSUInteger gloab_time = 0;
     isRecord = NO;
     [RecodeManage playRecode];
 }
-
 
 -(IBAction)actionClick:(id)sender{
     static int i;
@@ -516,10 +491,76 @@ static NSUInteger gloab_time = 0;
 //        }];
     };
     [RecodeManage addTaskToManage:task];
+    
 }
 
+-(IBAction)helpBtnClick:(id)sender{
+    
+    [SaveOpration showOnWindow:nil];
+    
+}
 
+-(IBAction)setBtnClick:(id)sender{
+    
+//    if (self.setBtnClickCallBack) {
+//        self.setBtnClickCallBack();
+//    }
+    
+//    [ConnectView showOnWindow:^{
+//        XLog(@"-----connect load");
+//        [appDelegate.siralManage blueToothAutoScaning:1 withTimeOut:15 autoConnectDistance:-100 didConnected:^(CBPeripheral *peripheral) {
+//            XLog(@"did connect");
+//            
+//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//                NSString *cmd = @"advance";
+//                [appDelegate.siralManage writeData:[cmd dataUsingEncoding:NSUTF8StringEncoding]];
+//            });
+//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//                [ConnectView dissmissOnWindow:nil];
+//            });
+//        } timeOutCallback:^{
+//            XLog(@"timeout");
+//        }];
+//        
+//    }];
+    if (self.setBtnClickCallBack) {
+        self.setBtnClickCallBack();
+    }
+}
 
+-(IBAction)btnClick:(UIButton *)sender{
+    
+    if (isRecord) {
+        TaskRecode *task = [TaskRecode taskRecode];
+        task.taskBlock = ^(TaskRecode *task) {
+            sender.highlighted = YES;
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                sender.highlighted = NO;
+            });
+        };
+        [RecodeManage addTaskToManage:task];
+    }
+    switch (sender.tag) {
+        case 100:
+                    {
+                        NSString *cmd = @"advance";
+                        [appDelegate.siralManage writeData:[cmd dataUsingEncoding:NSUTF8StringEncoding]];
+                    }
+            break;
+        case 200:
+            
+            break;
+        case 300:
+            
+            break;
+        case 400:
+            
+            break;
+            
+        default:
+            break;
+    }
+}
 
 /*
 // Only override drawRect: if you perf-orm custom drawing.

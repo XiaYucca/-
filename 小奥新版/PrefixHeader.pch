@@ -16,8 +16,13 @@
 //#import <UIKit/UIKit.h>
 //
 #import "Route.h"
+#import "AppDelegate.h"
 
 #endif
+
+//AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+
+#define appDelegate  ((AppDelegate *)([UIApplication sharedApplication].delegate))
 
 #define XLog(fmt, ...) NSLog((@"[%s[line:%d]] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 

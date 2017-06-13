@@ -25,14 +25,14 @@ typedef enum : NSUInteger {
 @implementation BlueAnimattionView
 
 -(void)drawRect:(CGRect)rect{
-    NSLog(@"%@",self);
+    //  NSLog(@"%@",self);
     __weak typeof(self) weakself = self;
     [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
         static int count = 0;
-        NSLog(@"time +++");
+        //  NSLog(@"time +++");
         if (count++ >= 5) {
             [timer invalidate];
-            NSLog(@"time over");
+            //  NSLog(@"time over");
             count =0;
         }else{
             [weakself addWave:LEFT];
@@ -90,7 +90,7 @@ typedef enum : NSUInteger {
  //   [self.layer insertSublayer:shaperLayer atIndex:self.layer.sublayers.count];
    // self.layer insertSublayer:<#(nonnull CALayer *)#> above:<#(nullable CALayer *)#>
     
-    NSLog(@"subLayers%@",self.layer.sublayers);
+    //  NSLog(@"subLayers%@",self.layer.sublayers);
     
     [self.layer addSublayer:shaperLayer];
     
@@ -168,7 +168,7 @@ typedef enum : NSUInteger {
     }
     for (id temp in [window subviews]) {
         if ([temp isKindOfClass:NSClassFromString(@"ConnectView") ]) {
-            NSLog(@"find ConnectView will remove from window%@",temp);
+           // //  NSLog(@"find ConnectView will remove from window%@",temp);
             [((ConnectView *)temp) removeFromSuperview];
             isFound = YES;
         }

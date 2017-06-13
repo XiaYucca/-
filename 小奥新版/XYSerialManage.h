@@ -18,6 +18,7 @@
 @property (nonatomic,strong) CBPeripheralManager * centralManager;
 @property (nonatomic, copy)NSMutableArray *discoverPeripheral;
 @property (strong ,nonatomic) SerialGATT *serial;
+@property (assign ,readonly,getter=isConnect) BOOL connect;
 
 /**
  *  蓝牙扫描一次
@@ -35,6 +36,8 @@
  */
 -(void)blueToothAutoScaning:(float)interval withTimeOut:(float)timeOut autoConnectDistance:(CGFloat)distance didConnected:(void (^)(CBPeripheral *peripheral))callBack timeOutCallback:(void (^)())timeOutCallback;
 
+
+-(void)unenableAutoScaning;
 /**
  *  查找设备
  *

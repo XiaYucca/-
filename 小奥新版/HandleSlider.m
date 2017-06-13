@@ -37,7 +37,6 @@
     }
     
     CGFloat helf = self.frame.size.height * 0.5;
-
     CGFloat maxY = (helf - 17);
     CGFloat minY = -(helf - 17);
     CGFloat dp = progress * (self.frame.size.height - 34);

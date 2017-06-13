@@ -30,8 +30,6 @@
 		C18DCF801EC31842003AD61B /* HuntingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18DCF7F1EC31842003AD61B /* HuntingView.xib */; };
 		C18E515B1EE67BE400857FA7 /* ScenarioSimulation.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18E515A1EE67BE400857FA7 /* ScenarioSimulation.xib */; };
 		C18E515E1EE67C2F00857FA7 /* ScenarioSimulation.m in Sources */ = {isa = PBXBuildFile; fileRef = C18E515D1EE67C2F00857FA7 /* ScenarioSimulation.m */; };
-		C18E51641EE6A05800857FA7 /* SerialGATT.m in Sources */ = {isa = PBXBuildFile; fileRef = C18E51611EE6A05800857FA7 /* SerialGATT.m */; };
-		C18E51651EE6A05800857FA7 /* XYSerialManage.m in Sources */ = {isa = PBXBuildFile; fileRef = C18E51631EE6A05800857FA7 /* XYSerialManage.m */; };
 		C18E51691EE6ABE200857FA7 /* OperationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C18E51681EE6ABE200857FA7 /* OperationController.m */; };
 		C18E516C1EE6AD7600857FA7 /* OperationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C18E516B1EE6AD7600857FA7 /* OperationView.m */; };
 		C18E516E1EE6ADAE00857FA7 /* OperationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C18E516D1EE6ADAE00857FA7 /* OperationView.xib */; };
@@ -67,12 +65,16 @@
 		C194220C1EBDBF8300220B8B /* HMBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = C19422081EBDBF8300220B8B /* HMBezierPath.m */; };
 		C19422101EBDC14F00220B8B /* DrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C194220F1EBDC14F00220B8B /* DrawingViewController.m */; };
 		C19802DD1EE8FE51006E0855 /* SaveOpration.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19802DC1EE8FE51006E0855 /* SaveOpration.xib */; };
+		C19802E11EE95272006E0855 /* SaveOprationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C19802DF1EE95272006E0855 /* SaveOprationCell.m */; };
+		C19802E21EE95272006E0855 /* SaveOprationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19802E01EE95272006E0855 /* SaveOprationCell.xib */; };
 		C19849031EAF1B43006F3625 /* MessageRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = C19849021EAF1B43006F3625 /* MessageRoute.m */; };
 		C19964F81EE4EBCB00650FC7 /* FindMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19964F71EE4EBCB00650FC7 /* FindMapView.xib */; };
 		C19964FA1EE4EC1700650FC7 /* FindMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = C19964F91EE4EC1700650FC7 /* FindMapView.m */; };
 		C19964FE1EE4F68000650FC7 /* FindMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C19964FD1EE4F68000650FC7 /* FindMapViewController.m */; };
 		C19965011EE51FC900650FC7 /* DrawLine.m in Sources */ = {isa = PBXBuildFile; fileRef = C19965001EE51FC900650FC7 /* DrawLine.m */; };
 		C19B14AE1EBB285B00CB9B86 /* SetingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C19B14AD1EBB285B00CB9B86 /* SetingView.xib */; };
+		C19C57781EEA32C400479FB8 /* SaveOpration.m in Sources */ = {isa = PBXBuildFile; fileRef = C19C57771EEA32C400479FB8 /* SaveOpration.m */; };
+		C19C57811EEA6BBC00479FB8 /* NSString+FindString.m in Sources */ = {isa = PBXBuildFile; fileRef = C19C57801EEA6BBC00479FB8 /* NSString+FindString.m */; };
 		C19CE7D21ECBE907007091B5 /* NetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = C19CE7D11ECBE907007091B5 /* NetWork.m */; };
 		C19CE7D41ECC2759007091B5 /* BDVoiceRecognitionClientResources in Resources */ = {isa = PBXBuildFile; fileRef = C19CE7D31ECC2759007091B5 /* BDVoiceRecognitionClientResources */; };
 		C19CE7FA1ECC27BE007091B5 /* VoicesViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C19CE7D71ECC27BE007091B5 /* VoicesViewController.mm */; };
@@ -109,6 +111,10 @@
 		C1A4098C1EB9A6C000874B8F /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A4098B1EB9A6C000874B8F /* Route.m */; };
 		C1A409901EB9C03000874B8F /* NSArray+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A4098F1EB9C03000874B8F /* NSArray+Safe.m */; };
 		C1A409941EB9C41500874B8F /* SetingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A409931EB9C41500874B8F /* SetingView.m */; };
+		C1AFDB4E1EEFB84100BC678F /* SerialGATT.m in Sources */ = {isa = PBXBuildFile; fileRef = C1AFDB4B1EEFB84100BC678F /* SerialGATT.m */; };
+		C1AFDB4F1EEFB84100BC678F /* XYSerialManage.m in Sources */ = {isa = PBXBuildFile; fileRef = C1AFDB4D1EEFB84100BC678F /* XYSerialManage.m */; };
+		C1ED31781EEE5E1B0062E022 /* PlayRecordViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1ED31771EEE5E1B0062E022 /* PlayRecordViewCell.xib */; };
+		C1ED317B1EEE5E390062E022 /* PlayRecordViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C1ED317A1EEE5E390062E022 /* PlayRecordViewCell.m */; };
 		C1FB193D1ECAA7520014830B /* SignInView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1FB193B1ECAA7520014830B /* SignInView.m */; };
 		C1FB193E1ECAA7520014830B /* SignInView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1FB193C1ECAA7520014830B /* SignInView.xib */; };
 		C1FB19411ECAA7DF0014830B /* SignInViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C1FB19401ECAA7DF0014830B /* SignInViewModel.m */; };
@@ -171,10 +177,6 @@
 		C18E515A1EE67BE400857FA7 /* ScenarioSimulation.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScenarioSimulation.xib; sourceTree = "<group>"; };
 		C18E515C1EE67C2F00857FA7 /* ScenarioSimulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScenarioSimulation.h; sourceTree = "<group>"; };
 		C18E515D1EE67C2F00857FA7 /* ScenarioSimulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScenarioSimulation.m; sourceTree = "<group>"; };
-		C18E51601EE6A05800857FA7 /* SerialGATT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SerialGATT.h; sourceTree = "<group>"; };
-		C18E51611EE6A05800857FA7 /* SerialGATT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SerialGATT.m; sourceTree = "<group>"; };
-		C18E51621EE6A05800857FA7 /* XYSerialManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSerialManage.h; sourceTree = "<group>"; };
-		C18E51631EE6A05800857FA7 /* XYSerialManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSerialManage.m; sourceTree = "<group>"; };
 		C18E51671EE6ABE200857FA7 /* OperationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationController.h; sourceTree = "<group>"; };
 		C18E51681EE6ABE200857FA7 /* OperationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperationController.m; sourceTree = "<group>"; };
 		C18E516A1EE6AD7600857FA7 /* OperationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationView.h; sourceTree = "<group>"; };
@@ -240,6 +242,9 @@
 		C194220E1EBDC14F00220B8B /* DrawingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingViewController.h; sourceTree = "<group>"; };
 		C194220F1EBDC14F00220B8B /* DrawingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingViewController.m; sourceTree = "<group>"; };
 		C19802DC1EE8FE51006E0855 /* SaveOpration.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaveOpration.xib; sourceTree = "<group>"; };
+		C19802DE1EE95272006E0855 /* SaveOprationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveOprationCell.h; sourceTree = "<group>"; };
+		C19802DF1EE95272006E0855 /* SaveOprationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveOprationCell.m; sourceTree = "<group>"; };
+		C19802E01EE95272006E0855 /* SaveOprationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaveOprationCell.xib; sourceTree = "<group>"; };
 		C19849011EAF1B42006F3625 /* MessageRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageRoute.h; sourceTree = "<group>"; };
 		C19849021EAF1B43006F3625 /* MessageRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageRoute.m; sourceTree = "<group>"; };
 		C19964F71EE4EBCB00650FC7 /* FindMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindMapView.xib; sourceTree = "<group>"; };
@@ -250,6 +255,10 @@
 		C19964FF1EE51FC900650FC7 /* DrawLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawLine.h; sourceTree = "<group>"; };
 		C19965001EE51FC900650FC7 /* DrawLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawLine.m; sourceTree = "<group>"; };
 		C19B14AD1EBB285B00CB9B86 /* SetingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetingView.xib; sourceTree = "<group>"; };
+		C19C57761EEA32C400479FB8 /* SaveOpration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveOpration.h; sourceTree = "<group>"; };
+		C19C57771EEA32C400479FB8 /* SaveOpration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveOpration.m; sourceTree = "<group>"; };
+		C19C577F1EEA6BBC00479FB8 /* NSString+FindString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FindString.h"; sourceTree = "<group>"; };
+		C19C57801EEA6BBC00479FB8 /* NSString+FindString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FindString.m"; sourceTree = "<group>"; };
 		C19CE7D01ECBE907007091B5 /* NetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWork.h; sourceTree = "<group>"; };
 		C19CE7D11ECBE907007091B5 /* NetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWork.m; sourceTree = "<group>"; };
 		C19CE7D31ECC2759007091B5 /* BDVoiceRecognitionClientResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BDVoiceRecognitionClientResources; sourceTree = "<group>"; };
@@ -314,6 +323,13 @@
 		C1A4098F1EB9C03000874B8F /* NSArray+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Safe.m"; sourceTree = "<group>"; };
 		C1A409921EB9C41500874B8F /* SetingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetingView.h; sourceTree = "<group>"; };
 		C1A409931EB9C41500874B8F /* SetingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetingView.m; sourceTree = "<group>"; };
+		C1AFDB4A1EEFB84100BC678F /* SerialGATT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SerialGATT.h; sourceTree = "<group>"; };
+		C1AFDB4B1EEFB84100BC678F /* SerialGATT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SerialGATT.m; sourceTree = "<group>"; };
+		C1AFDB4C1EEFB84100BC678F /* XYSerialManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSerialManage.h; sourceTree = "<group>"; };
+		C1AFDB4D1EEFB84100BC678F /* XYSerialManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSerialManage.m; sourceTree = "<group>"; };
+		C1ED31771EEE5E1B0062E022 /* PlayRecordViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayRecordViewCell.xib; sourceTree = "<group>"; };
+		C1ED31791EEE5E390062E022 /* PlayRecordViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayRecordViewCell.h; sourceTree = "<group>"; };
+		C1ED317A1EEE5E390062E022 /* PlayRecordViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayRecordViewCell.m; sourceTree = "<group>"; };
 		C1FB193A1ECAA7520014830B /* SignInView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInView.h; sourceTree = "<group>"; };
 		C1FB193B1ECAA7520014830B /* SignInView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInView.m; sourceTree = "<group>"; };
 		C1FB193C1ECAA7520014830B /* SignInView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInView.xib; sourceTree = "<group>"; };
@@ -444,10 +460,10 @@
 		C18E515F1EE6A01900857FA7 /* serial */ = {
 			isa = PBXGroup;
 			children = (
-				C18E51601EE6A05800857FA7 /* SerialGATT.h */,
-				C18E51611EE6A05800857FA7 /* SerialGATT.m */,
-				C18E51621EE6A05800857FA7 /* XYSerialManage.h */,
-				C18E51631EE6A05800857FA7 /* XYSerialManage.m */,
+				C1AFDB4A1EEFB84100BC678F /* SerialGATT.h */,
+				C1AFDB4B1EEFB84100BC678F /* SerialGATT.m */,
+				C1AFDB4C1EEFB84100BC678F /* XYSerialManage.h */,
+				C1AFDB4D1EEFB84100BC678F /* XYSerialManage.m */,
 			);
 			name = serial;
 			sourceTree = "<group>";
@@ -455,11 +471,19 @@
 		C18E51661EE6AACA00857FA7 /* 操作 */ = {
 			isa = PBXGroup;
 			children = (
+				C1ED31771EEE5E1B0062E022 /* PlayRecordViewCell.xib */,
+				C1ED31791EEE5E390062E022 /* PlayRecordViewCell.h */,
+				C1ED317A1EEE5E390062E022 /* PlayRecordViewCell.m */,
+				C19802DE1EE95272006E0855 /* SaveOprationCell.h */,
+				C19802DF1EE95272006E0855 /* SaveOprationCell.m */,
+				C19802E01EE95272006E0855 /* SaveOprationCell.xib */,
 				C189C64E1EE7FC6F00457055 /* SteeringWheel.h */,
 				C189C64F1EE7FC6F00457055 /* SteeringWheel.m */,
+				C19C57761EEA32C400479FB8 /* SaveOpration.h */,
+				C19C57771EEA32C400479FB8 /* SaveOpration.m */,
+				C19802DC1EE8FE51006E0855 /* SaveOpration.xib */,
 				C18E516A1EE6AD7600857FA7 /* OperationView.h */,
 				C18E516B1EE6AD7600857FA7 /* OperationView.m */,
-				C19802DC1EE8FE51006E0855 /* SaveOpration.xib */,
 				C189C6491EE7F4DE00457055 /* HandleSlider.xib */,
 				C189C64B1EE7F79600457055 /* HandleSlider.h */,
 				C189C64C1EE7F79600457055 /* HandleSlider.m */,
@@ -823,6 +847,8 @@
 		C1A4098D1EB9BFF300874B8F /* category */ = {
 			isa = PBXGroup;
 			children = (
+				C19C577F1EEA6BBC00479FB8 /* NSString+FindString.h */,
+				C19C57801EEA6BBC00479FB8 /* NSString+FindString.m */,
 				C1A4098E1EB9C03000874B8F /* NSArray+Safe.h */,
 				C1A4098F1EB9C03000874B8F /* NSArray+Safe.m */,
 			);
@@ -986,6 +1012,7 @@
 				C19421F41EBD61B200220B8B /* EditFaceView.xib in Resources */,
 				C19B14AE1EBB285B00CB9B86 /* SetingView.xib in Resources */,
 				C19802DD1EE8FE51006E0855 /* SaveOpration.xib in Resources */,
+				C1ED31781EEE5E1B0062E022 /* PlayRecordViewCell.xib in Resources */,
 				C18E516E1EE6ADAE00857FA7 /* OperationView.xib in Resources */,
 				C19CE8001ECC27BE007091B5 /* s_2_InputMethod in Resources */,
 				C19228491EA5C3E500B0166D /* MainView.xib in Resources */,
@@ -998,6 +1025,7 @@
 				C19964F81EE4EBCB00650FC7 /* FindMapView.xib in Resources */,
 				C19CE7D41ECC2759007091B5 /* BDVoiceRecognitionClientResources in Resources */,
 				C18DCF7D1EC3148A003AD61B /* VoiceView.xib in Resources */,
+				C19802E21EE95272006E0855 /* SaveOprationCell.xib in Resources */,
 				C19421FD1EBDA69600220B8B /* DrawingView.xib in Resources */,
 				C18379FF1ECD71970072976C /* HelpView.xib in Resources */,
 				C1FB193E1ECAA7520014830B /* SignInView.xib in Resources */,
@@ -1093,18 +1121,18 @@
 				C18379FC1ECD3B9F0072976C /* SiriViewController.m in Sources */,
 				C18DCF7A1EC2B7E2003AD61B /* ExpressionViewModel.m in Sources */,
 				C189C6501EE7FC6F00457055 /* SteeringWheel.m in Sources */,
-				C18E51651EE6A05800857FA7 /* XYSerialManage.m in Sources */,
 				C192285A1EA617DF00B0166D /* NSMutableArray+Queue.m in Sources */,
 				C19CE7FB1ECC27BE007091B5 /* BDVRSConfig.m in Sources */,
 				C19422101EBDC14F00220B8B /* DrawingViewController.m in Sources */,
 				C19964FA1EE4EC1700650FC7 /* FindMapView.m in Sources */,
-				C18E51641EE6A05800857FA7 /* SerialGATT.m in Sources */,
 				C18786EF1EC40EC500955499 /* VoiceViewModel.m in Sources */,
 				C19422091EBDBF8300220B8B /* XYDirectionCalculate.c in Sources */,
 				C1A409891EB987F500874B8F /* NSNull+Safe.m in Sources */,
 				C189C64D1EE7F79600457055 /* HandleSlider.m in Sources */,
 				C19228541EA5EA9400B0166D /* HeadView.m in Sources */,
+				C19C57781EEA32C400479FB8 /* SaveOpration.m in Sources */,
 				C18E51691EE6ABE200857FA7 /* OperationController.m in Sources */,
+				C19C57811EEA6BBC00479FB8 /* NSString+FindString.m in Sources */,
 				C1A409861EB9828C00874B8F /* HYXMLParser.m in Sources */,
 				C1A409941EB9C41500874B8F /* SetingView.m in Sources */,
 				C18F59BC1EBC3E0E00D16CA7 /* SetingViewController.m in Sources */,
@@ -1116,6 +1144,7 @@
 				C14CE5F71EA887CA007AE1AE /* ConnectView.m in Sources */,
 				C19421EE1EBD604900220B8B /* LittleItem.m in Sources */,
 				C19CE7FE1ECC27BE007091B5 /* CAXException.cpp in Sources */,
+				C1AFDB4F1EEFB84100BC678F /* XYSerialManage.m in Sources */,
 				C192285D1EA6188C00B0166D /* MainViewModel.m in Sources */,
 				C14CE5F31EA88584007AE1AE /* ConnectViewController.m in Sources */,
 				C19228511EA5C54200B0166D /* MainView.m in Sources */,
@@ -1129,15 +1158,18 @@
 				C19228571EA5FD6900B0166D /* iCarousel.m in Sources */,
 				C19CE7FD1ECC27BE007091B5 /* CAStreamBasicDescription.cpp in Sources */,
 				C18786EC1EC3F83700955499 /* VoiceViewController.mm in Sources */,
+				C1ED317B1EEE5E390062E022 /* PlayRecordViewCell.m in Sources */,
 				C194220B1EBDBF8300220B8B /* HMView.m in Sources */,
 				C19CE8051ECC27BE007091B5 /* NSMutableArray+Queue.m in Sources */,
 				C18786FC1EC45C0400955499 /* HuntingViewController.m in Sources */,
 				C19421ED1EBD604900220B8B /* FaceView.m in Sources */,
+				C19802E11EE95272006E0855 /* SaveOprationCell.m in Sources */,
 				C1937D661EC55235007EC7B7 /* SiriView.m in Sources */,
 				C19228151EA5B62300B0166D /* AppDelegate.m in Sources */,
 				C18786F91EC4554C00955499 /* HuntingViewModel.m in Sources */,
 				C1837A011ECD74C10072976C /* HelpView.m in Sources */,
 				C19228121EA5B62300B0166D /* main.m in Sources */,
+				C1AFDB4E1EEFB84100BC678F /* SerialGATT.m in Sources */,
 				C19CE7D21ECBE907007091B5 /* NetWork.m in Sources */,
 				C19421F71EBD699100220B8B /* EditFaceViewController.m in Sources */,
 				C19964FE1EE4F68000650FC7 /* FindMapViewController.m in Sources */,

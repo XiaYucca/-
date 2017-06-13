@@ -74,4 +74,8 @@ static const NSString *INSTRUCT_STOPMP3 = @"stopmp3";
 
 @property (nonatomic ,copy) void(^callBack)(UIAlertController *alertVC);
 
+@property (nonatomic ,copy) void(^setBtnClickCallBack)();
+
+
+
 @end

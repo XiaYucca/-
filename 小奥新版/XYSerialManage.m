@@ -10,6 +10,8 @@
 #import "SerialGATT.h"
 //#import "NSString+FindString.h"
 #import <CoreFoundation/CoreFoundation.h>
+#import <pthread/pthread.h>
+#import "NSString+FindString.h"
 
 
 
@@ -29,7 +31,7 @@
 @property (nonatomic,copy) void(^updteValue)(CBPeripheral *peripheral , NSData *data);
 
 @property (nonatomic,copy) void(^autoConnectCallBack)(CBPeripheral *peripheral);
-@property (nonatomic,strong) NSData *readData;
+@property (nonatomic,copy) NSData *readData;
 
 
  
@@ -57,6 +59,13 @@
  
  */
 
+-(BOOL)isConnect{
+    if (self.serial.activePeripheral != nil ) {
+        return YES;
+    }
+    return NO;
+}
+
 -(void)connect:(CBPeripheral *)peripheral response:(void (^)(bool, CBPeripheral *))response
 {
     self.connectResponse = response;
@@ -66,6 +75,7 @@
 {
     self.misConnectCallback = callback;
 }
+
 -(void)finedPeripheral:(void (^)(CBPeripheral *, NSNumber *))callBack
 {
     self.findedPeripheralcallBack = callBack;
@@ -78,29 +88,40 @@
 
 -(NSData *)readWithTimeout:(CGFloat)timeout
 {
-   __block bool shouldLoop = YES;
+    static bool shouldLoop = YES;
+    __block bool *shouldLoop_p = &shouldLoop;
+    
+//    pthread_mutex_t mutex ;
+//    pthread_mutex_init( &mutex,NULL);
     
     NSData *data;
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(timeout * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(timeout* NSEC_PER_SEC)), dispatch_get_global_queue(0, 0), ^{
         //shouldLoop = NO;
-        if (shouldLoop == NO) {
-           //没有超时;
+//        pthread_mutex_lock(&mutex);
+        if (*shouldLoop_p == NO) {
+            //没有超时;
         }else
         {
-            shouldLoop = NO;
-             NSLog(@"读取数据超时");
+            *shouldLoop_p = NO;
+            NSLog(@"读取数据超时");
         }
-        
-     });
+ //       pthread_mutex_unlock(&mutex);
+ //       NSLog(@"value%d",*shouldLoop_p);
+    });
     
-    while (shouldLoop) {
-        
+    while (*shouldLoop_p) {
         if (self.readData.length) {
-            data = self.readData;
+            data = [self.readData copy];
             self.readData = nil;
-            shouldLoop = NO;
+            *shouldLoop_p = NO;
+            NSLog(@"收到数据为%@",data);
+            break;
         }
+        else
+        {
+            NSLog(@"一直在读取");
+        }
+
     }
     return data;
 }
@@ -207,23 +228,33 @@
 //    [alert addAction:action];
 //    
 //   [[[UIApplication sharedApplication]keyWindow].rootViewController presentViewController:alert animated:YES completion:nil];
-       //
+//
 }
 
 -(void)serialGATTCharValueUpdated:(NSString *)UUID value:(NSData *)data
 {
    // NSString *str = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+    self.readData = data ;
     
-    self.readData = data;
+    unsigned char da[100];
+//    
+    [data getBytes: da length: data.length];
     
-    unsigned int i;
+    NSString *hexString = [NSString getHexStringWithData:data];
     
-    [data getBytes: &i length: sizeof(i)];
-//    NSString *hexString = [NSString getHexStringWithData:data];
+ //   NSLog(@"recive data length%lu",data.length);
+    printf("蓝牙收到数据有");
+   // printf("%s", hexString);
     
-    NSLog(@"recive data length%lu",data.length);
-    
-    !self.updteValue? : self.updteValue(self.serial.activePeripheral,data);
+    for (int i = 0; i < data.length; i++) {
+        printf("%2.x",da[i]);
+    }
+ //  dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        
+         !self.updteValue? : self.updteValue(self.serial.activePeripheral,data);
+ //   });
+  
+
 }
 
 
@@ -302,8 +333,10 @@
     [self.serial.manager stopScan];
     [self.scanTimer invalidate];
     self.scanTimer = nil;
-    
 }
+//-(void)stopScan
+
+
 -(void)sendStr:(NSString *)str
 {
     [self.serial write:self.serial.activePeripheral data:[str dataUsingEncoding:NSUTF8StringEncoding]];
@@ -337,14 +370,12 @@
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
 {
-    
     __weak XYSerialManage *weakSelf = self;
     if ([keyPath isEqualToString:@"discoverPeripheral"]) {
         
         CBPeripheral *per = [change[@"new"]lastObject];
         
         if (per.name) {
-            
             NSMutableArray *perM = [@[]mutableCopy];
             [self.discoverPeripheral enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                 CBPeripheral *pers = obj;
@@ -369,9 +400,21 @@
 #pragma mark - override delloc
 -(void)dealloc{
     
-    [self removeObserver:self forKeyPath:@"discoverPeripheral"];
+
+    //NSLog([self observationInfo]);
     
+    @try {
+        
+        [self removeObserver:self forKeyPath:@"discoverPeripheral"];
+        printf("XYSerialManage did remove observer\n");
+        
+    } @catch (NSException *exception) {
+        
+        printf("XYSerialManage  removeobserver error\n");
+    }
+
 }
+
 
 
 

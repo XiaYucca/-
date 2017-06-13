@@ -25,7 +25,8 @@
 
 #define fileService     0xFFE0
 #define fileSub         0xFFE1
-#define fileReadNotif   0XFFE1
+#define fileReadNotif   0xFFE2
+
 
 //
 //#define fileService     0xDFB0
@@ -87,6 +88,7 @@
 -(void) read:(CBPeripheral *)peripheral;
 -(void) notify:(CBPeripheral *)peripheral on:(BOOL)on;
 
+
 -(void) printPeripheralInfo:(CBPeripheral*)peripheral;
 
 -(void) notification:(int)serviceUUID characteristicUUID:(int)characteristicUUID p:(CBPeripheral *)p on:(BOOL)on;
@@ -103,11 +105,3 @@
 -(void) readValue: (int)serviceUUID characteristicUUID:(int)characteristicUUID p:(CBPeripheral *)p;
 
 @end
-
-
-
-
-
-
-
-
