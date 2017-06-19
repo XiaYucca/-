@@ -36,21 +36,17 @@
 //        NSLog(@"i=====d%@",[response class]);
 //        NSLog(@"%@",response);
 //    }];
-    XLog(@"-------")
+    XLog(@"-------");
     self.manage = [[XYSerialManage alloc]init];
     
     [self.manage blueToothAutoScaning:1 withTimeOut:10 autoConnectDistance:-100 didConnected:^(CBPeripheral *peripheral) {
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            
             [self.manage writeData:[@"dance" dataUsingEncoding: NSUTF8StringEncoding]];
-            
             sleep(1);
-            
             [self.manage writeData:[@"advance" dataUsingEncoding: NSUTF8StringEncoding]];
             sleep(1);
             [self.manage writeData:[@"stop" dataUsingEncoding: NSUTF8StringEncoding]];;
-            
         });
         
     } timeOutCallback:^{

@@ -17,10 +17,19 @@
 }
 
 -(void)loadView{
-//    FindMapView *findV = [[FindMapView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    FindMapView *findV = [[FindMapView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
+    [findV selectMapItem:^(NSInteger Item) {
+        [[Route share]GoToControllerIsPush:NO ClassName:@"ARViewController" From:self PropertyDic:nil];
+    }];
+    
+    [findV didClickBackBtn:^{
+        [[Route share]GoBackFromController:self];
+    }];
+    
 //    self.view = findV;
     ScenarioSimulation *view = [[ScenarioSimulation alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    self.view = view;
+    self.view = findV;
 
 }
 

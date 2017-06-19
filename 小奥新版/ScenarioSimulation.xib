@@ -33,6 +33,9 @@
                                 <constraint firstAttribute="height" constant="28" id="SmT-9K-pGd"/>
                             </constraints>
                             <state key="normal" backgroundImage="Arrow-icon-green"/>
+                            <connections>
+                                <action selector="dissmissBtnClick" destination="-1" eventType="touchUpInside" id="PoM-S8-sKC"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pz6-U4-HVX">
                             <rect key="frame" x="678" y="16" width="28" height="28"/>

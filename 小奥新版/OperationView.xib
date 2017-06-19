@@ -32,6 +32,9 @@
                                 <constraint firstAttribute="height" constant="28" id="S3P-fb-eZu"/>
                             </constraints>
                             <state key="normal" backgroundImage="Arrow-icon-green"/>
+                            <connections>
+                                <action selector="backBtnClick" destination="-1" eventType="touchUpInside" id="iyo-Iv-wHX"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEd-uI-R4x">
                             <rect key="frame" x="678" y="16" width="28" height="28"/>

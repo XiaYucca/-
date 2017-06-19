@@ -316,7 +316,7 @@
 
 // 剪切距离 最近的节点分割line
 -(NSArray *)cutNodeListAtNode:(Node *)node{
-    return [self cutNodeListAtIndex:[self nearestAtNodeList:node] ];
+    return [self cutNodeListAtIndex:[self nearestAtNodeList:node]];
 }
 
 

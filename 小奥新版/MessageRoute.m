@@ -18,7 +18,6 @@
 @property (nonatomic ,copy)NSString *className;
 @property (nonatomic ,copy)NSString *classMethod;
 @property (nonatomic ,copy)NSArray *classMethodParm;
-
 @end
 
 @implementation XYObject
@@ -517,7 +516,7 @@ void processReturnType(RETURNSTRUCT *r,id c,XYObject *xyObj,void (^callBack)()){
     return 1;
 }
 
-//测试runtime
+//测试
 -(void)test{
     Class c = objc_getClass("MessageRoute");
     id co = objc_msgSend(c, sel_registerName("alloc"));
@@ -609,8 +608,6 @@ void processReturnType(RETURNSTRUCT *r,id c,XYObject *xyObj,void (^callBack)()){
     // [_ClassInstace_0  initWithFram:frame item:ite]
 }
 
-
-
 void startEngine(id self, SEL _cmd, NSString *brand) {
     NSLog(@"my %@ car starts the engine", brand);
 }
@@ -622,5 +619,8 @@ void startEngine(id self, SEL _cmd, NSString *brand) {
     }
     return [super resolveInstanceMethod:sel];
 }
+
+
+
 
 @end

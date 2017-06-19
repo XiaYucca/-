@@ -15,5 +15,7 @@
 
 @property (strong ,nonatomic)XYSerialManage *siralManage;
 
+@property (atomic) bool active;
+
 @end
 

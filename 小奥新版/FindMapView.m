@@ -25,12 +25,14 @@ typedef NS_ENUM(NSUInteger, MAP_BTN_TAG) {
 
 @property (nonatomic ,weak)IBOutlet UIView *contentView;
 @property (nonatomic ,copy)void(^btnClickCallback)(NSInteger);
+@property (nonatomic ,copy)void(^backBtnCallaback)(void);
+
 @end
 
 
 @implementation FindMapView
 
--(void)awakeFromNib{
+-(void)setup{
     
     for(int i=MAP_BTN_1_TAG; i <= MAP_BTN_6_TAG; i++){
         UIButton *btn = [self viewWithTag:i];
@@ -56,8 +58,12 @@ typedef NS_ENUM(NSUInteger, MAP_BTN_TAG) {
 -(void)loadFromNib{
     [[NSBundle mainBundle]loadNibNamed:@"FindMapView" owner:self options:nil];
     [self addSubview:_contentView];
+    [self setup];
 }
 
+-(void)selectMapItem:(void(^)(NSInteger Item))callBack{
+    _btnClickCallback = callBack;
+}
 
 -(IBAction)btnClick:(UIButton *)sender{
     switch (sender.tag) {
@@ -81,6 +87,13 @@ typedef NS_ENUM(NSUInteger, MAP_BTN_TAG) {
     }
 }
 
+-(IBAction)backBtnClick:(id)sender{
+    ! self.backBtnCallaback ?: self.backBtnCallaback();
+}
+
+-(void)didClickBackBtn:(void(^)(void))callback{
+    self.backBtnCallaback = callback;
+}
 
 
 

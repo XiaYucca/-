@@ -11,4 +11,8 @@
 
 @interface FindMapView : UIView
 
+
+-(void)selectMapItem:(void(^)(NSInteger Item))callBack;
+-(void)didClickBackBtn:(void(^)(void))callback;
+
 @end

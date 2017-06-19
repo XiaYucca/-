@@ -76,6 +76,7 @@ static const NSString *INSTRUCT_STOPMP3 = @"stopmp3";
 
 @property (nonatomic ,copy) void(^setBtnClickCallBack)();
 
+@property (nonatomic ,copy) void(^dissMissCallBack)();
 
 
 @end

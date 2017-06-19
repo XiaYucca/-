@@ -66,8 +66,8 @@
     UIImageView *backimageView = [cell viewWithTag:2000];
     UIImageView *imageView = [cell viewWithTag:1000];
     if (!imageView) {
-        imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 115, 115)];
-        backimageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 115, 115)];
+        imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 80, 80)];
+        backimageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 80, 80)];
         
         [cell addSubview:backimageView];
         [cell addSubview:imageView];
@@ -84,11 +84,11 @@
 
 //返回分区个数
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 6;
+    return 5;
 }
 //返回每个分区的item个数
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 5;
+    return 6;
 }
 
 ////返回每个item
@@ -99,18 +99,35 @@
 //}
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return (CGSize){115,115};
+    return (CGSize){80,80};
 }
 
+-(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
+{
+      XLog(@"section :%ld",section);
+    return (self.contentView.frame.size.width - 80 * 5 - 200) /5.0;
+}
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    CGFloat dWidth = (self.contentView.frame.size.width - 115 * 4) /5.0;
-    return UIEdgeInsetsMake(dWidth*0.5, dWidth * 0.5, dWidth * 0.5, dWidth * 0.5);
+    XLog(@"section :%ld",section);
+    CGFloat dWidth = (self.contentView.frame.size.width - 80 * 4) /5.0;
+    return UIEdgeInsetsMake(0, 100, dWidth * 0.5, 100);
 }
 
-
-
+//- (UICollectionViewLayoutAttributes *)initialLayoutAttributesForAppearingItemAtIndexPath:(NSIndexPath *)itemIndexPath {
+//    
+//    UICollectionViewLayoutAttributes* attributes = [_collectionView layoutAttributesForItemAtIndexPath:itemIndexPath];
+//    
+//    attributes.alpha = 0.0;
+//    
+//    CGSize size = [self collectionView].frame.size;
+//    
+//    attributes.center = CGPointMake(size.width / 2.0, size.height / 2.0);
+//    
+//    return attributes;
+//    
+//}
 
 #pragma mark ---- UICollectionViewDelegate
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath
@@ -159,6 +176,9 @@
 }
 
 
+-(IBAction)dissmissBtnClick{
+    !self.closeCallback ?:self.closeCallback();
+}
 
 
 @end

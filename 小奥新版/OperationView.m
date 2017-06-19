@@ -25,6 +25,9 @@ typedef enum {
       dragIn
 } TASK_STATUS;
 
+
+#define TASK_FRENQUENCY 50
+
 /*************** 任务 ****************/
 #pragma mark - task item
 
@@ -124,7 +127,7 @@ static NSUInteger gloab_time = 0;
     [[RecodeManage shared].timer invalidate];
     [RecodeManage shared].timer = nil;
     
-    [RecodeManage shared].timer = [NSTimer scheduledTimerWithTimeInterval:0.1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+    [RecodeManage shared].timer = [NSTimer scheduledTimerWithTimeInterval:(float)(1.0/TASK_FRENQUENCY) repeats:YES block:^(NSTimer * _Nonnull timer) {
         gloab_time ++;
         NSUInteger index = gloab_time;
         if ([RecodeManage shared].timeTickBlock) {
@@ -148,7 +151,7 @@ static NSUInteger gloab_time = 0;
         
          __block TaskRecode* task = [[RecodeManage shared].taskQueue pop];
 
-        [RecodeManage shared].timer = [NSTimer scheduledTimerWithTimeInterval:0.1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        [RecodeManage shared].timer = [NSTimer scheduledTimerWithTimeInterval:(float)(1.0/TASK_FRENQUENCY)  repeats:YES block:^(NSTimer * _Nonnull timer) {
             gloab_time ++;
             XLog(@"play time tick time:%ld",gloab_time);
             while ( abs(task.startTime - gloab_time)<1 ) {
@@ -240,6 +243,7 @@ static NSUInteger gloab_time = 0;
     [self.contentView addSubview:itemView];
     itemView.layer.cornerRadius = 25;
     itemView.layer.masksToBounds = YES;
+    itemView.hidden = YES;
     
     UIButton *btn = [self viewWithTag:100];
     btn.highlighted = YES;
@@ -441,7 +445,7 @@ static NSUInteger gloab_time = 0;
 
 -(void)showTimeTick{
     UILabel *label = [self viewWithTag:20];
-    NSUInteger temp = gloab_time / 10;
+    NSUInteger temp = gloab_time / TASK_FRENQUENCY;
     int s = temp % 60;
     int m = temp % 3600/ 60;
     int h = temp / 3600;
@@ -472,6 +476,7 @@ static NSUInteger gloab_time = 0;
 }
 
 -(IBAction)btnTaskPlay:(id)sender{
+    itemView.hidden = NO;
     isRecord = NO;
     [RecodeManage playRecode];
 }
@@ -560,6 +565,10 @@ static NSUInteger gloab_time = 0;
         default:
             break;
     }
+}
+
+-(IBAction)backBtnClick{
+    !self.dissMissCallBack ?: self.dissMissCallBack();
 }
 
 /*

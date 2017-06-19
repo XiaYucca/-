@@ -10,4 +10,6 @@
 
 @interface ScenarioSimulation : UIView
 
+@property(nonatomic ,copy)void(^closeCallback)(void);
+
 @end

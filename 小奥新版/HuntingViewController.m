@@ -21,11 +21,18 @@
     // Do any additional setup after loading the view.
     HuntingViewModel *model = [[HuntingViewModel alloc]init];
     WeakObj(self);
+    
     [model willDissmiss:^BOOL(UIView *v) {
-        [[Route share]GoBackFromController:weakself];
+        //[[Route share]GoBackFromController:weakself];
+        [self dismissViewControllerAnimated:YES completion:nil];
         return YES;
     }];
+    
     ((HuntingView *)self.view).model = model;
+
+    [model voiceBtnClick:^(UIButton *btn) {
+        [[Route share]GoToControllerIsPush:NO ClassName:@"FindMapViewController" From:self PropertyDic:nil];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

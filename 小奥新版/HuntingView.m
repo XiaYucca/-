@@ -152,16 +152,27 @@
 
 -(IBAction)backBtnClick:(UIButton *)btn{
     WeakObj(self);
-    !self.willDissmissCallback ? : self.willDissmissCallback(weakself);
+    if (self.willDissmissCallback) {
+        self.willDissmissCallback(self);
+    }
+//    !self.willDissmissCallback ? : self.willDissmissCallback(weakself);
 }
+
 -(IBAction)helpBtnClick:(UIButton *)btn{
-    
+    if (_helpBtnClickCallback) {
+        _helpBtnClickCallback(btn);
+    }
 }
+
 -(IBAction)setBtnClick:(UIButton *)btn{
-    
+    if (_setBtnClickCallback) {
+        _setBtnClickCallback(btn);
+    }
 }
 -(IBAction)actionBtnClick:(UIButton *)btn{
-
+    if (_voiceBtnClickCallback) {
+        _voiceBtnClickCallback(btn);
+    }
 }
 
 -(void)dealloc{

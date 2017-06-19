@@ -170,6 +170,7 @@ iCarouselOption;
 
 
 @protocol iCarouselDelegate <NSObject>
+
 @optional
 
 - (void)carouselWillBeginScrollingAnimation:(iCarousel *)carousel;
