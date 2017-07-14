@@ -39,7 +39,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nWV-a7-Wk8">
-                                    <rect key="frame" x="10" y="73" width="70" height="109"/>
+                                    <rect key="frame" x="20" y="73" width="70" height="109"/>
                                     <subviews>
                                         <button opaque="NO" tag="1000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZxK-sv-BaU">
                                             <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
@@ -47,7 +47,7 @@
                                                 <constraint firstAttribute="height" constant="70" id="DSJ-kt-Df3"/>
                                                 <constraint firstAttribute="width" constant="70" id="Fw1-dE-eoY"/>
                                             </constraints>
-                                            <state key="normal" image="音乐" backgroundImage="表情背景"/>
+                                            <state key="normal" image="sign_day01" backgroundImage="表情背景"/>
                                             <connections>
                                                 <action selector="btnClick:" destination="-1" eventType="touchUpInside" id="gxC-Ay-jvU"/>
                                             </connections>
@@ -76,7 +76,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Le-Bz-hCM">
-                                    <rect key="frame" x="120" y="73" width="70" height="109"/>
+                                    <rect key="frame" x="130" y="73" width="70" height="109"/>
                                     <subviews>
                                         <button opaque="NO" tag="2000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgr-Pi-pwQ">
                                             <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
@@ -84,7 +84,7 @@
                                                 <constraint firstAttribute="width" constant="70" id="QKc-RB-XZd"/>
                                                 <constraint firstAttribute="height" constant="70" id="a2G-X2-TYW"/>
                                             </constraints>
-                                            <state key="normal" image="音乐" backgroundImage="表情背景"/>
+                                            <state key="normal" image="sign_day02" backgroundImage="表情背景"/>
                                             <connections>
                                                 <action selector="btnClick:" destination="-1" eventType="touchUpInside" id="aiK-rC-1ZJ"/>
                                             </connections>
@@ -121,7 +121,7 @@
                                                 <constraint firstAttribute="width" constant="70" id="ig2-O3-jBj"/>
                                                 <constraint firstAttribute="height" constant="70" id="tvw-ky-Z09"/>
                                             </constraints>
-                                            <state key="normal" image="音乐" backgroundImage="表情背景">
+                                            <state key="normal" image="sign_day03" backgroundImage="表情背景">
                                                 <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
@@ -160,7 +160,7 @@
                                                 <constraint firstAttribute="height" constant="70" id="RVE-Re-yzN"/>
                                                 <constraint firstAttribute="width" constant="70" id="kIu-QT-pql"/>
                                             </constraints>
-                                            <state key="normal" image="音乐" backgroundImage="表情背景"/>
+                                            <state key="normal" image="sign_day05" backgroundImage="表情背景"/>
                                             <connections>
                                                 <action selector="btnClick:" destination="-1" eventType="touchUpInside" id="hdf-ug-v7h"/>
                                             </connections>
@@ -197,7 +197,7 @@
                                                 <constraint firstAttribute="width" constant="70" id="AFD-sf-9KI"/>
                                                 <constraint firstAttribute="height" constant="70" id="R0H-FB-5kW"/>
                                             </constraints>
-                                            <state key="normal" image="音乐" backgroundImage="表情背景"/>
+                                            <state key="normal" image="sign_day06" backgroundImage="表情背景"/>
                                             <connections>
                                                 <action selector="btnClick:" destination="-1" eventType="touchUpInside" id="VfI-5t-ysy"/>
                                             </connections>
@@ -234,7 +234,7 @@
                                                 <constraint firstAttribute="height" constant="70" id="aOk-cI-Wsn"/>
                                                 <constraint firstAttribute="width" constant="70" id="vay-zB-YUV"/>
                                             </constraints>
-                                            <state key="normal" image="音乐" backgroundImage="表情背景"/>
+                                            <state key="normal" image="sign_day07" backgroundImage="表情背景"/>
                                             <connections>
                                                 <action selector="btnClick:" destination="-1" eventType="touchUpInside" id="ku4-pt-2HY"/>
                                             </connections>
@@ -282,7 +282,7 @@
                                                 <constraint firstAttribute="height" constant="70" id="ZcS-nA-qnT"/>
                                                 <constraint firstAttribute="width" constant="70" id="y7j-BA-sx4"/>
                                             </constraints>
-                                            <state key="normal" image="音乐" backgroundImage="表情背景">
+                                            <state key="normal" image="sign_day04" backgroundImage="表情背景">
                                                 <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
@@ -329,7 +329,7 @@
                                 <constraint firstItem="eiE-sk-7mo" firstAttribute="top" secondItem="tVt-T2-oVC" secondAttribute="top" constant="-1" id="bh8-V7-iiV"/>
                                 <constraint firstItem="wEW-8Z-JTN" firstAttribute="leading" secondItem="PH2-Iu-FFh" secondAttribute="trailing" constant="46" id="cpc-NK-tuQ"/>
                                 <constraint firstItem="wEW-8Z-JTN" firstAttribute="top" secondItem="PH2-Iu-FFh" secondAttribute="top" id="env-gJ-kVv"/>
-                                <constraint firstItem="nWV-a7-Wk8" firstAttribute="leading" secondItem="tVt-T2-oVC" secondAttribute="leading" constant="10" id="jkC-ou-ZqV"/>
+                                <constraint firstItem="nWV-a7-Wk8" firstAttribute="leading" secondItem="tVt-T2-oVC" secondAttribute="leading" constant="20" id="jkC-ou-ZqV"/>
                                 <constraint firstItem="Lod-mX-1eE" firstAttribute="bottom" secondItem="nWV-a7-Wk8" secondAttribute="bottom" id="jtO-ZD-KEI"/>
                                 <constraint firstItem="Dd2-Af-2m6" firstAttribute="top" secondItem="tVt-T2-oVC" secondAttribute="top" constant="25" id="o4D-zp-meJ"/>
                                 <constraint firstAttribute="trailing" secondItem="eiE-sk-7mo" secondAttribute="trailing" constant="-1" id="pi8-kY-sHm"/>
@@ -366,8 +366,14 @@
     </objects>
     <resources>
         <image name="X-btn-" width="28" height="28"/>
+        <image name="sign_day01" width="70" height="70"/>
+        <image name="sign_day02" width="70" height="70"/>
+        <image name="sign_day03" width="210" height="210"/>
+        <image name="sign_day04" width="70" height="70"/>
+        <image name="sign_day05" width="70" height="70"/>
+        <image name="sign_day06" width="70" height="70"/>
+        <image name="sign_day07" width="70" height="70"/>
         <image name="签到-bg" width="430" height="324"/>
         <image name="表情背景" width="70" height="70"/>
-        <image name="音乐" width="94" height="45"/>
     </resources>
 </document>

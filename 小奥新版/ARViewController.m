@@ -3,7 +3,7 @@
 * EasyAR is the registered trademark or trademark of VisionStar Information Technology (Shanghai) Co., Ltd in China
 * and other countries for the augmented reality technology developed by VisionStar Information Technology (Shanghai) Co., Ltd.
 */
-
+#import <UserNotifications/UserNotifications.h>
 #import "ARViewController.h"
 
 @interface ARViewController ()
@@ -23,13 +23,10 @@
     [self.view addSubview:btn];
     
     [self.glView setOrientation:self.interfaceOrientation];
-
-    
     WeakObj(self);
     self.glView.didRecognizeImage = ^(NSUInteger index, NSString *info) {
         StrongObj(self);
         NSLog(@"did recognize index:%ld info:%@",index,info);
-        
         UIAlertController *ac = [UIAlertController alertControllerWithTitle:@"识别结果" message:info preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             [self dismissViewControllerAnimated:YES completion:nil];
@@ -42,9 +39,8 @@
                 }];
             });
         }];
-        
-
     };
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated{

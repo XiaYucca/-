@@ -30,7 +30,6 @@ static BOOL isPushVc;
         }
         dispatch_async(dispatch_get_main_queue(), ^{
             isPushVc = isPush;
-            
             if(isPush == YES){
                 [fromVc.navigationController pushViewController:controller animated:YES];
             }else{

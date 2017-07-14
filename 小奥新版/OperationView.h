@@ -40,6 +40,8 @@
  寻迹	sear
  跳舞	dance	使用 dance x（x 舞蹈编号号 dance与x之间加一个空格）
  */
+#import "XYSerialManage.h"
+
 
 static const NSString *INSTRUCT_DANCE = @"dance";
 static const NSString *INSTRUCT_SEAR = @"sear";
@@ -78,5 +80,5 @@ static const NSString *INSTRUCT_STOPMP3 = @"stopmp3";
 
 @property (nonatomic ,copy) void(^dissMissCallBack)();
 
-
+@property (nonatomic ,weak)XYSerialManage *serial;
 @end

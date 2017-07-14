@@ -15,9 +15,10 @@
 #import "ConnectView.h"
 #import "SaveOpration.h"
 
-
 #import "Route.h"
+#import "XYSerialManage.h"
 
+#import "AppDelegate.h"
 
 typedef enum {
       touchDown,
@@ -38,7 +39,6 @@ typedef enum {
 @property (nonatomic ,assign)NSUInteger startTime;
 
 @property (nonatomic ,assign)TASK_STATUS statuts;
-
 @property (nonatomic ,copy)void(^taskBlock)();
 
 @end
@@ -209,6 +209,15 @@ static NSUInteger gloab_time = 0;
     UIView *itemView;
 }
 
+-(XYSerialManage *)serial{
+    
+    if (!_serial) {
+        _serial = ((AppDelegate *)[UIApplication sharedApplication].delegate).siralManage;
+    }
+    return _serial;
+}
+    
+    
 -(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
 
 //    UITouch * touch = [touches anyObject];
@@ -337,6 +346,41 @@ static NSUInteger gloab_time = 0;
             [RecodeManage addTaskToManage:task];
 
         }
+        NSString *cmd = @"";
+        switch (der) {
+            
+            case WHEEL_ORIGOIN:
+                cmd = INSTRUCT_STOP;
+            break;
+            case WHEEL_LEFT:
+                cmd = INSTRUCT_ADCANCE;
+            break;
+            case WHEEL_LEFT_UP:
+                //cmd = INSTRUCT_ADCANCE;
+            break;
+            case WHEEL_UP:
+                cmd = INSTRUCT_TURN_LEFT;
+            break;
+            case WHEEL_RIGHT_UP:
+            
+            break;
+            case WHEEL_RIGHT:
+                cmd = INSTRUCT_TURN_BACK;
+            break;
+            case WHEEL_DOWN:
+                cmd =INSTRUCT_TURN_RIGHT ;
+            break;
+            case WHEEL_LEFT_DOWN:
+            
+            break;
+            
+            default:
+            break;
+        }
+        
+        NSLog(@"cmd:%@",cmd);
+        [appDelegate.siralManage writeData:[cmd dataUsingEncoding:NSUTF8StringEncoding]];
+        
     }];
     
     [self test];
@@ -354,7 +398,7 @@ static NSUInteger gloab_time = 0;
     return temp;
 }
 
-//点一次触发两次所以用了一个笨办法 过滤一次
+//点一次触发两次所以用了一个笨办法 过滤一次.
 -(BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event{
     
     static int pointInsideHandleIndex = 1;

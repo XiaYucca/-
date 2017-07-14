@@ -39,6 +39,11 @@
 {
     DanceView *dv = [[DanceView alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.view = dv;
+    WeakObj(self);
+    dv.backBtnCallback = ^{
+        StrongObj(self);
+        [self dismissViewControllerAnimated:YES completion:nil];
+    };
 }
 
 @end

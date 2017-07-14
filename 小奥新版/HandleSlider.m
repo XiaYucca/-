@@ -28,6 +28,7 @@
     return p;
 }
 
+    
 -(void)setProgress:(CGFloat)progress{
     if (progress > 1.0) {
         progress = 1.0;

@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SlaveCmd.h"
+
 
 @interface MainViewController : UIViewController
 
 
-@end
 
+@end

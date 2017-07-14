@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MusicProgressView">
+            <rect key="frame" x="0.0" y="0.0" width="914" height="84"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2L-Qr-tdC" userLabel="后退">
+                    <rect key="frame" x="20" y="34" width="19" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="19" id="RKC-gL-jr8"/>
+                        <constraint firstAttribute="height" constant="17" id="Vpx-CM-r0y"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="dance_Prev_icon"/>
+                    <connections>
+                        <action selector="backBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="mW3-fZ-bcr"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vJ-O9-1Kq" userLabel="前进">
+                    <rect key="frame" x="98" y="33.666666666666664" width="19" height="17"/>
+                    <state key="normal" backgroundImage="dance_Forward_icon"/>
+                    <connections>
+                        <action selector="forwordBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="P7r-mK-kgR"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rDD-3y-U2i">
+                    <rect key="frame" x="147" y="40" width="587" height="4"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gpp-h2-FG1">
+                            <rect key="frame" x="0.0" y="0.0" width="587" height="4"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="4" id="RJy-G1-2Nf"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Gpp-h2-FG1" firstAttribute="centerY" secondItem="rDD-3y-U2i" secondAttribute="centerY" id="ApM-ju-v7d"/>
+                        <constraint firstItem="Gpp-h2-FG1" firstAttribute="height" secondItem="rDD-3y-U2i" secondAttribute="height" id="D8Y-da-6hn"/>
+                        <constraint firstAttribute="trailing" secondItem="Gpp-h2-FG1" secondAttribute="trailing" id="aWC-3D-OI7"/>
+                        <constraint firstItem="Gpp-h2-FG1" firstAttribute="leading" secondItem="rDD-3y-U2i" secondAttribute="leading" id="o6A-to-gsU"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fqy-mb-sxL">
+                    <rect key="frame" x="129" y="24" width="36" height="36"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="36" id="HOf-mv-dAG"/>
+                        <constraint firstAttribute="height" constant="36" id="dCh-XQ-9Yb"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="pad_进度条点"/>
+                    <state key="highlighted" backgroundImage="pad_进度条点"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="1pg-of-fcI" appends="YES" id="Z5z-5A-qbJ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7Y-ly-PYI" userLabel="随机">
+                    <rect key="frame" x="764" y="27" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="DKf-5f-ixn"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="l15-jx-8mu"/>
+                        <constraint firstAttribute="height" constant="30" id="tEM-Gy-d5S"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="xBp-dH-8vG"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="pad_跳舞_随机播放"/>
+                    <state key="highlighted" backgroundImage="pad_随机播放_点击"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mc2-5S-xa4" userLabel="单曲">
+                    <rect key="frame" x="814" y="27" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="YJF-Xe-O33"/>
+                        <constraint firstAttribute="height" constant="30" id="zvi-ps-jUa"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="pad_跳舞_单曲循环"/>
+                    <state key="highlighted" backgroundImage="pad_单曲循环_点击"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eai-cj-oo6" userLabel="重复">
+                    <rect key="frame" x="864" y="27" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="MVO-4i-fI9"/>
+                        <constraint firstAttribute="width" constant="30" id="ab8-MU-LcO"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="pad_跳舞_循环"/>
+                    <state key="highlighted" backgroundImage="pad_跳舞_循环_点击"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rog-5N-N2d" userLabel="暂停">
+                    <rect key="frame" x="59" y="34" width="19" height="17"/>
+                    <state key="normal" backgroundImage="dance_Pause_click_icon"/>
+                    <connections>
+                        <action selector="stopBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Xf7-CA-Zpb"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Rog-5N-N2d" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="1pM-vs-rcb"/>
+                <constraint firstItem="Mc2-5S-xa4" firstAttribute="leading" secondItem="m7Y-ly-PYI" secondAttribute="trailing" constant="20" id="6u6-8S-hqV"/>
+                <constraint firstItem="5vJ-O9-1Kq" firstAttribute="height" secondItem="z2L-Qr-tdC" secondAttribute="height" id="B05-zh-tX5"/>
+                <constraint firstItem="m7Y-ly-PYI" firstAttribute="leading" secondItem="rDD-3y-U2i" secondAttribute="trailing" constant="30" id="CPp-2e-3nw"/>
+                <constraint firstItem="eai-cj-oo6" firstAttribute="centerY" secondItem="rDD-3y-U2i" secondAttribute="centerY" id="CRW-ht-ZDx"/>
+                <constraint firstItem="rDD-3y-U2i" firstAttribute="leading" secondItem="5vJ-O9-1Kq" secondAttribute="trailing" constant="30" id="EaW-li-KtA"/>
+                <constraint firstItem="Rog-5N-N2d" firstAttribute="leading" secondItem="z2L-Qr-tdC" secondAttribute="trailing" constant="20" id="IkH-CL-2ug"/>
+                <constraint firstItem="rDD-3y-U2i" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="K3U-Fn-Ot1"/>
+                <constraint firstItem="z2L-Qr-tdC" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="MBc-8d-EO5"/>
+                <constraint firstItem="5vJ-O9-1Kq" firstAttribute="width" secondItem="z2L-Qr-tdC" secondAttribute="width" id="Oi8-iZ-L1m"/>
+                <constraint firstItem="Rog-5N-N2d" firstAttribute="height" secondItem="z2L-Qr-tdC" secondAttribute="height" id="daz-kS-13F"/>
+                <constraint firstItem="z2L-Qr-tdC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="fRK-CY-nwK"/>
+                <constraint firstItem="Mc2-5S-xa4" firstAttribute="centerY" secondItem="rDD-3y-U2i" secondAttribute="centerY" id="hXJ-41-gl9"/>
+                <constraint firstItem="Fqy-mb-sxL" firstAttribute="leading" secondItem="rDD-3y-U2i" secondAttribute="leading" constant="-18" id="kIo-ZY-lDK"/>
+                <constraint firstItem="m7Y-ly-PYI" firstAttribute="centerY" secondItem="rDD-3y-U2i" secondAttribute="centerY" id="l0h-uV-FDh"/>
+                <constraint firstItem="Rog-5N-N2d" firstAttribute="width" secondItem="z2L-Qr-tdC" secondAttribute="width" id="mxO-pE-J0F"/>
+                <constraint firstItem="Fqy-mb-sxL" firstAttribute="centerY" secondItem="rDD-3y-U2i" secondAttribute="centerY" id="oG2-UA-lsH"/>
+                <constraint firstItem="5vJ-O9-1Kq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="uBr-yq-FBu"/>
+                <constraint firstAttribute="trailing" secondItem="eai-cj-oo6" secondAttribute="trailing" constant="20" id="uQH-4V-AMY"/>
+                <constraint firstItem="5vJ-O9-1Kq" firstAttribute="leading" secondItem="Rog-5N-N2d" secondAttribute="trailing" constant="20" id="v78-u0-dFz"/>
+                <constraint firstItem="eai-cj-oo6" firstAttribute="leading" secondItem="Mc2-5S-xa4" secondAttribute="trailing" constant="20" id="ypB-h3-MsE"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="clickItem" destination="Fqy-mb-sxL" id="aTs-LU-Zvk"/>
+                <outlet property="itemBack" destination="Gpp-h2-FG1" id="M04-NC-PYr"/>
+                <outlet property="leadingItem" destination="kIo-ZY-lDK" id="D2v-Pc-8nd"/>
+                <outlet property="panGesture" destination="1pg-of-fcI" id="fdl-P6-Htx"/>
+                <outlet property="progressV" destination="rDD-3y-U2i" id="mMF-Hw-i9i"/>
+            </connections>
+            <point key="canvasLocation" x="313" y="-548"/>
+        </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="1pg-of-fcI">
+            <connections>
+                <action selector="panGestClick:" destination="iN0-l3-epB" id="nlh-fm-Vvw"/>
+                <outlet property="delegate" destination="-1" id="Hxn-X6-w82"/>
+            </connections>
+        </panGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="dance_Forward_icon" width="19" height="17"/>
+        <image name="dance_Pause_click_icon" width="19" height="23"/>
+        <image name="dance_Prev_icon" width="19" height="17"/>
+        <image name="pad_单曲循环_点击" width="30" height="30"/>
+        <image name="pad_跳舞_单曲循环" width="30" height="30"/>
+        <image name="pad_跳舞_循环" width="30" height="30"/>
+        <image name="pad_跳舞_循环_点击" width="30" height="24"/>
+        <image name="pad_跳舞_随机播放" width="30" height="30"/>
+        <image name="pad_进度条点" width="36" height="36"/>
+        <image name="pad_随机播放_点击" width="30" height="30"/>
+    </resources>
+</document>

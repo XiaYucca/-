@@ -159,8 +159,7 @@
   //      self.blueToothStatus = YES;
         NSLog(@"蓝牙打开");
         break;
-        
-//        default: self.blueToothStatus = NO;
+//      default: self.blueToothStatus = NO;
         break;
     }
 }
@@ -179,30 +178,23 @@
 
 -(void) peripheralFound:(CBPeripheral *)peripheral
 {
-        NSLog(@"array --->%@",peripheral);
+    NSLog(@"array --->%@",peripheral);
     //   [self.discoverPeripheral addObject:peripheral];
     if (![self.discoverPeripheral containsObject:peripheral]) {
-        
         [[self mutableArrayValueForKey:@"discoverPeripheral"] addObject:peripheral];
-        
         }
 }
 
 -(void)peripheralFound:(CBPeripheral *)peripheral andRSSI:(NSNumber *)RSSI
 {
     NSLog(@"peripheral-->%@  //// %d  autoConnect****%@",peripheral, RSSI.intValue,[NSString stringWithFormat:@"%i", self.autoConnect]);
-
     ! self.findedPeripheralcallBack ? : self.findedPeripheralcallBack(peripheral,RSSI);
-    
     if (RSSI.intValue > autoConnectDistance && self.autoConnect) {
         //  self.serial.activePeripheral = peripheral;
         [self.serial.manager stopScan];
         [self.serial connect:peripheral];
-        
         timeOutFlag = NO;
-    
     }
-    
 }
 - (void) periphereDidConnect:(CBPeripheral *)peripheral
 {
@@ -217,7 +209,6 @@
 - (void) peripheralMissConnect:(CBPeripheral *)peripheral
 {
     ! self.misConnectCallback ? : self.misConnectCallback(peripheral);
-    
 //    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"蓝牙断开连接" preferredStyle:UIAlertControllerStyleAlert];
 //    
 //    UIAlertAction *action = [UIAlertAction actionWithTitle:@"好的" style:UIPreviewActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -251,7 +242,7 @@
     }
  //  dispatch_async(dispatch_get_global_queue(0, 0), ^{
         
-         !self.updteValue? : self.updteValue(self.serial.activePeripheral,data);
+    !self.updteValue? : self.updteValue(self.serial.activePeripheral,data);
  //   });
   
 
@@ -298,12 +289,10 @@
 
 -(void)blueToothAutoScaning:(float)interval withTimeOut:(float)timeOut autoConnectDistance:(CGFloat)distance didConnected:(void (^)(CBPeripheral *peripheral))callBack timeOutCallback:(void (^)())timeOutCallback
 {
-    
     self.autoConnect = YES;
     timeOutFlag = YES;
     
     autoConnectDistance = distance;
-    
     self.autoConnectCallBack = callBack;
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(timeOut * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -314,7 +303,6 @@
         !timeOutCallback ? : timeOutCallback();
             NSLog(@"连接蓝牙超时");
         }
-        
     });
     
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:interval+0.2 target:self selector:@selector(autoscaning:) userInfo:[NSNumber numberWithInt:interval] repeats:YES];

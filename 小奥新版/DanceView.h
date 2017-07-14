@@ -10,4 +10,6 @@
 
 @interface DanceView : UIView
 
+@property (nonatomic, copy) void(^backBtnCallback)(void);
+
 @end

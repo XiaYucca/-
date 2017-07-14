@@ -15,7 +15,8 @@
 #import <CoreGraphics/CoreGraphics.h>
 
 
-const char* box_video_vert="uniform mat4 trans;\n"
+const char* box_video_vert=
+        "uniform mat4 trans;\n"
         "uniform mat4 proj;\n"
         "attribute vec4 coord;\n"
         "attribute vec2 texcoord;\n"
@@ -70,10 +71,12 @@ void VideoRenderer::init()
 
     glGenBuffers(1, &vbo_coord_box);
     glBindBuffer(GL_ARRAY_BUFFER, vbo_coord_box);
-    const GLfloat cube_vertices[4][3] = {{1.0f / 2, 1.0f / 2, 0.f},
+    const GLfloat cube_vertices[4][3] = {
+                                        {1.0f / 2, 1.0f / 2, 0.f},
                                         {1.0f / 2, -1.0f / 2, 0.f},
                                         {-1.0f / 2, -1.0f / 2, 0.f},
-                                        {-1.0f / 1, 1.0f / 2, 0.f}};
+                                        {-1.0f / 1, 1.0f / 2, 0.f}
+    };
     
     glBufferData(GL_ARRAY_BUFFER, sizeof(cube_vertices), cube_vertices, GL_DYNAMIC_DRAW);
 

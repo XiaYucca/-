@@ -23,7 +23,6 @@
     int writeServerId;
     int readServerID;
     int noteServerID;
-    
 }
 
 @synthesize delegate;

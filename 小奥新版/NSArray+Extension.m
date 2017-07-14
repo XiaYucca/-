@@ -10,8 +10,6 @@
 
 @implementation NSArray (Extension)
 
-
-
 -(NSString *)descriptionWithLocale:(id)locale
 {
     NSMutableString *msr = [NSMutableString string];

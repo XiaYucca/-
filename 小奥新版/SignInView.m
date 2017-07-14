@@ -8,6 +8,9 @@
 
 #import "SignInView.h"
 #import "SignInViewModel.h"
+
+#import "XYNotificationManage.h"
+
 //#import "ExpressionViewModel.h"
 
 //typedef enum : NSUInteger {
@@ -100,9 +103,17 @@
 
 -(IBAction)btnClick:(UIButton *)sender
 {
+    
+//    [[XYNotificationManage shared] removeNotificationByIDList:@[@"c_notification"]];
+    
     !self.selectItem?:self.selectItem( sender.tag/1000);
     
     NSLog(@"%s btn_id:%ld",__func__,sender.tag);
+    
+    
+    
+    sender.selected = !sender.selected;
+    
     if (sender.tag == BTN_TAG_0) {
     
     }

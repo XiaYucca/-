@@ -20,7 +20,7 @@
     FindMapView *findV = [[FindMapView alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
     [findV selectMapItem:^(NSInteger Item) {
-        [[Route share]GoToControllerIsPush:NO ClassName:@"ARViewController" From:self PropertyDic:nil];
+        [[Route share]GoToControllerIsPush:NO ClassName:@"DetailMapViewController" From:self PropertyDic:@{@"picName":[NSString stringWithFormat:@"寻线-map%d",Item]}];
     }];
     
     [findV didClickBackBtn:^{

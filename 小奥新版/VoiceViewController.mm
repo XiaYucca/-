@@ -11,7 +11,7 @@
 #import "VoiceViewModel.h"
 
 
-#define VOICE_LEVEL_INTERVAL 0.1 // 音量监听频率为1秒中10次
+#define VOICE_LEVEL_INTERVAL 0.5 // 音量监听频率为1秒中10次
 
 @interface VoiceViewController () <MVoiceRecognitionClientDelegate>
 @property (nonatomic ,strong) NSTimer *voiceLevelMeterTimer;
@@ -145,6 +145,7 @@
     // 获取语音音量级别
     
   //  if ([[BDVoiceRecognitionClient sharedInstance]listenCurrentDBLevelMeter]){
+    NSLog(@"[BDVoiceRecognitionClient sharedInstance]:%@",[BDVoiceRecognitionClient sharedInstance]);
         int voiceLevel = [[BDVoiceRecognitionClient sharedInstance] getCurrentDBLevelMeter];
         
         NSString *statusMsg = [NSLocalizedString(@"StringLogVoiceLevel", nil) stringByAppendingFormat:@": %d", voiceLevel];
@@ -279,10 +280,12 @@
 //             }
              case EVoiceRecognitionClientWorkStatusStartWorkIng: // 识别库开始识别工作，用户可以说话
              {
-                 if ([BDVRSConfig sharedInstance].voiceLevelMeter)  // 开启语音音量监听
-                 {
-                     [self startVoiceLevelMeterTimer];
-                 }
+                 NSLog(@"识别库开始工作");
+                 [self startVoiceLevelMeterTimer];
+//                 if ([BDVRSConfig sharedInstance].voiceLevelMeter)  // 开启语音音量监听
+//                 {
+//                     [self startVoiceLevelMeterTimer];
+//                 }
                  break;
              }
              case EVoiceRecognitionClientWorkStatusNone:
@@ -327,5 +330,13 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+//1、  ARM处理器（STM32F103VC），OLED显示屏。可同时控制多个I/o接口开关
+//2、  设置参数，开机密码。
+//3、  设置二维码为本机编号、两种工作模式：一种是直接密码解锁，通过电话注册或自动网站注册获得注册码，除去使用限制。
+//4、  另一种为二维码扫码开锁：分为单次使用、扫描一次设置时间，再把使用时间写进芯片。到时通过WIFI与把参数与服务器互传数据。
+//5、  内置几个简单网页、可以通过手机WIFI访问，设置保存参数与服务器同步。
+//6、  自动设置一个服务器ID，每个ID对应一个二维码产品。
+//7、  WIFI自动升级功能。
 
 @end

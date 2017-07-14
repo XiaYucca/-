@@ -230,6 +230,7 @@ EasyAR::samples::HelloARVideo ar;
 
 @end
 
+static OpenGLView *THIS;
 
 @implementation OpenGLView
 
@@ -298,24 +299,20 @@ EasyAR::samples::HelloARVideo ar;
     //开始加载 ar 组件
     ar.initCamera();
     ar.loadAllFromJsonFile("targets.json");
-//    ar.loadFromImage("namecard_old.png");
-//    ar.loadFromImage("namecard_re.jpg");
+    ar.loadFromImage("tag_5.jpg");
     ar.start();
-    
     [self regist];
-
     self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(displayLinkCallback:)];
     [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+    
 }
 
-static OpenGLView *THIS;
-
 -(void)regist{
-    ar.regeistRecognize_handle(regist);
+    ar.regeistRecognize_handle(registRecognize);
     THIS = self;
 }
 
-void regist(int index, char *str){
+void registRecognize(int index, char *str){
     NSString *nsStr = [NSString stringWithUTF8String:str];
     if (THIS.didRecognizeImage) {
         THIS.didRecognizeImage(index, nsStr);
@@ -380,8 +377,6 @@ void regist(int index, char *str){
     }
     ar.setPortrait(isPortrait);
     ar.resizeGL(frame.size.width, frame.size.height);
-    
-    
 }
 
 - (void)setOrientation:(UIInterfaceOrientation)orientation

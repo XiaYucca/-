@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="google" value="notranslate">
+  <title>test</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="nav">
+    <ul>
+      <li><a href="test.html" class="cur">首页</a></li>
+      <li><a href="test.html?123456zhlella">新品来袭</a></li>
+      <li><a href="test.html?546">关于我们</a></li>
+    </ul>
+  </div>
+  <script type="text/javascript" src="js/jquery.1.9.1.min.js"></script>
+  <!--<script>
+    $(function(){
+        var href = window.location.search;
+        var target = "?123456zhlella";
+      console.log(href);
+        if( target == href ){
+          getNav();
+        }
+    });
+    function getNav(){
+      var a = $(".nav").find("a");
+      for(var i = 0; i < a.length ; i++ ){
+        var con = a[i].innerHTML ;
+        if ( con == "新品来袭" ){
+            a[i].setAttribute("class","cur");
+        } else {
+            a[i].removeAttribute("class","cur");
+        }
+      }
+    }
+  </script>-->
+
+
+  <script>
+    $(function(){
+      var href = window.location.search;
+      var target = "?123456zhlella";
+      /*var target = "?encode=YToxNzp7czo0OiJzb3J0IjtzOjg6Imdvb2RzX2lkIjtzOjU6Im9yZGVyIjtzOjQ6IkRFU0MiO3M6MTI6ImltYWdlRmllbGRfeCI7czoyOiIxOSI7czoxMjoiaW1hZ2VGaWVsZF95IjtzOjE6IjgiO3M6NDoicGFnZSI7czoxOiIxIjtzOjc6ImRpc3BsYXkiO3M6NDoiZ3JpZCI7czo4OiJrZXl3b3JkcyI7czowOiIiO3M6ODoiY2F0ZWdvcnkiO3M6MToiMCI7czo1OiJicmFuZCI7czoxOiIwIjtzOjk6Im1pbl9wcmljZSI7czoxOiIwIjtzOjk6Im1heF9wcmljZSI7czoxOiIwIjtzOjY6ImFjdGlvbiI7czowOiIiO3M6NToiaW50cm8iO3M6MDoiIjtzOjEwOiJnb29kc190eXBlIjtzOjE6IjAiO3M6NToic2NfZHMiO3M6MToiMCI7czo4OiJvdXRzdG9jayI7czoxOiIwIjtzOjE4OiJzZWFyY2hfZW5jb2RlX3RpbWUiO2k6MTQyODk3MjQwMzt9";
+      */console.log(href);
+      if( target == href ){
+        console.log("这里执行了")
+        getNav("新品来袭");
+      }
+      var last = $(document).last();
+      console.log(last);
+      if( last == "1"){
+        getNav("关于我们");
+      }
+    });
+
+
+    function getNav(str){
+      var a = $(".nav").find("a");
+      for(var i = 0; i < a.length ; i++ ){
+        var con = a[i].innerHTML ;
+        console.log(str.charAt(0));
+        if ( con.charAt(0) == str.charAt(0) && con.charAt(1) == str.charAt(1) && con.charAt(2) == str.charAt(2) && con.charAt(3) == str.charAt(3) ){
+          console.log(con);
+          a[i].setAttribute("class","cur");
+        } else {
+          a[i].removeAttribute("class","cur");
+        }
+      }
+    }
+  </script>
+</body>
+</html>
+1

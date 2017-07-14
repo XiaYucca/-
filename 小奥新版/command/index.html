@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="google" value="notranslate">
+  <title>奥松编程吧SuperBlockly-指令编程</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/blockly_compressed.js"></script>
+  <script src="js/blocks_compressed.js"></script>
+  <script src="js/javascript_compressed.js"></script>
+  <script src="js/jquery.1.9.1.min.js"></script>
+  <script src="js/code.js"></script>
+  <script src="blocks/command.js"></script>
+  <link rel="stylesheet" id="categoryStyle" href="css/category1.css" >
+</head>
+<body id="indexContainer">
+  <table width="100%" height="100%">
+    <tr class="head">
+      <td id="tab_Logo" colspan="4"><img src="img/logo.png" alt="" style="height:50px;"></td>
+    </tr>
+    <tr class="menu">
+      <td class="tdw">
+        <div class="headNav cl">
+          <ul class="headMain fl">
+            <li class="one"><a href="../">图形编程</a></li>
+          </ul>
+        </div>
+      </td>
+      <td class="tabon tdw">
+        <div class="headNav cl">
+          <ul class="headMain fl">
+            <li class="two on"><span>指令编程</span><em></em></li>
+          </ul>
+        </div>
+      </td>
+      <td class="tdw">
+        <div class="headNav cl">
+          <ul class="headMain fl">
+            <li class="one"><a href="../scratch">Scratch编程</a></li>
+          </ul>
+        </div>
+      </td>
+      <td id="tabBlocks" class="tabon tdw">
+      </td>
+      <td class="levelMenu">
+        <div class="twoLevel">
+          <div class="levelTitle">小奥版</div>
+          <div class="twoLevelMenu">
+            <span class="on" onclick="changeBlock(this.innerHTML)">小奥版</span>
+            <span onclick="changeBlock(this.innerHTML)">小车版</span>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan=5>
+        <table width="100%" height="100%">
+          <tr>
+            <td height="99%" id="contentArea"></td>
+            <td id="mid_td" height="100%" width="0.3%"></td>
+            <td height="100%" style="display:none;" class="help" id="helpList" >
+              <!--帮助-->
+              <div class="helpCon">
+                <div class="helpCC">
+                  <div class="helpC">
+                    <div class="helpTitle">常见问题</div>
+                    <div class="h15"></div>
+                    <div class="QAwrap" style="height: 1085px;">
+                      <div class="QAcon">
+                        <h1><span>Q&amp;A：插件怎么安装？</span></h1>
+                        <p>解决方法：</p>
+                        <p class="mt5">第一步：点击“Google插件”按钮，下载插件 </p>
+                        <div class="QAbtn pt5 pb5">
+                          <a href="InstructionProgramming.crx" class="QAbtn3">Google插件</a>
+                        </div>
+                        <p class="mt5">第二步：打开chrome浏览器，在地址栏输入<span onclick="open(chrome://extensions)">chrome://extensions</span> ; </p>
+                        <p class="mt5">第三步：把InstructionProgramming.crx拖入浏览器 ; </p>
+                        <p class="mt5">第四步：完成安装</p>
+                        <p class="mt5">说明：如果顶部弹出“无法添加来自此网站的应用...”，请点击确定。由于一些你懂的原因，我们不能把插件发布到google应用商店。就算能发布，部分用户也不能...，所以╮(╯▽╰)╭</p>
+                      </div>
+                      <div class="QAcon">
+                        <h1><span>Q&amp;A：已经安装过插件，还是提示“应用安装说明”？</span></h1>
+                        <p>解决方法：请在谷歌浏览器，进入chrome://extensions界面，重启插件</p>
+                      </div>
+                      <div class="QAcon">
+                        <h1><span>Q&amp;A：设备连接上了，设置时查看不到端口？</span></h1>
+                        <p>解决方法：可能是缺少驱动，请根据您用的系统版本，下载设备驱动，然后安装</p>
+                        <div class="QAbtn">
+                          <a href="Window_Arduino_Drivers.zip" class="QAbtn1">Window版</a>
+                          <a href="MAC_Arduino_Drivers.ZIP" class="QAbtn2">MAC版</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!--end of helpC-->
+                </div><!--end of helpCC-->
+              </div><!--end of helpCon-->
+            </td>
+            <div class="helpTab" id="helpTab" onclick="sideHelpClick()">帮<br>助</div><!--end of helpTab-->
+            <div id="setTab" onclick="sideSetClick()">设<br>置</div><!--end of helpTab-->
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <div id="contentBlocks" class="content"></div>
+  <pre id="contentRun" class="content"></pre>
+  <textarea id="contentXml" class="content" wrap="off"></textarea>
+  <xml id="toolbox" style="display: none"></xml>
+
+  <div class="versionNum">版本：2.1.0</div>
+
+  <div class="ModularRun">
+    <a href="javascript:void(0);" id="tabRun">执行</a>
+  </div>
+
+  <div id="runTips">
+    <h1></h1>
+    <a href="javascript:void(0)" class="runBack ts1" style="display: none;">返回</a>
+    <a href="javascript:void(0)" class="backIndex ts1" style="display: none;">返回</a>
+  </div>
+  <div id="runBg"></div>
+
+  <!--应用安装提示-->
+  <div id="applicationTips">
+    <div class="appTitle">
+      <h1>应用安装说明</h1>
+      <div class="appClose" onclick="hideApp()"></div>
+    </div>
+    <div class="appCon">
+      <p class="appTip">你没有安装InstructionProgramming.crx，请按以下步骤操作：</p>
+      <p class="appStep">第一步：点击<a href="InstructionProgramming.crx">下载</a></p>
+      <p class="appStep">第二步：打开chrome浏览器，在地址栏输入 &nbsp;<span>chrome://extensions</span></p>
+      <p class="appStep">第三步：把InstructionProgramming.crx拖入浏览器</p>
+      <p class="appStep">第四步：完成安装</p>
+      <p class="appOtherTip">说明：如果顶部弹出“无法添加来自此网站的应用...”，请点击确定。由于一些你懂的原因，我们不能把插件发布到google应用商店。就算能发布，部分用户也不能...，所以╮(╯▽╰)╭</p>
+      <p class="appAnnotation">注：如果你已安装，还出现此提示，请在地址栏输入chrome://extensions，点击“奥松小车插件”后的“启用”</p>
+    </div>
+  </div>
+  <div id="appBg" onclick="hideApp()"></div>
+
+  <!--设备-->
+  <div id="deviceBg" onclick="HideDevice();"></div>
+  <div id="deviceContent" style="display: none;">
+    <div class="deviceTitle">
+      <h1>选择设备或者端口</h1>
+      <div class="deviceClose" onclick="HideDevice();"></div>
+    </div>
+    <div id="changeEquipment">
+      <span class="fl">设备/端口 : </span>
+      <div class="slt">
+        <select id="equipment" class="fl" onchange ='deviceDidChange(this)'></select>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="deviceBottom">
+      <a href="javascript:void(0)" id="tipYes" class="deviceTrue">确定</a>
+      <a href="javascript:void(0)" id="deviceYes" class="deviceTrue" onclick="deviceTrue()">确定</a>
+      <a href="javascript:void(0)" class="deviceFalse" onclick="HideDevice()">取消</a>
+    </div>
+    <p class="deviceTip"></p>
+  </div>
+<div id="paraBg"></div>
+<div class="alertPrompt" style="display: none;"></div>
+  <script type="text/javascript" src="js/jquery.1.9.1.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="js/chrome.js"></script>
+
+  <script>
+    /*小奥版*/
+    var ALSBlock1='<category name="开始" colour="#242424" icon="img/ico1.png"><block type="base_setup"></block><block type="base_delay"></block><block type="base_loop"></block><block type="base_pause"></block></category><category name="行驶" colour="#242424" icon="img/ico2.png"><block type="run_forward"></block><block type="run_backwards"></block><block type="run_left"></block><block type="run_right"></block></category><category name="看" colour="#242424" icon="img/ico3.png"><block type="look_left"></block><block type="look_right"></block><block type="look_people"></block></category><category name="灯光" colour="#242424" icon="img/ico4.png"><block type="light_left"></block><block type="light_right"></block><block type="light_front"></block><block type="light_behind"></block><block type="light_all"></block></category><category name="声音" colour="#242424" icon="img/ico5.png"><block type="sound_only"></block><block type="sound_say"></block><block type="sound_animal"></block><block type="sound_strange"></block><block type="sound_vehicle"></block></category><category name="动画" colour="#242424" icon="img/ico6.png"><block type="animation_only"></block><block type="animation_greet"></block><block type="animation_dance"></block><block type="animation_expression"></block><block type="animation_match"></block><block type="animation_answer"></block><block type="animation_play"></block></category><category name="功能" colour="#242424" icon="img/ico7.png"><block type="fun_line"></block><block type="fun_distance"></block><block type="fun_light"></block><block type="fun_sound"></block><block type="fun_temp_hum"></block><block type="fun_temp"></block><block type="fun_compass"></block><block type="fun_pot"></block><block type="fun_red"></block></category>';
+    /*小车版*/
+    var ALSBlock2='<category name="开始" colour="#242424" icon="img/ico1.png"><block type="base_setup"></block><block type="base_delay"></block><block type="base_loop"></block><block type="base_pause"></block></category><category name="行驶" colour="#242424" icon="img/ico2.png"><block type="run_forward"></block><block type="run_backwards"></block><block type="run_left"></block><block type="run_right"></block></category><category name="灯光" colour="#242424" icon="img/ico4.png"><block type="light_left"></block><block type="light_right"></block><block type="light_front"></block><block type="light_behind"></block><block type="light_all"></block></category><category name="声音" colour="#242424" icon="img/ico5.png"><block type="sound_only"></block></category><category name="功能" colour="#242424" icon="img/ico7.png"><block type="fun_line"></block></category>';
+
+    if( ALSBlock1 != null ) {
+      $('#toolbox').append(ALSBlock1);     
+    }
+    function changeBlock(content){
+      if ( content == "小奥版" ) {
+        localStorage.setItem("ALS", 1);
+      } else {
+        console.log("content is " + content );
+        localStorage.setItem("ALS", 2);
+      }
+      location.reload();
+    }
+    function hasALS(){
+      $('.twoLevelMenu span').removeClass('on');
+      var key = localStorage.getItem("ALS");
+      $('#toolbox').html("");
+      if ( key == null ){
+        localStorage.setItem("ALS", 1);
+      }
+      console.log( 'this is kenbox')
+      if ( key == 1 ) {
+        $('#toolbox').append(ALSBlock1);
+        $('.twoLevelMenu span').first().addClass('on');
+        $('.levelTitle').html('小奥版');
+        $('#categoryStyle').attr('href','css/category1.css');
+      } else {
+        $('#toolbox').append(ALSBlock2);
+        $('.twoLevelMenu span').last().addClass('on');
+        $('.levelTitle').html('小车版');
+        $('#categoryStyle').attr('href','css/category2.css');
+      }
+    }
+    hasALS();
+
+    $('.twoLevel').hover(function(){
+      $(".twoLevelMenu").show();
+    },function(){
+      $(".twoLevelMenu").hide();
+    });
+
+  </script>
+</body>
+</html>

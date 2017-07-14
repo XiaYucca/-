@@ -24,6 +24,8 @@
     
     [self removeLastObject];
     return temp;
+    
+    
 }
 
 -(NSInteger)push:(id)obj{

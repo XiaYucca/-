@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bvs-EL-cr4">
+                    <rect key="frame" x="281" y="80" width="175" height="167"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_logo" translatesAutoresizingMaskIntoConstraints="NO" id="mOz-PF-iq2">
+                            <rect key="frame" x="0.0" y="0.0" width="175" height="167"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="175" id="bga-kO-CI7"/>
+                                <constraint firstAttribute="height" constant="167" id="fzC-HT-cvM"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="mOz-PF-iq2" firstAttribute="height" secondItem="bvs-EL-cr4" secondAttribute="height" id="MDv-hh-oQs"/>
+                        <constraint firstItem="mOz-PF-iq2" firstAttribute="centerX" secondItem="bvs-EL-cr4" secondAttribute="centerX" id="frc-Ja-q25"/>
+                        <constraint firstItem="mOz-PF-iq2" firstAttribute="centerY" secondItem="bvs-EL-cr4" secondAttribute="centerY" id="kWg-xT-v2n"/>
+                        <constraint firstItem="mOz-PF-iq2" firstAttribute="width" secondItem="bvs-EL-cr4" secondAttribute="width" id="zdJ-co-kii"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1G-4J-j4b">
+                    <rect key="frame" x="243" y="277" width="251" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="251" id="6GB-li-ltT"/>
+                        <constraint firstAttribute="height" constant="36" id="Fo0-uw-wX2"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="JPE-xW-T7L"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="251" id="u2H-xF-xxm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="注册" backgroundImage="login_btn_blue">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEP-Ad-n2I">
+                    <rect key="frame" x="316" y="333" width="106" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Zz1-ii-XCx"/>
+                        <constraint firstAttribute="width" constant="106" id="xGi-Fi-wz6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="已有账号?登陆">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="bvs-EL-cr4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ENN-yx-Oe4"/>
+                <constraint firstItem="o1G-4J-j4b" firstAttribute="top" secondItem="bvs-EL-cr4" secondAttribute="bottom" constant="30" id="H4y-4f-Fja"/>
+                <constraint firstItem="uEP-Ad-n2I" firstAttribute="top" secondItem="o1G-4J-j4b" secondAttribute="bottom" constant="20" id="Ux7-6W-Cwu"/>
+                <constraint firstItem="o1G-4J-j4b" firstAttribute="centerX" secondItem="bvs-EL-cr4" secondAttribute="centerX" id="f4O-wf-Vw9"/>
+                <constraint firstItem="bvs-EL-cr4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="80" id="gIi-AB-vV8"/>
+                <constraint firstItem="uEP-Ad-n2I" firstAttribute="centerX" secondItem="bvs-EL-cr4" secondAttribute="centerX" id="va4-w1-7j5"/>
+            </constraints>
+            <point key="canvasLocation" x="103" y="-163"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="login_btn_blue" width="251" height="36"/>
+        <image name="login_logo" width="175" height="167"/>
+    </resources>
+</document>

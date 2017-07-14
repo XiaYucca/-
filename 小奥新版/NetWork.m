@@ -25,10 +25,8 @@
 }
 
 -(void)test{
-
 //    dispatch_release(group);
 //    dispatch_release(semaphore);
-    
 }
 
 

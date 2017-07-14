@@ -35,8 +35,6 @@
     }];
     
     ((ExpressionView *)(self.view)).model = model;
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {

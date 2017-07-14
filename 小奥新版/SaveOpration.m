@@ -120,13 +120,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     //SaveOprationCell *cell  = [tableView dequeueReusableCellWithIdentifier:@"SaveOprationCell" forIndexPath:indexPath];
     
-    if (indexPath.row > 2) {
-        SaveOprationCell *cell  = [tableView dequeueReusableCellWithIdentifier:@"SaveOprationCell" forIndexPath:indexPath];
-        return cell;
-    }else{
-        PlayRecordViewCell *cell  = [tableView dequeueReusableCellWithIdentifier:@"PlayRecordViewCell" forIndexPath:indexPath];
-        return cell;
-    }
+
+    SaveOprationCell *cell  = [tableView dequeueReusableCellWithIdentifier:@"SaveOprationCell" forIndexPath:indexPath];
+    return cell;
+   
   //  return cell;
 }
 
@@ -194,7 +191,7 @@
     UIView *view = [cell viewWithTag:100];
     
     if (isSelected) {
-      //  tableViewRow ++;
+//        tableViewRow ++;
 //        [self.tableView insertRowsAtIndexPaths:rowToInsert withRowAnimation:UITableViewRowAnimationTop];
         if (view) {
             view.hidden = NO;

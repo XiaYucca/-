@@ -14,6 +14,12 @@
 @property (nonatomic ,weak)IBOutlet UIView *content;
 @property (nonatomic ,weak)IBOutlet iCarousel *icarousel;
 
+@property (nonatomic ,weak)IBOutlet UIView *ProgressVBK;
+@property (nonatomic ,weak)IBOutlet UIView *progressV;
+@property (nonatomic ,weak)IBOutlet NSLayoutConstraint *progressRoghtConstraint;
+@property (nonatomic ,assign)CGFloat progress;
+
+
 @end
 
 @implementation DanceView
@@ -60,14 +66,37 @@
     self.icarousel.type = iCarouselTypeCustom;
   //  self.icarousel.perspective = - 0.05;
     self.icarousel.bounceDistance = 0.5;
+    self.ProgressVBK.layer.cornerRadius = 2;
+    self.ProgressVBK.layer.masksToBounds = YES;
 
+}
+
+-(void)setProgress:(CGFloat)progress{
+    if (progress > 1.0) {
+        progress = 1.0;
+    }
+    if (progress < 0.0) {
+        progress = 0.0;
+    }
+    _progress = 1.0 - progress;
+    self.progressRoghtConstraint.constant = _progress * CGRectGetWidth(self.ProgressVBK.frame);
+//    [UIView animateWithDuration:2.5 animations:^{
+//        [self.progressV layoutIfNeeded];
+//    }];
+    
+}
+
+-(IBAction)backBtnClick:(id)sender{
+    if (self.backBtnCallback) {
+        self.backBtnCallback();
+    }
 }
 
 
 #pragma mark -iCarouselDataSource
 
 - (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel{
-    return 5;
+    return 16;
 }
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view{
     
@@ -79,8 +108,8 @@
 //    //        imageV.image = [UIImage imageNamed:(NSString *)d];
 //    //    }
 //
-    imageV.backgroundColor = [UIColor lightGrayColor];
-    
+//    imageV.backgroundColor = [UIColor lightGrayColor];
+    imageV.image = [UIImage imageNamed:[NSString stringWithFormat:@"song_%d", index+1]];
     return  imageV;
 }
 
@@ -114,6 +143,8 @@
 {
     WeakObj(carousel);
     NSLog(@"点击了 %ld",index);
+    
+    self.progress = index * 0.1;
 //  !self.didSeletItemCallback ? :_didSeletItemCallback(weakcarousel,index);
 }
 

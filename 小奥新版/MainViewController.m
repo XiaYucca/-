@@ -26,6 +26,7 @@
 
 
 #import "DanceViewModel.h"
+#import "XYNotificationManage.h"
 
 #define VerifyValue(value)\
 ({id tmp;\
@@ -68,18 +69,20 @@ tmp;\
 
 - (void)viewDidLoad {
     
+    [[XYNotificationManage shared]addNotification];
     [super viewDidLoad];
     NSLog(@"%s",__func__);
     
+//    NSLog(@"%@",INSTRUCT_DANCE);
+//    NSLog(@"%@",INSTRUCT_DANCE);
 
-    
     MainViewModel *mainViewModel = [[MainViewModel alloc] init ];
-    mainViewModel.pageListArr = @[@"跳舞",@"语音",@"寻线",@"手绘",@"编程",@"重力",@"摇杆",@"5_操控模式",@"6_表情",@"7_情景模拟"];
-    mainViewModel.jumpPageListArr = @[@"ExpressionViewController",
+    mainViewModel.pageListArr = @[@"首页_01",@"首页_02",@"寻线",@"手绘",@"编程",@"重力",@"摇杆",@"5_操控模式",@"6_表情",@"7_情景模拟"];
+    mainViewModel.jumpPageListArr = @[@"DanceViewController",
+                                      @"FindMapViewController",
                                       @"VoiceViewController",
-                                      @"HuntingViewController",
                                       @"DrawingViewController",
-                                      @"EditFaceViewController",
+                                      @"ProgramViewController",
                                       @"DanceViewController",
                                       @"FindMapViewController",
                                       @"OperationController",
@@ -95,7 +98,6 @@ tmp;\
         NSLog(@"view:%@\n indx:%li",view,(long)index);
         NSString *str = [weakmainViewModel.jumpPageListArr objectAtIndex:index];
         [[Route share]GoToControllerIsPush:NO ClassName:str From:weakself PropertyDic:nil];
-        
     };
     
     [mainViewModel didClickHelpBtn:^{

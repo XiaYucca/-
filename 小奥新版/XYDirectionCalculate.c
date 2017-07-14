@@ -61,13 +61,8 @@ CGFloat getAngleWithVector(CGPoint translation)
             CGFloat location = (-translation.y)/translation.x;
             CGFloat result;
             
-            
             CGFloat R = sqrt( pow(translation.y, 2) + pow(translation.x, 2) );
-            
             result = acos(- translation.y / R);
-            
-            
-            
             
             if (translation.x <0) {
                 result = M_PI * 2 - result;

@@ -1,0 +1,19 @@
+/*分类*/
+.blocklyToolboxDiv{width: 200px;/*box-shadow:3px 0px 5px #f0f0f0;*/}
+.blocklyTreeRow{border:0!important;}
+#\:1 .blocklyTreeSelected { border-left:10px solid #FFAB00!important;}
+#\:2 .blocklyTreeSelected { border-left:10px solid #478FFF!important;}
+/* #\:3 .blocklyTreeSelected { border-left:10px solid #AD40FF!important;} */
+#\:3 .blocklyTreeSelected { border-left:10px solid #FF3B46!important;}
+#\:4 .blocklyTreeSelected { border-left:10px solid #CF37BD!important;}
+/* #\:6 .blocklyTreeSelected { border-left:10px solid #00BFEA!important;} */
+#\:5 .blocklyTreeSelected { border-left:10px solid #00CA59!important;}
+.blocklyTreeIcon{background-image:url(../img/ico5.png);}
+
+#\:1 .blocklyTreeIcon{background-image:url(../img/ico1.png)!important;}
+#\:2 .blocklyTreeIcon{background-image:url(../img/ico2.png)!important;}
+/* #\:3 .blocklyTreeIcon{background-image:url(../img/ico3.png)!important;} */
+#\:3 .blocklyTreeIcon{background-image:url(../img/ico4.png)!important;}
+#\:4 .blocklyTreeIcon{background-image:url(../img/ico5.png)!important;}
+/* #\:6 .blocklyTreeIcon{background-image:url(../img/ico6.png)!important;} */
+#\:5 .blocklyTreeIcon{background-image:url(../img/ico7.png)!important;}

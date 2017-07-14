@@ -83,7 +83,7 @@ typedef NS_ENUM(NSUInteger, MAP_BTN_TAG) {
             break;
     }
     if(_btnClickCallback){
-        _btnClickCallback(sender.tag);
+        _btnClickCallback(sender.tag - MAP_BTN_1_TAG + 1);
     }
 }
 
