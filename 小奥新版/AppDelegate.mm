@@ -82,7 +82,7 @@
     _active = false;
 }
 
-
+//ios 9之前还可以用
 -(void)testNotification{
     // 1.创建本地通知
     UILocalNotification *localNote = [[UILocalNotification alloc] init];

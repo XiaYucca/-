@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4085D494295EC3384ECE470E9DCF3A8EA5956255",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4085D494295EC3384ECE470E9DCF3A8EA5956255" : 9223372036854775807,
+    "46C7C266A343C8ED07839384C4A42809E272A27E" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "867D7A73-D6C1-4DFA-9964-AB71DB96B165",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4085D494295EC3384ECE470E9DCF3A8EA5956255" : "%E5%B0%8F%E5%A5%A5%E6%96%B0%E7%89%88\/",
+    "46C7C266A343C8ED07839384C4A42809E272A27E" : "%E5%B0%8F%E5%A5%A5%E6%96%B0%E7%89%88\/%E5%B0%8F%E5%A5%A5%E6%96%B0%E7%89%88\/pythonProject\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "小奥新版",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "小奥新版.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/XiaYucca\/-.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4085D494295EC3384ECE470E9DCF3A8EA5956255"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/XiaYucca\/pythonProject.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "46C7C266A343C8ED07839384C4A42809E272A27E"
+    }
+  ]
+}

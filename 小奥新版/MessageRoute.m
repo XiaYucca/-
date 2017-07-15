@@ -32,6 +32,7 @@
 
 @end
 
+//算了懒得改了 统一就是id类型的了
 typedef struct returnStruct{
     int RETURN_TYPE_OBJ:1;
     int RETURN_TYPE_VOID:1;

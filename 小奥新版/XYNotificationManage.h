@@ -11,6 +11,10 @@
 
 @interface XYNotificationManage : NSObject <UNUserNotificationCenterDelegate>
 
+
+/**
+ 管理本地通知 测试.
+ */
 +(instancetype)shared;
 -(void)addNotification;
 -(void)removeNotificationByIDList:(NSArray<NSString *>*)idList;
